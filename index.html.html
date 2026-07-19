@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kenzy Eltablawy — STEM Student · Data Science & AI</title>
+<meta name="description" content="STEM student specialising in Data Science, AI, and Python — three Udacity Nanodegrees, two STEM capstone prototypes, and a roadmap into systems programming.">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:          #09060F;
+  --surface:     #110A1C;
+  --border:      #261440;
+  --text:        #EEE8F8;
+  --muted:       #9880B0;
+  --violet:      #A968D8;
+  --rose:        #D4689E;
+  --v-bg:        rgba(169, 104, 216, 0.08);
+  --v-bd:        rgba(169, 104, 216, 0.22);
+  --r-bg:        rgba(212, 104, 158, 0.08);
+  --r-bd:        rgba(212, 104, 158, 0.22);
+  --mono:        'JetBrains Mono', monospace;
+  --sans:        'Inter', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  background-image:
+    radial-gradient(ellipse 60% 50% at 5% 0%, rgba(169,104,216,0.06) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 95% 10%, rgba(212,104,158,0.04) 0%, transparent 60%);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.65;
+  min-height: 100vh;
+}
+
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 64px 32px 80px;
+}
+
+/* ── Header ─────────────────────────────────── */
+.header {
+  margin-bottom: 52px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--border);
+}
+
+.name {
+  font-family: var(--mono);
+  font-size: clamp(26px, 5vw, 40px);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  margin-bottom: 10px;
+  background: linear-gradient(105deg, var(--violet) 0%, var(--rose) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  height: 0.82em;
+  background: var(--rose);
+  -webkit-text-fill-color: initial;
+  margin-left: 5px;
+  vertical-align: middle;
+  animation: blink 1.1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.role-line {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--violet);
+  margin-bottom: 20px;
+}
+
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 20px;
+}
+
+.contacts a,
+.contacts span {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.contacts a:hover { color: var(--rose); }
+
+/* ── Two-column layout ──────────────────────── */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 264px;
+  gap: 52px;
+  align-items: start;
+}
+
+/* ── Section chrome ─────────────────────────── */
+.section { margin-bottom: 44px; }
+
+.section-label {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--violet);
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, var(--border) 0%, transparent 100%);
+}
+
+/* ── Profile ─────────────────────────────────── */
+.summary {
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.8;
+}
+
+/* ── STEM Project entries (job-style) ───────── */
+.job {
+  margin-bottom: 34px;
+  padding-bottom: 34px;
+  border-bottom: 1px solid var(--border);
+}
+
+.job:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.job-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 3px;
+}
+
+.job-company {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.job-date {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  color: var(--muted);
+  white-space: nowrap;
+  padding-top: 2px;
+}
+
+.job-role {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  color: var(--rose);
+  margin-bottom: 12px;
+}
+
+.job ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.job li {
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.65;
+  padding-left: 18px;
+  position: relative;
+}
+
+.job li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--violet);
+  font-size: 10px;
+  top: 3px;
+}
+
+.job li .kw {
+  color: var(--text);
+  font-size: 11px;
+  opacity: 0.75;
+}
+
+/* ── Portfolio cards ─────────────────────────── */
+.project {
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background: var(--surface);
+  margin-bottom: 10px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.project:hover {
+  border-color: var(--v-bd);
+  box-shadow: 0 0 18px rgba(169,104,216,0.06);
+}
+
+.project-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--violet);
+  letter-spacing: 0.1em;
+  margin-bottom: 3px;
+}
+
+.project-name {
+  font-weight: 600;
+  font-size: 13.5px;
+  margin-bottom: 5px;
+}
+
+.project-badge {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  color: var(--rose);
+  margin-left: 8px;
+  font-weight: 400;
+}
+
+.project-desc {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.58;
+}
+
+/* ── Certifications ──────────────────────────── */
+.cert-group { margin-bottom: 20px; }
+
+.cert-group-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.cert-item {
+  display: flex;
+  align-items: baseline;
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(38, 20, 64, 0.7);
+  font-size: 12.5px;
+  gap: 0;
+}
+
+.cert-item:last-child { border-bottom: none; }
+
+.cert-arrow {
+  font-family: var(--mono);
+  color: var(--violet);
+  margin-right: 8px;
+  font-size: 11px;
+  flex-shrink: 0;
+}
+
+.cert-name {
+  font-weight: 500;
+  color: var(--text);
+  flex: 1;
+}
+
+.cert-org {
+  color: var(--muted);
+  font-size: 11.5px;
+  margin-left: 6px;
+  flex-shrink: 0;
+}
+
+.cert-date {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--rose);
+  margin-left: 10px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.cert-note {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  color: var(--muted);
+  font-style: italic;
+  padding: 6px 0 2px 18px;
+}
+
+/* ── Sidebar ─────────────────────────────────── */
+.sidebar .section { margin-bottom: 32px; }
+
+.edu-degree {
+  font-weight: 600;
+  font-size: 13.5px;
+  margin-bottom: 4px;
+}
+
+.edu-sub {
+  font-size: 12.5px;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.edu-year {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  color: var(--rose);
+  margin-bottom: 10px;
+}
+
+.edu-note {
+  font-size: 11.5px;
+  color: var(--muted);
+  line-height: 1.6;
+  border-left: 2px solid var(--border);
+  padding-left: 10px;
+}
+
+.lang-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+
+.lang-row:last-child { border: none; }
+
+.lang-level {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--muted);
+}
+
+.skill-group { margin-bottom: 14px; }
+
+.skill-group-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 7px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  padding: 2px 8px;
+  border-radius: 3px;
+  border: 1px solid;
+}
+
+.tag.hi {
+  background: var(--v-bg);
+  color: var(--violet);
+  border-color: var(--v-bd);
+}
+
+.tag.ro {
+  background: var(--r-bg);
+  color: var(--rose);
+  border-color: var(--r-bd);
+}
+
+.tag.lo {
+  background: rgba(255,255,255,0.025);
+  color: var(--muted);
+  border-color: var(--border);
+}
+
+/* ── Competition card ───────────────────────── */
+.comp-card {
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background: var(--surface);
+  transition: border-color 0.15s;
+}
+
+.comp-card:hover { border-color: var(--r-bd); }
+
+.comp-name {
+  font-weight: 600;
+  font-size: 13.5px;
+  margin-bottom: 3px;
+}
+
+.comp-meta {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  color: var(--rose);
+  margin-bottom: 8px;
+  letter-spacing: 0.04em;
+}
+
+.comp-desc {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+/* ── Volunteering ───────────────────────────── */
+.vol-item {
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.vol-item:last-child { border: none; margin: 0; padding: 0; }
+
+.vol-org {
+  font-weight: 600;
+  font-size: 12.5px;
+  margin-bottom: 2px;
+}
+
+.vol-role {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--rose);
+  margin-bottom: 4px;
+}
+
+.vol-desc {
+  font-size: 11.5px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* ── Workshops ──────────────────────────────── */
+.ws-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(38, 20, 64, 0.6);
+  font-size: 12px;
+}
+
+.ws-item:last-child { border: none; }
+
+.ws-arrow {
+  color: var(--violet);
+  font-family: var(--mono);
+  font-size: 10px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.ws-name {
+  font-weight: 500;
+  margin-bottom: 1px;
+}
+
+.ws-desc {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* ── Mobile ─────────────────────────────────── */
+@media (max-width: 680px) {
+  .page   { padding: 36px 18px 60px; }
+  .layout { grid-template-columns: 1fr; gap: 0; }
+  .sidebar {
+    border-top: 1px solid var(--border);
+    padding-top: 40px;
+    margin-top: 4px;
+  }
+  .cert-item { flex-wrap: wrap; gap: 2px; }
+  .cert-date { margin-left: 0; }
+  .job-top   { flex-direction: column; gap: 2px; }
+}
+
+@media print {
+  body { background: #fff; color: #111; }
+  .name { -webkit-text-fill-color: #7B3FBE; }
+  .cursor { display: none; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ── HEADER ─────────────────────────────────── -->
+<header class="header">
+  <div class="name">Kenzy Eltablawy<span class="cursor"></span></div>
+  <div class="role-line">STEM Student (Grade 11, A) &nbsp;·&nbsp; Data Science &amp; AI &nbsp;·&nbsp; Python &nbsp;·&nbsp; C &amp; C++ (Learning) &nbsp;·&nbsp; Egypt</div>
+  <div class="contacts">
+    <a href="tel:+201065304179">+20 106 530 4179</a>
+    <a href="mailto:Kenzyrafat98@gmail.com">Kenzyrafat98@gmail.com</a>
+    <a href="https://github.com/KenzyEltablawy" target="_blank" rel="noopener">GitHub</a>
+    <span>Shebin Elkom, Menoufia, Egypt</span>
+  </div>
+</header>
+
+<!-- ── TWO COLUMNS ────────────────────────────── -->
+<div class="layout">
+
+<!-- ── MAIN ──────────────────────────────────── -->
+<main>
+
+  <!-- Profile -->
+  <section class="section">
+    <div class="section-label">Profile</div>
+    <p class="summary">
+      STEM student (11th grade, Grade A) with a strong foundation in data science, AI, and software development — validated by three consecutive Udacity Nanodegrees under Egypt's Digital Egypt Cubs Initiative (Ministry of Communications &amp; IT): Lite One → Level Two → Level Three: Data Science &amp; AI, with Level Four currently in progress. Proficient in Python-driven data pipelines, ML modeling with scikit-learn, and full-stack web fundamentals. Led two STEM capstone research teams producing functional prototypes — GREENADO (eco-friendly building) and GALVINO (galvanic energy system) — both addressing Egypt's Grand Challenges. Active competitor in DIGITOPIA 2025. Volunteer at Resala; participant in Girls Who Code, Mint Squad, and the New York Academy of Science. Expanding into systems-level programming in C and C++ with a roadmap toward game engine development.
+    </p>
+  </section>
+
+  <!-- STEM Projects -->
+  <section class="section">
+    <div class="section-label">STEM Research Projects</div>
+
+    <div class="job">
+      <div class="job-top">
+        <div class="job-company">GREENADO — Eco-Friendly Structural Prototype</div>
+        <div class="job-date">S1 · 2025/2026</div>
+      </div>
+      <div class="job-role">Menofia STEM School · Grade 10 · Group 20106 · Team: Kenzy Raafat, Shahd, Salma, Renad</div>
+      <ul>
+        <li>Designed and built a scale prototype house using entirely natural and sustainable materials — reeds (primary structural unit), wool (insulation layer), and palm branches — directly addressing Egypt's Grand Challenge of climate-resilient, affordable housing.</li>
+        <li>Engineering targets: interior temperature maintained below 4 °C above ambient, roof load resistance of 5 kg, wind and rain resilience, fire resistance, and full repairability using locally sourced materials only.</li>
+        <li>Prototype passed thermal management, static load, and lateral load tests across all four structural walls; demonstrated strong thermal stability and structural integrity under controlled test conditions.</li>
+        <li>Validated that eco-friendly, naturally sourced materials can replace conventional building inputs while fully satisfying structural and environmental design specifications.</li>
+        <li><span class="kw">Keywords: Reeds · Wool · Palm Branches · Thermal Insulation · Sustainable Construction · Egypt Grand Challenges</span></li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-top">
+        <div class="job-company">GALVINO — Galvanic Cell Energy Generation</div>
+        <div class="job-date">S2 · 2026</div>
+      </div>
+      <div class="job-role">Menofia STEM School · Group 20104 · Team: Kenzy Raafat, Shahd, Jana, Radwa</div>
+      <ul>
+        <li>Designed and constructed a 12-cell galvanic cell array in series using graphite electrodes sourced from recycled batteries, copper sulfate (CuSO₄) at the cathode, and magnesium sulfate (MgSO₄) at the anode, connected via NaCl salt bridges.</li>
+        <li>Generated over 150 V of electrical output within 2 minutes; ranked among the top teams in the competition phase. Achieved 12.5% energy conversion efficiency — a confirmed 10% improvement over the baseline design.</li>
+        <li>Performed electrochemical analysis: plotted voltage vs. concentration curves (MgSO₄, 20–120 mL), identified optimal electrolyte ratio, and applied Faraday's Law to calculate electron charge transfer.</li>
+        <li>Demonstrated a practical, low-cost electrochemical renewable energy system built entirely from recycled and sustainable materials, with real-world application potential for off-grid energy generation.</li>
+        <li><span class="kw">Keywords: Galvanic Cell · Graphite · Magnesium Sulfate · Redox Reactions · Salt Bridge · Electrochemistry · Recycled Materials</span></li>
+      </ul>
+    </div>
+
+  </section>
+
+  <!-- Portfolio -->
+  <section class="section">
+    <div class="section-label">Portfolio</div>
+
+    <div class="project">
+      <div class="project-num">I &nbsp;—&nbsp; STEM CAPSTONE · DATA &amp; AI</div>
+      <div class="project-name">Social Impact Data Project</div>
+      <div class="project-desc">Framed a real Egyptian socio-technical problem as a structured data challenge. Built a full pipeline from raw data collection through cleaning, EDA, and visualization to actionable insight. Applied scikit-learn ML models for pattern recognition; integrated Arduino components to extend the solution into a tangible hardware-software system.</div>
+    </div>
+
+    <div class="project">
+      <div class="project-num">II &nbsp;—&nbsp; WEB &amp; PYTHON</div>
+      <div class="project-name">Python &amp; Web Application Portfolio <span class="project-badge">· Ongoing</span></div>
+      <div class="project-desc">Multiple standalone Python applications across automation, data analysis, and AI/ML integration. Front-end web projects in HTML, CSS, and JavaScript with Angular component experimentation. Mobile and visual programming prototypes built with Thunkable and Blockly.</div>
+    </div>
+
+  </section>
+
+  <!-- Certifications -->
+  <section class="section">
+    <div class="section-label">Certifications</div>
+
+    <div class="cert-group">
+      <div class="cert-group-label">Digital Egypt Cubs Initiative — Udacity · MoICT Egypt</div>
+      <div class="cert-item">
+        <span class="cert-arrow">▸</span>
+        <span class="cert-name">Level Three: Data Science and AI — Nanodegree</span>
+        <span class="cert-date">Oct 2025</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-arrow">▸</span>
+        <span class="cert-name">Level Two — Nanodegree</span>
+        <span class="cert-date">Oct 2024</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-arrow">▸</span>
+        <span class="cert-name">Lite One — Nanodegree</span>
+        <span class="cert-date">Oct 2023</span>
+      </div>
+      <div class="cert-note">⤷ Level Four in progress via iSchool + Udacity partnership.</div>
+    </div>
+
+    <div class="cert-group">
+      <div class="cert-group-label">Huawei ICT Academy · CRA Training Program</div>
+      <div class="cert-item">
+        <span class="cert-arrow">▸</span>
+        <span class="cert-name">AI Basic: Overview of AI</span>
+        <span class="cert-date">Dec 2025</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-arrow">▸</span>
+        <span class="cert-name">Development and Basic Concepts of Cloud Computing</span>
+        <span class="cert-date">Dec 2025</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-arrow">▸</span>
+        <span class="cert-name">Information Representation and Data Organization</span>
+        <span class="cert-date">Jan 2026</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-arrow">▸</span>
+        <span class="cert-name">Python Programming Basics</span>
+        <span class="cert-date">Jan 2026</span>
+      </div>
+    </div>
+
+    <div class="cert-group">
+      <div class="cert-group-label">TOFAS — International Test of Fundamental Academic Skills</div>
+      <div class="cert-item">
+        <span class="cert-arrow">▸</span>
+        <span class="cert-name">JavaScript Level 1</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-arrow">▸</span>
+        <span class="cert-name">JavaScript Level 2</span>
+      </div>
+    </div>
+
+    <div class="cert-group">
+      <div class="cert-group-label">Language &amp; Art Certifications</div>
+      <div class="cert-item">
+        <span class="cert-arrow">▸</span>
+        <span class="cert-name">French DELF A1 — Language Proficiency Certificate</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-arrow">▸</span>
+        <span class="cert-name">TREFLE Art Competition — 1st Prize (French)</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-arrow">▸</span>
+        <span class="cert-name">Chinese My Dream Art Competition — 2nd Position (African Region)</span>
+      </div>
+    </div>
+
+    <div class="cert-group">
+      <div class="cert-group-label">Individual Certifications</div>
+      <div class="cert-item">
+        <span class="cert-arrow">▸</span>
+        <span class="cert-name">Generative AI for Beginners</span>
+        <span class="cert-org">— Simplilearn SkillUp</span>
+        <span class="cert-date">Jul 2026</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-arrow">▸</span>
+        <span class="cert-name">Robotics and Programming (Arduino) Level 1</span>
+        <span class="cert-org">— EGY STEM</span>
+        <span class="cert-date">Jun 2026</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-arrow">▸</span>
+        <span class="cert-name">Leadership Training Course</span>
+        <span class="cert-org">— DemocraShe</span>
+        <span class="cert-date">Jul 2026</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-arrow">▸</span>
+        <span class="cert-name">SheShines Online Workshop — Certificate of Completion</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-arrow">▸</span>
+        <span class="cert-name">Translation Workshop</span>
+        <span class="cert-org">— Lingua Stochos</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-arrow">▸</span>
+        <span class="cert-name">Microsoft Word &amp; Excel Workshop</span>
+        <span class="cert-org">— Lingua Stochos</span>
+      </div>
+      <div class="cert-note">In progress: EDX · Microsoft Learn · Google · Harvard Online · Cybersecurity &amp; Data Analysis · SPRIX (Japan)</div>
+    </div>
+
+  </section>
+
+</main>
+
+<!-- ── SIDEBAR ──────────────────────────────── -->
+<aside class="sidebar">
+
+  <!-- Education -->
+  <section class="section">
+    <div class="section-label">Education</div>
+    <div class="edu-degree">Menofia STEM School</div>
+    <div class="edu-sub">11th Grade · Grade A</div>
+    <div class="edu-year">2025 – Present</div>
+    <div class="edu-note">Bi-weekly EPA journal exams, capstone performance evaluations, leadership assessments, prototype presentations, team discussions, and cross-cultural workshops.</div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section">
+    <div class="section-label">Skills</div>
+
+    <div class="skill-group">
+      <div class="skill-group-label">Programming Languages</div>
+      <div class="tags">
+        <span class="tag hi">Python</span>
+        <span class="tag hi">JavaScript</span>
+        <span class="tag hi">SQL</span>
+        <span class="tag hi">HTML</span>
+        <span class="tag hi">CSS</span>
+        <span class="tag lo">C (learning)</span>
+        <span class="tag lo">C++ (learning)</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <div class="skill-group-label">Data Science &amp; AI</div>
+      <div class="tags">
+        <span class="tag ro">Data Cleaning</span>
+        <span class="tag ro">Data Wrangling</span>
+        <span class="tag ro">EDA</span>
+        <span class="tag ro">ML Modeling</span>
+        <span class="tag ro">Generative AI</span>
+        <span class="tag lo">AI Fundamentals</span>
+        <span class="tag lo">Cloud Basics</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <div class="skill-group-label">Libraries &amp; Frameworks</div>
+      <div class="tags">
+        <span class="tag hi">Pandas</span>
+        <span class="tag hi">NumPy</span>
+        <span class="tag hi">Scikit-learn</span>
+        <span class="tag lo">Angular</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <div class="skill-group-label">Tools &amp; Platforms</div>
+      <div class="tags">
+        <span class="tag lo">Git</span>
+        <span class="tag lo">Agile / Scrum</span>
+        <span class="tag lo">Arduino</span>
+        <span class="tag lo">Scratch</span>
+        <span class="tag lo">Blockly</span>
+        <span class="tag lo">Thunkable</span>
+        <span class="tag lo">MS Word &amp; Excel</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <div class="skill-group-label">Software Engineering</div>
+      <div class="tags">
+        <span class="tag lo">OOP</span>
+        <span class="tag lo">Design Patterns</span>
+        <span class="tag lo">Data-Driven Arch.</span>
+        <span class="tag lo">Software Architecture</span>
+        <span class="tag lo">Technical Docs</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <div class="skill-group-label">Soft Skills</div>
+      <div class="tags">
+        <span class="tag lo">Presentation Design</span>
+        <span class="tag lo">Academic Writing</span>
+        <span class="tag lo">Portfolio Dev</span>
+        <span class="tag lo">Leadership</span>
+        <span class="tag lo">Team Collaboration</span>
+        <span class="tag lo">Cross-Cultural Comm.</span>
+        <span class="tag lo">Deadline Management</span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Languages -->
+  <section class="section">
+    <div class="section-label">Languages</div>
+    <div class="lang-row">
+      <span>Arabic</span>
+      <span class="lang-level">Native</span>
+    </div>
+    <div class="lang-row">
+      <span>English</span>
+      <span class="lang-level">Advanced</span>
+    </div>
+    <div class="lang-row">
+      <span>French</span>
+      <span class="lang-level">Intermediate · DELF A1</span>
+    </div>
+  </section>
+
+  <!-- Competitions -->
+  <section class="section">
+    <div class="section-label">Competitions</div>
+    <div class="comp-card">
+      <div class="comp-name">DIGITOPIA 2025</div>
+      <div class="comp-meta">National Competition · Games &amp; Digital Arts Track · Edition 1</div>
+      <div class="comp-desc">Organized by Egypt's Ministry of Communications and IT — partners: Huawei, Cisco, UNDP, Vodafone, Orange. Received two official Certificates of Appreciation for effective participation.</div>
+    </div>
+  </section>
+
+  <!-- Volunteering -->
+  <section class="section">
+    <div class="section-label">Volunteering</div>
+
+    <div class="vol-item">
+      <div class="vol-org">Resala Charity Organization</div>
+      <div class="vol-role">Volunteer · Ongoing</div>
+      <div class="vol-desc">Community and social outreach programs across Egypt.</div>
+    </div>
+
+    <div class="vol-item">
+      <div class="vol-org">Girls Who Code</div>
+      <div class="vol-role">Member · Ongoing</div>
+      <div class="vol-desc">Coding sessions and peer learning for young women in tech.</div>
+    </div>
+
+    <div class="vol-item">
+      <div class="vol-org">Mint Squad</div>
+      <div class="vol-role">Member · Ongoing</div>
+      <div class="vol-desc">Collaborative STEM and peer-driven innovation for Egyptian youth.</div>
+    </div>
+
+    <div class="vol-item">
+      <div class="vol-org">New York Academy of Science</div>
+      <div class="vol-role">Participant · Ongoing</div>
+      <div class="vol-desc">Youth science and innovation programs within a global STEM network.</div>
+    </div>
+
+  </section>
+
+  <!-- Workshops -->
+  <section class="section">
+    <div class="section-label">Workshops &amp; Initiatives</div>
+
+    <div class="ws-item">
+      <span class="ws-arrow">▸</span>
+      <div>
+        <div class="ws-name">CULTURA Initiative</div>
+        <div class="ws-desc">Cross-disciplinary STEM &amp; cultural engagement</div>
+      </div>
+    </div>
+    <div class="ws-item">
+      <span class="ws-arrow">▸</span>
+      <div>
+        <div class="ws-name">STEAM for All</div>
+        <div class="ws-desc">Hands-on science, technology, engineering, art &amp; math</div>
+      </div>
+    </div>
+    <div class="ws-item">
+      <span class="ws-arrow">▸</span>
+      <div>
+        <div class="ws-name">Break the Code</div>
+        <div class="ws-desc">Programming and computational thinking</div>
+      </div>
+    </div>
+    <div class="ws-item">
+      <span class="ws-arrow">▸</span>
+      <div>
+        <div class="ws-name">SheShines</div>
+        <div class="ws-desc">Online workshop for young women in STEM &amp; digital innovation</div>
+      </div>
+    </div>
+    <div class="ws-item">
+      <span class="ws-arrow">▸</span>
+      <div>
+        <div class="ws-name">DemocraShe Initiative</div>
+        <div class="ws-desc">Leadership training and civic engagement for young women</div>
+      </div>
+    </div>
+
+  </section>
+
+</aside>
+</div>
+</div>
+</body>
+</html>
