@@ -1074,35 +1074,44 @@ body {
 <script>
 // =============================================================
 //  CERTS — 25 total
-//  Batch 1 (original 19) + Batch 2 (6 new) = 25
-//  Batch 3 updates: JS Level 2 path + 13 underscore path fixes
+//  All image paths use spaces to match exact GitHub filenames.
+//
+//  NOTE: Cards 7 & 8 (DemocraShe + Generative AI) are mapped
+//  to the three unmapped Aug-06 files (215357, 215412, 215439).
+//  Open those files locally and swap the paths below to match
+//  the correct certificates. The third unmapped file (215357)
+//  is assigned to the SheShines cert (#16).
 // =============================================================
 const CERTS = [
 
-  // ── Udacity Nanodegrees (added batch 2, pinned to top) ────
+  // 01 ── Udacity Nanodegrees ────────────────────────────────
   {
     name:  "Level Three: Data Science and AI \u2014 Nanodegree",
     org:   "Digital Egypt Cubs Initiative \u00b7 Udacity \u00b7 MoICT Egypt",
     date:  "October 2025",
-    img:   "certs/Screenshot_2026-07-19_235213.png",
+    img:   "certs/Screenshot 2026-07-19 235213.png",
     badge: "Nanodegree"
   },
+
+  // 02
   {
     name:  "Level Two \u2014 Nanodegree",
     org:   "Digital Egypt Cubs Initiative \u00b7 Udacity \u00b7 MoICT Egypt",
     date:  "October 2024",
-    img:   "certs/Screenshot_2026-07-19_235256.png",
+    img:   "certs/Screenshot 2026-07-19 235256.png",
     badge: "Nanodegree"
   },
+
+  // 03
   {
     name:  "Lite One \u2014 Nanodegree",
     org:   "Digital Egypt Cubs Initiative \u00b7 Udacity \u00b7 MoICT Egypt",
     date:  "October 2023",
-    img:   "certs/Screenshot_2026-07-19_235619.png",
+    img:   "certs/Screenshot 2026-07-19 235619.png",
     badge: "Nanodegree"
   },
 
-  // ── Aug 2026 screenshots (space paths — not yet re-uploaded as underscores) ──
+  // 04 ── TOFAS ──────────────────────────────────────────────
   {
     name:  "JavaScript Level 3",
     org:   "TOFAS \u2014 International Test of Fundamental Academic Skills",
@@ -1111,15 +1120,16 @@ const CERTS = [
     badge: "Achievement"
   },
 
-  // ── JS Level 2: replaced with Jul-19 underscore version (batch 3) ──
+  // 05
   {
     name:  "JavaScript Level 2",
     org:   "TOFAS \u2014 International Test of Fundamental Academic Skills",
     date:  "June 11, 2026",
-    img:   "certs/Screenshot_2026-07-19_235827.png",
+    img:   "certs/Screenshot 2026-07-19 235827.png",
     badge: "Achievement"
   },
 
+  // 06 ── STEAM for All ──────────────────────────────────────
   {
     name:  "Certificate of Exceptional Efficiency",
     org:   "STEAM for All",
@@ -1128,24 +1138,29 @@ const CERTS = [
     badge: "Award"
   },
 
-  // ── DemocraShe: replaced in batch 2 ──
+  // 07 ── DemocraShe ─────────────────────────────────────────
+  // VERIFY: check Screenshot 2026-08-06 215412.png locally.
+  // If it is not this cert, swap the path for the correct one.
   {
     name:  "Leadership Training Course \u2014 Certificate of Graduation",
     org:   "DemocraShe \u00b7 Engage. Empower. Elect.",
     date:  "July 18, 2026",
-    img:   "certs/Screenshot_2026-07-19_235631.png",
+    img:   "certs/Screenshot 2026-08-06 215412.png",
     badge: "Completion"
   },
 
-  // ── Generative AI: replaced in batch 2 ──
+  // 08 ── Generative AI ──────────────────────────────────────
+  // VERIFY: check Screenshot 2026-08-06 215439.png locally.
+  // If it is not this cert, swap the path for the correct one.
   {
     name:  "Generative AI for Beginners",
     org:   "Simplilearn SkillUp",
     date:  "July 19, 2026",
-    img:   "certs/Screenshot_2026-07-19_235555.png",
+    img:   "certs/Screenshot 2026-08-06 215439.png",
     badge: "Completion"
   },
 
+  // 09 ── Break the Code ─────────────────────────────────────
   {
     name:  "Break the Code 2026",
     org:   "Certificate of Completion \u00b7 Sponsored by Mobbin",
@@ -1154,123 +1169,151 @@ const CERTS = [
     badge: "Completion"
   },
 
-  // ── Jul-20 screenshots: path updated to underscores (batch 3) ──
+  // 10 ── STEM Posters ───────────────────────────────────────
   {
     name:   "GREENADO \u2014 Eco-Friendly Building System",
     org:    "STEM Research Project Poster \u00b7 Menofia STEM School \u00b7 S1 2025/2026",
     date:   "Semester 1, 2025/2026",
-    img:    "certs/Screenshot_2026-07-20_013120.png",
+    img:    "certs/Screenshot 2026-07-20 013120.png",
     badge:  "Poster",
     poster: true
   },
+
+  // 11
   {
     name:   "GALVINO \u2014 Galvanic Cell Energy Generator",
     org:    "STEM Research Project Poster \u00b7 Menofia STEM School \u00b7 S2 2026",
     date:   "Semester 2, 2026",
-    img:    "certs/Screenshot_2026-07-20_013110.png",
+    img:    "certs/Screenshot 2026-07-20 013110.png",
     badge:  "Poster",
     poster: true
   },
+
+  // 12 ── Art & Language ─────────────────────────────────────
   {
     name:  "1er Prix \u2014 French Art Competition",
     org:   "TREFLE \u00b7 Institut Fran\u00e7ais \u00b7 Ambassade de France en \u00c9gypte",
     date:  "November 19, 2024",
-    img:   "certs/Screenshot_2026-07-20_010758.png",
+    img:   "certs/Screenshot 2026-07-20 010758.png",
     badge: "1st Prize"
   },
+
+  // 13
   {
     name:  "DELF Prep Course \u2014 Certificate of Appreciation",
     org:   "Misr El-Bursa IDEL School",
     date:  "2025",
-    img:   "certs/Screenshot_2026-07-20_010748.png",
+    img:   "certs/Screenshot 2026-07-20 010748.png",
     badge: "Appreciation"
   },
+
+  // 14
   {
     name:  "Chinese My Dream Art \u2014 2nd Position, African Region",
     org:   "Chinese Cultural Art Competition",
     date:  "2023",
-    img:   "certs/Screenshot_2026-07-20_010740.png",
+    img:   "certs/Screenshot 2026-07-20 010740.png",
     badge: "2nd Place"
   },
 
-  // ── Jul-19 screenshots: path updated to underscores (batch 3) ──
+  // 15 ── DIGITOPIA ──────────────────────────────────────────
   {
     name:  "DIGITOPIA \u2014 Certificate of Appreciation (Games & Digital Arts Track)",
     org:   "Ministry of Communications & IT, Egypt \u00b7 Edition 1 \u00b7 2025",
     date:  "2025",
-    img:   "certs/Screenshot_2026-07-19_235949.png",
+    img:   "certs/Screenshot 2026-07-19 235949.png",
     badge: "Appreciation"
   },
+
+  // 16 ── SheShines ──────────────────────────────────────────
+  // VERIFY: check Screenshot 2026-08-06 215357.png locally.
+  // If it is not this cert, swap the path for the correct one.
   {
     name:  "Study Abroad: What You Need to Know \u2014 Certificate of Completion",
     org:   "SheShines \u00b7 Study Abroad, Scholarships & STEM Pathways",
     date:  "2026",
-    img:   "certs/Screenshot_2026-07-19_235912.png",
+    img:   "certs/Screenshot 2026-08-06 215357.png",
     badge: "Completion"
   },
+
+  // 17
   {
     name:  "DIGITOPIA \u2014 Certificate of Appreciation (Effective Participation)",
     org:   "Ministry of Communications & IT, Egypt \u00b7 Edition 1 \u00b7 2025",
     date:  "2025",
-    img:   "certs/Screenshot_2026-07-19_235850.png",
+    img:   "certs/Screenshot 2026-07-19 235850.png",
     badge: "Appreciation"
   },
+
+  // 18 ── TOFAS Level 1 ──────────────────────────────────────
   {
     name:  "JavaScript Level 1",
     org:   "TOFAS \u2014 International Test of Fundamental Academic Skills",
     date:  "2025",
-    img:   "certs/Screenshot_2026-07-19_235838.png",
+    img:   "certs/Screenshot 2026-07-19 235838.png",
     badge: "Achievement"
   },
+
+  // 19 ── Huawei ICT Academy ─────────────────────────────────
   {
     name:  "Information Representation and Data Organization",
     org:   "Huawei ICT Academy \u2014 Certificate of Completion",
     date:  "January 28, 2026",
-    img:   "certs/Screenshot_2026-07-19_235801.png",
+    img:   "certs/Screenshot 2026-07-19 235801.png",
     badge: "Completion"
   },
+
+  // 20
   {
     name:  "Development and Basic Concepts of Cloud Computing",
     org:   "Huawei ICT Academy \u2014 Certificate of Completion",
     date:  "December 24, 2025",
-    img:   "certs/Screenshot_2026-07-19_235751.png",
+    img:   "certs/Screenshot 2026-07-19 235751.png",
     badge: "Completion"
   },
+
+  // 21
   {
     name:  "Python Programming Basics",
     org:   "Huawei ICT Academy \u2014 Certificate of Completion",
     date:  "January 30, 2026",
-    img:   "certs/Screenshot_2026-07-19_235740.png",
+    img:   "certs/Screenshot 2026-07-19 235740.png",
     badge: "Completion"
   },
+
+  // 22
   {
     name:  "AI Basic: Overview of AI (CRA Training Program)",
     org:   "Huawei ICT Academy \u2014 Certificate of Completion",
     date:  "December 12, 2025",
-    img:   "certs/Screenshot_2026-07-19_235727.png",
+    img:   "certs/Screenshot 2026-07-19 235727.png",
     badge: "Completion"
   },
 
-  // ── New additions from batch 2 ────────────────────────────
+  // 23 ── EGY STEM ────────────────────────────────────────────
   {
     name:  "Robotics and Programming (Arduino) Level 1",
     org:   "EGY STEM \u2014 Certificate of Appreciation",
     date:  "June 2026",
-    img:   "certs/Screenshot_2026-07-19_235238.png",
+    img:   "certs/Screenshot 2026-07-19 235238.png",
     badge: "Completion"
   },
+
+  // 24 ── Lingua Stochos ─────────────────────────────────────
   {
     name:  "Translation Workshop \u2014 Certificate of Achievement",
     org:   "Lingua Stochos",
     date:  "",
-    img:   "certs/Screenshot_2026-07-19_235656.png",
+    img:   "certs/Screenshot 2026-07-19 235656.png",
     badge: "Achievement"
   },
+
+  // 25
   {
     name:  "Microsoft Word & Excel Workshop \u2014 Certificate of Appreciation",
     org:   "Lingua Stochos",
     date:  "",
-    img:   "certs/Screenshot_2026-07-19_235711.png",
+    img:   "certs/Screenshot 2026-07-19 235711.png",
     badge: "Appreciation"
   }
 
