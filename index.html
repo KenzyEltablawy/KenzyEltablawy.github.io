@@ -11,19 +11,19 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg:          #09060F;
-  --surface:     #110A1C;
-  --border:      #261440;
-  --text:        #EEE8F8;
-  --muted:       #9880B0;
-  --violet:      #A968D8;
-  --rose:        #D4689E;
-  --v-bg:        rgba(169, 104, 216, 0.08);
-  --v-bd:        rgba(169, 104, 216, 0.22);
-  --r-bg:        rgba(212, 104, 158, 0.08);
-  --r-bd:        rgba(212, 104, 158, 0.22);
-  --mono:        'JetBrains Mono', monospace;
-  --sans:        'Inter', sans-serif;
+  --bg:      #09060F;
+  --surface: #110A1C;
+  --border:  #261440;
+  --text:    #EEE8F8;
+  --muted:   #9880B0;
+  --violet:  #A968D8;
+  --rose:    #D4689E;
+  --v-bg:    rgba(169,104,216,0.08);
+  --v-bd:    rgba(169,104,216,0.22);
+  --r-bg:    rgba(212,104,158,0.08);
+  --r-bd:    rgba(212,104,158,0.22);
+  --mono:    'JetBrains Mono', monospace;
+  --sans:    'Inter', sans-serif;
 }
 
 html { scroll-behavior: smooth; }
@@ -31,8 +31,8 @@ html { scroll-behavior: smooth; }
 body {
   background: var(--bg);
   background-image:
-    radial-gradient(ellipse 60% 50% at 5% 0%, rgba(169,104,216,0.06) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 40% at 95% 10%, rgba(212,104,158,0.04) 0%, transparent 60%);
+    radial-gradient(ellipse 60% 50% at 5% 0%,   rgba(169,104,216,0.06) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 95% 10%,  rgba(212,104,158,0.04) 0%, transparent 60%);
   color: var(--text);
   font-family: var(--sans);
   font-size: 14px;
@@ -46,7 +46,7 @@ body {
   padding: 64px 32px 80px;
 }
 
-/* ── Header ─────────────────────────────────── */
+/* ── Header ───────────────────────────────────── */
 .header {
   margin-bottom: 52px;
   padding-bottom: 40px;
@@ -108,7 +108,7 @@ body {
 
 .contacts a:hover { color: var(--rose); }
 
-/* ── Two-column layout ──────────────────────── */
+/* ── Two-column layout ────────────────────────── */
 .layout {
   display: grid;
   grid-template-columns: 1fr 264px;
@@ -116,7 +116,7 @@ body {
   align-items: start;
 }
 
-/* ── Section chrome ─────────────────────────── */
+/* ── Section chrome ───────────────────────────── */
 .section { margin-bottom: 44px; }
 
 .section-label {
@@ -138,25 +138,21 @@ body {
   background: linear-gradient(to right, var(--border) 0%, transparent 100%);
 }
 
-/* ── Profile ─────────────────────────────────── */
+/* ── Profile ──────────────────────────────────── */
 .summary {
   color: var(--muted);
   font-size: 13.5px;
   line-height: 1.8;
 }
 
-/* ── STEM Project entries (job-style) ───────── */
+/* ── STEM Project entries ─────────────────────── */
 .job {
   margin-bottom: 34px;
   padding-bottom: 34px;
   border-bottom: 1px solid var(--border);
 }
 
-.job:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
+.job:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
 
 .job-top {
   display: flex;
@@ -166,10 +162,7 @@ body {
   margin-bottom: 3px;
 }
 
-.job-company {
-  font-weight: 600;
-  font-size: 15px;
-}
+.job-company { font-weight: 600; font-size: 15px; }
 
 .job-date {
   font-family: var(--mono);
@@ -186,12 +179,7 @@ body {
   margin-bottom: 12px;
 }
 
-.job ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-}
+.job ul { list-style: none; display: flex; flex-direction: column; gap: 7px; }
 
 .job li {
   font-size: 12.5px;
@@ -210,13 +198,9 @@ body {
   top: 3px;
 }
 
-.job li .kw {
-  color: var(--text);
-  font-size: 11px;
-  opacity: 0.75;
-}
+.job li .kw { color: var(--text); font-size: 11px; opacity: 0.75; }
 
-/* ── Portfolio cards ─────────────────────────── */
+/* ── Portfolio cards ──────────────────────────── */
 .project {
   padding: 14px 16px;
   border: 1px solid var(--border);
@@ -226,40 +210,14 @@ body {
   transition: border-color 0.15s, box-shadow 0.15s;
 }
 
-.project:hover {
-  border-color: var(--v-bd);
-  box-shadow: 0 0 18px rgba(169,104,216,0.06);
-}
+.project:hover { border-color: var(--v-bd); box-shadow: 0 0 18px rgba(169,104,216,0.06); }
 
-.project-num {
-  font-family: var(--mono);
-  font-size: 9px;
-  color: var(--violet);
-  letter-spacing: 0.1em;
-  margin-bottom: 3px;
-}
+.project-num { font-family: var(--mono); font-size: 9px; color: var(--violet); letter-spacing: 0.1em; margin-bottom: 3px; }
+.project-name { font-weight: 600; font-size: 13.5px; margin-bottom: 5px; }
+.project-badge { font-family: var(--mono); font-size: 9.5px; color: var(--rose); margin-left: 8px; font-weight: 400; }
+.project-desc { font-size: 12px; color: var(--muted); line-height: 1.58; }
 
-.project-name {
-  font-weight: 600;
-  font-size: 13.5px;
-  margin-bottom: 5px;
-}
-
-.project-badge {
-  font-family: var(--mono);
-  font-size: 9.5px;
-  color: var(--rose);
-  margin-left: 8px;
-  font-weight: 400;
-}
-
-.project-desc {
-  font-size: 12px;
-  color: var(--muted);
-  line-height: 1.58;
-}
-
-/* ── Certifications ──────────────────────────── */
+/* ── Certifications ───────────────────────────── */
 .cert-group { margin-bottom: 20px; }
 
 .cert-group-label {
@@ -275,233 +233,62 @@ body {
   display: flex;
   align-items: baseline;
   padding: 5px 0;
-  border-bottom: 1px solid rgba(38, 20, 64, 0.7);
+  border-bottom: 1px solid rgba(38,20,64,0.7);
   font-size: 12.5px;
-  gap: 0;
 }
 
 .cert-item:last-child { border-bottom: none; }
 
-.cert-arrow {
-  font-family: var(--mono);
-  color: var(--violet);
-  margin-right: 8px;
-  font-size: 11px;
-  flex-shrink: 0;
-}
+.cert-arrow { font-family: var(--mono); color: var(--violet); margin-right: 8px; font-size: 11px; flex-shrink: 0; }
+.cert-name  { font-weight: 500; color: var(--text); flex: 1; }
+.cert-org   { color: var(--muted); font-size: 11.5px; margin-left: 6px; flex-shrink: 0; }
+.cert-date  { font-family: var(--mono); font-size: 10px; color: var(--rose); margin-left: 10px; white-space: nowrap; flex-shrink: 0; }
+.cert-note  { font-family: var(--mono); font-size: 10.5px; color: var(--muted); font-style: italic; padding: 6px 0 2px 18px; }
 
-.cert-name {
-  font-weight: 500;
-  color: var(--text);
-  flex: 1;
-}
-
-.cert-org {
-  color: var(--muted);
-  font-size: 11.5px;
-  margin-left: 6px;
-  flex-shrink: 0;
-}
-
-.cert-date {
-  font-family: var(--mono);
-  font-size: 10px;
-  color: var(--rose);
-  margin-left: 10px;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-.cert-note {
-  font-family: var(--mono);
-  font-size: 10.5px;
-  color: var(--muted);
-  font-style: italic;
-  padding: 6px 0 2px 18px;
-}
-
-/* ── Sidebar ─────────────────────────────────── */
+/* ── Sidebar ──────────────────────────────────── */
 .sidebar .section { margin-bottom: 32px; }
 
-.edu-degree {
-  font-weight: 600;
-  font-size: 13.5px;
-  margin-bottom: 4px;
-}
+.edu-degree { font-weight: 600; font-size: 13.5px; margin-bottom: 4px; }
+.edu-sub    { font-size: 12.5px; color: var(--muted); margin-bottom: 4px; }
+.edu-year   { font-family: var(--mono); font-size: 10.5px; color: var(--rose); margin-bottom: 10px; }
+.edu-note   { font-size: 11.5px; color: var(--muted); line-height: 1.6; border-left: 2px solid var(--border); padding-left: 10px; }
 
-.edu-sub {
-  font-size: 12.5px;
-  color: var(--muted);
-  margin-bottom: 4px;
-}
-
-.edu-year {
-  font-family: var(--mono);
-  font-size: 10.5px;
-  color: var(--rose);
-  margin-bottom: 10px;
-}
-
-.edu-note {
-  font-size: 11.5px;
-  color: var(--muted);
-  line-height: 1.6;
-  border-left: 2px solid var(--border);
-  padding-left: 10px;
-}
-
-.lang-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 7px 0;
-  border-bottom: 1px solid var(--border);
-  font-size: 13px;
-}
-
+.lang-row { display: flex; justify-content: space-between; align-items: center; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
 .lang-row:last-child { border: none; }
-
-.lang-level {
-  font-family: var(--mono);
-  font-size: 10px;
-  color: var(--muted);
-}
+.lang-level { font-family: var(--mono); font-size: 10px; color: var(--muted); }
 
 .skill-group { margin-bottom: 14px; }
+.skill-group-label { font-family: var(--mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 7px; }
+.tags { display: flex; flex-wrap: wrap; gap: 5px; }
+.tag { font-family: var(--mono); font-size: 10.5px; padding: 2px 8px; border-radius: 3px; border: 1px solid; }
+.tag.hi { background: var(--v-bg); color: var(--violet); border-color: var(--v-bd); }
+.tag.ro { background: var(--r-bg); color: var(--rose);   border-color: var(--r-bd); }
+.tag.lo { background: rgba(255,255,255,0.025); color: var(--muted); border-color: var(--border); }
 
-.skill-group-label {
-  font-family: var(--mono);
-  font-size: 9px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 7px;
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-}
-
-.tag {
-  font-family: var(--mono);
-  font-size: 10.5px;
-  padding: 2px 8px;
-  border-radius: 3px;
-  border: 1px solid;
-}
-
-.tag.hi {
-  background: var(--v-bg);
-  color: var(--violet);
-  border-color: var(--v-bd);
-}
-
-.tag.ro {
-  background: var(--r-bg);
-  color: var(--rose);
-  border-color: var(--r-bd);
-}
-
-.tag.lo {
-  background: rgba(255,255,255,0.025);
-  color: var(--muted);
-  border-color: var(--border);
-}
-
-/* ── Competition card ───────────────────────── */
-.comp-card {
-  padding: 14px 16px;
-  border: 1px solid var(--border);
-  border-radius: 5px;
-  background: var(--surface);
-  transition: border-color 0.15s;
-}
-
+/* ── Competition card ─────────────────────────── */
+.comp-card { padding: 14px 16px; border: 1px solid var(--border); border-radius: 5px; background: var(--surface); transition: border-color 0.15s; }
 .comp-card:hover { border-color: var(--r-bd); }
+.comp-name { font-weight: 600; font-size: 13.5px; margin-bottom: 3px; }
+.comp-meta { font-family: var(--mono); font-size: 9.5px; color: var(--rose); margin-bottom: 8px; letter-spacing: 0.04em; }
+.comp-desc { font-size: 12px; color: var(--muted); line-height: 1.55; }
 
-.comp-name {
-  font-weight: 600;
-  font-size: 13.5px;
-  margin-bottom: 3px;
-}
-
-.comp-meta {
-  font-family: var(--mono);
-  font-size: 9.5px;
-  color: var(--rose);
-  margin-bottom: 8px;
-  letter-spacing: 0.04em;
-}
-
-.comp-desc {
-  font-size: 12px;
-  color: var(--muted);
-  line-height: 1.55;
-}
-
-/* ── Volunteering ───────────────────────────── */
-.vol-item {
-  margin-bottom: 14px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid var(--border);
-}
-
+/* ── Volunteering ─────────────────────────────── */
+.vol-item { margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
 .vol-item:last-child { border: none; margin: 0; padding: 0; }
+.vol-org  { font-weight: 600; font-size: 12.5px; margin-bottom: 2px; }
+.vol-role { font-family: var(--mono); font-size: 10px; color: var(--rose); margin-bottom: 4px; }
+.vol-desc { font-size: 11.5px; color: var(--muted); line-height: 1.5; }
 
-.vol-org {
-  font-weight: 600;
-  font-size: 12.5px;
-  margin-bottom: 2px;
-}
-
-.vol-role {
-  font-family: var(--mono);
-  font-size: 10px;
-  color: var(--rose);
-  margin-bottom: 4px;
-}
-
-.vol-desc {
-  font-size: 11.5px;
-  color: var(--muted);
-  line-height: 1.5;
-}
-
-/* ── Workshops ──────────────────────────────── */
-.ws-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  padding: 6px 0;
-  border-bottom: 1px solid rgba(38, 20, 64, 0.6);
-  font-size: 12px;
-}
-
+/* ── Workshops ────────────────────────────────── */
+.ws-item { display: flex; align-items: flex-start; gap: 8px; padding: 6px 0; border-bottom: 1px solid rgba(38,20,64,0.6); font-size: 12px; }
 .ws-item:last-child { border: none; }
+.ws-arrow { color: var(--violet); font-family: var(--mono); font-size: 10px; flex-shrink: 0; margin-top: 2px; }
+.ws-name  { font-weight: 500; margin-bottom: 1px; }
+.ws-desc  { font-size: 11px; color: var(--muted); }
 
-.ws-arrow {
-  color: var(--violet);
-  font-family: var(--mono);
-  font-size: 10px;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-
-.ws-name {
-  font-weight: 500;
-  margin-bottom: 1px;
-}
-
-.ws-desc {
-  font-size: 11px;
-  color: var(--muted);
-}
-
-/* ═══════════════════════════════════════════════════════════════ */
-/*  CERTIFICATES GALLERY                                           */
-/* ═══════════════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════ */
+/*  CERTIFICATES GALLERY                           */
+/* ═══════════════════════════════════════════════ */
 
 .gallery-wrapper {
   max-width: 900px;
@@ -516,9 +303,7 @@ body {
   margin-bottom: 52px;
 }
 
-.gallery-header {
-  margin-bottom: 32px;
-}
+.gallery-header { margin-bottom: 32px; }
 
 .gallery-title {
   font-family: var(--mono);
@@ -539,15 +324,8 @@ body {
   background: linear-gradient(to right, var(--border) 0%, transparent 100%);
 }
 
-.gallery-subtitle {
-  font-family: var(--mono);
-  font-size: 10.5px;
-  color: var(--muted);
-}
-
-.gallery-subtitle span {
-  color: var(--rose);
-}
+.gallery-subtitle { font-family: var(--mono); font-size: 10.5px; color: var(--muted); }
+.gallery-subtitle span { color: var(--rose); }
 
 /* Grid */
 .certs-grid {
@@ -572,17 +350,15 @@ body {
 .cert-card:hover {
   border-color: var(--v-bd);
   transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(169, 104, 216, 0.13);
+  box-shadow: 0 16px 40px rgba(169,104,216,0.13);
 }
 
 .cert-card:hover .cert-card-zoom { opacity: 1; }
 
-/* Zoom hint */
 .cert-card-zoom {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  background: rgba(9, 6, 15, 0.72);
+  top: 10px; right: 10px;
+  background: rgba(9,6,15,0.72);
   border: 1px solid var(--v-bd);
   border-radius: 4px;
   padding: 3px 7px;
@@ -596,7 +372,6 @@ body {
   z-index: 2;
 }
 
-/* Card header */
 .cert-card-header { padding: 12px 14px 11px; }
 
 .cert-card-num {
@@ -616,14 +391,8 @@ body {
   margin-bottom: 4px;
 }
 
-.cert-card-org {
-  font-size: 10px;
-  color: var(--violet);
-  line-height: 1.3;
-  opacity: 0.85;
-}
+.cert-card-org { font-size: 10px; color: var(--violet); line-height: 1.3; opacity: 0.85; }
 
-/* Image area */
 .cert-card-img-wrap {
   background: #f7f5fa;
   display: flex;
@@ -637,8 +406,7 @@ body {
 }
 
 .cert-card-img-wrap img {
-  width: 100%;
-  height: 100%;
+  width: 100%; height: 100%;
   object-fit: contain;
   display: block;
   transition: transform 0.3s ease;
@@ -646,12 +414,8 @@ body {
 
 .cert-card:hover .cert-card-img-wrap img { transform: scale(1.03); }
 
-.cert-card.poster .cert-card-img-wrap {
-  height: 230px;
-  background: #f0eef4;
-}
+.cert-card.poster .cert-card-img-wrap { height: 230px; background: #f0eef4; }
 
-/* Card footer */
 .cert-card-footer {
   padding: 9px 14px 10px;
   display: flex;
@@ -659,13 +423,7 @@ body {
   gap: 8px;
 }
 
-.cert-card-date {
-  font-family: var(--mono);
-  font-size: 9.5px;
-  color: var(--rose);
-  flex: 1;
-}
-
+.cert-card-date  { font-family: var(--mono); font-size: 9.5px; color: var(--rose); flex: 1; }
 .cert-card-badge {
   font-family: var(--mono);
   font-size: 8px;
@@ -679,11 +437,11 @@ body {
   flex-shrink: 0;
 }
 
-/* ─── Lightbox ──────────────────────────────────────────────── */
+/* ─── Lightbox ──────────────────────────────── */
 .lightbox-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(9, 6, 15, 0.97);
+  background: rgba(9,6,15,0.97);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -695,10 +453,7 @@ body {
   padding: 20px 20px 60px;
 }
 
-.lightbox-overlay.open {
-  opacity: 1;
-  pointer-events: all;
-}
+.lightbox-overlay.open { opacity: 1; pointer-events: all; }
 
 .lightbox-img-box {
   position: relative;
@@ -714,40 +469,19 @@ body {
   max-height: 80vh;
   object-fit: contain;
   border-radius: 6px;
-  box-shadow: 0 0 100px rgba(169, 104, 216, 0.16), 0 0 40px rgba(0,0,0,0.6);
+  box-shadow: 0 0 100px rgba(169,104,216,0.16), 0 0 40px rgba(0,0,0,0.6);
   display: block;
 }
 
-.lightbox-meta {
-  margin-top: 20px;
-  text-align: center;
-}
-
-.lightbox-meta-name {
-  font-family: var(--mono);
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--text);
-  margin-bottom: 4px;
-}
-
-.lightbox-meta-org {
-  font-size: 11px;
-  color: var(--violet);
-  margin-bottom: 4px;
-}
-
-.lightbox-meta-date {
-  font-family: var(--mono);
-  font-size: 10px;
-  color: var(--rose);
-}
+.lightbox-meta { margin-top: 20px; text-align: center; }
+.lightbox-meta-name { font-family: var(--mono); font-size: 12px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+.lightbox-meta-org  { font-size: 11px; color: var(--violet); margin-bottom: 4px; }
+.lightbox-meta-date { font-family: var(--mono); font-size: 10px; color: var(--rose); }
 
 .lightbox-close-btn {
   position: fixed;
-  top: 18px;
-  right: 24px;
-  background: rgba(38, 20, 64, 0.6);
+  top: 18px; right: 24px;
+  background: rgba(38,20,64,0.6);
   border: 1px solid var(--border);
   border-radius: 5px;
   color: var(--muted);
@@ -762,7 +496,7 @@ body {
 }
 
 .lightbox-close-btn:hover {
-  background: rgba(212, 104, 158, 0.12);
+  background: rgba(212,104,158,0.12);
   color: var(--rose);
   border-color: var(--r-bd);
 }
@@ -780,29 +514,24 @@ body {
   white-space: nowrap;
 }
 
-/* ── Mobile ─────────────────────────────────── */
+/* ── Mobile ───────────────────────────────────── */
 @media (max-width: 680px) {
-  .page        { padding: 36px 18px 60px; }
-  .layout      { grid-template-columns: 1fr; gap: 0; }
-  .sidebar {
-    border-top: 1px solid var(--border);
-    padding-top: 40px;
-    margin-top: 4px;
-  }
-  .cert-item   { flex-wrap: wrap; gap: 2px; }
-  .cert-date   { margin-left: 0; }
-  .job-top     { flex-direction: column; gap: 2px; }
-
-  .gallery-wrapper  { padding: 0 18px 60px; }
-  .certs-grid       { grid-template-columns: 1fr; }
+  .page   { padding: 36px 18px 60px; }
+  .layout { grid-template-columns: 1fr; gap: 0; }
+  .sidebar { border-top: 1px solid var(--border); padding-top: 40px; margin-top: 4px; }
+  .cert-item  { flex-wrap: wrap; gap: 2px; }
+  .cert-date  { margin-left: 0; }
+  .job-top    { flex-direction: column; gap: 2px; }
+  .gallery-wrapper { padding: 0 18px 60px; }
+  .certs-grid { grid-template-columns: 1fr; }
   .cert-card-img-wrap { height: 160px; }
   .cert-card.poster .cert-card-img-wrap { height: 180px; }
 }
 
 @media print {
-  body         { background: #fff; color: #111; }
-  .name        { -webkit-text-fill-color: #7B3FBE; }
-  .cursor      { display: none; }
+  body { background: #fff; color: #111; }
+  .name { -webkit-text-fill-color: #7B3FBE; }
+  .cursor { display: none; }
   .gallery-wrapper { display: none; }
 }
 </style>
@@ -838,7 +567,7 @@ body {
         <div class="job">
           <div class="job-top">
             <div class="job-company">GREENADO &mdash; Eco-Friendly Structural Prototype</div>
-            <div class="job-date">S1 &middot; 2025/2026</div>
+            <div class="job-date">S1 &middot; 2026</div>
           </div>
           <div class="job-role">Menofia STEM School &middot; Grade 10 &middot; Group 20106 &middot; Team: Kenzy Raafat, Shahd, Salma, Renad</div>
           <ul>
@@ -885,40 +614,40 @@ body {
 
         <div class="cert-group">
           <div class="cert-group-label">Digital Egypt Cubs Initiative &mdash; Udacity &middot; MoICT Egypt</div>
-          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Level Three: Data Science and AI &mdash; Nanodegree</span><span class="cert-date">Oct 2025</span></div>
-          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Level Two &mdash; Nanodegree</span><span class="cert-date">Oct 2024</span></div>
-          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Lite One &mdash; Nanodegree</span><span class="cert-date">Oct 2023</span></div>
+          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Level Three: Data Science and AI &mdash; Nanodegree</span><span class="cert-date">2025</span></div>
+          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Level Two &mdash; Nanodegree</span><span class="cert-date">2024</span></div>
+          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Lite One &mdash; Nanodegree</span><span class="cert-date">2023</span></div>
           <div class="cert-note">Level Four in progress via iSchool + Udacity partnership.</div>
         </div>
 
         <div class="cert-group">
           <div class="cert-group-label">Huawei ICT Academy &middot; CRA Training Program</div>
-          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">AI Basic: Overview of AI</span><span class="cert-date">Dec 2025</span></div>
-          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Development and Basic Concepts of Cloud Computing</span><span class="cert-date">Dec 2025</span></div>
-          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Information Representation and Data Organization</span><span class="cert-date">Jan 2026</span></div>
-          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Python Programming Basics</span><span class="cert-date">Jan 2026</span></div>
+          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">AI Basic: Overview of AI</span><span class="cert-date">2025</span></div>
+          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Development and Basic Concepts of Cloud Computing</span><span class="cert-date">2025</span></div>
+          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Information Representation and Data Organization</span><span class="cert-date">2026</span></div>
+          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Python Programming Basics</span><span class="cert-date">2026</span></div>
         </div>
 
         <div class="cert-group">
           <div class="cert-group-label">TOFAS &mdash; International Test of Fundamental Academic Skills</div>
-          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">JavaScript Level 3</span><span class="cert-date">Jul 2026</span></div>
-          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">JavaScript Level 2</span><span class="cert-date">Jun 2026</span></div>
-          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">JavaScript Level 1</span></div>
+          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">JavaScript Level 3</span><span class="cert-date">2026</span></div>
+          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">JavaScript Level 2</span><span class="cert-date">2026</span></div>
+          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">JavaScript Level 1</span><span class="cert-date">2025</span></div>
         </div>
 
         <div class="cert-group">
           <div class="cert-group-label">Language &amp; Art Certifications</div>
           <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">French DELF A1 &mdash; Language Proficiency Certificate</span></div>
-          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">TREFLE Art Competition &mdash; 1st Prize (French)</span><span class="cert-date">Nov 2024</span></div>
-          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Chinese My Dream Art Competition &mdash; 2nd Position (African Region)</span></div>
+          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">TREFLE Art Competition &mdash; 1st Prize (French)</span><span class="cert-date">2024</span></div>
+          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Chinese My Dream Art Competition &mdash; 2nd Position (African Region)</span><span class="cert-date">2023</span></div>
         </div>
 
         <div class="cert-group">
           <div class="cert-group-label">Individual Certifications</div>
-          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Generative AI for Beginners</span><span class="cert-org">&mdash; Simplilearn SkillUp</span><span class="cert-date">Jul 2026</span></div>
-          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Robotics and Programming (Arduino) Level 1</span><span class="cert-org">&mdash; EGY STEM</span><span class="cert-date">Jun 2026</span></div>
-          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Leadership Training Course</span><span class="cert-org">&mdash; DemocraShe</span><span class="cert-date">Jul 2026</span></div>
-          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">SheShines Online Workshop &mdash; Certificate of Completion</span></div>
+          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Generative AI for Beginners</span><span class="cert-org">&mdash; Simplilearn SkillUp</span><span class="cert-date">2026</span></div>
+          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Robotics and Programming (Arduino) Level 1</span><span class="cert-org">&mdash; EGY STEM</span><span class="cert-date">2026</span></div>
+          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Leadership Training Course</span><span class="cert-org">&mdash; DemocraShe</span><span class="cert-date">2026</span></div>
+          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">SheShines Online Workshop &mdash; Certificate of Completion</span><span class="cert-date">2026</span></div>
           <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Translation Workshop</span><span class="cert-org">&mdash; Lingua Stochos</span></div>
           <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Microsoft Word &amp; Excel Workshop</span><span class="cert-org">&mdash; Lingua Stochos</span></div>
           <div class="cert-note">In progress: EDX &middot; Microsoft Learn &middot; Google &middot; Harvard Online &middot; Cybersecurity &amp; Data Analysis &middot; SPRIX (Japan)</div>
@@ -1042,22 +771,22 @@ body {
 </div>
 
 
-<!-- ─────────────────────────────────────────────── -->
-<!--  CERTIFICATES & AWARDS GALLERY                  -->
-<!-- ─────────────────────────────────────────────── -->
+<!-- ─────────────────────────────────────────── -->
+<!--  CERTIFICATES & AWARDS GALLERY              -->
+<!-- ─────────────────────────────────────────── -->
 
 <div class="gallery-wrapper">
   <div class="gallery-divider"></div>
   <div class="gallery-header">
     <div class="gallery-title">Certificates &amp; Awards Gallery</div>
     <div class="gallery-subtitle">
-      <span id="certCount"></span> certificates &middot; Click any card to view full size
+      <span id="certCount"></span> certificates &middot; newest first &middot; click any card to view full size
     </div>
   </div>
   <div class="certs-grid" id="certsGrid"></div>
 </div>
 
-<!-- ── Lightbox ──────────────────────────────────── -->
+<!-- ── Lightbox ────────────────────────────────── -->
 <div class="lightbox-overlay" id="lightboxOverlay" role="dialog" aria-modal="true" aria-label="Certificate viewer">
   <button class="lightbox-close-btn" id="lightboxClose" aria-label="Close">X ESC</button>
   <div class="lightbox-img-box">
@@ -1072,64 +801,61 @@ body {
 </div>
 
 <script>
-// =============================================================
-//  CERTS — 25 total
-//  All image paths use spaces to match exact GitHub filenames.
+// =====================================================
+//  CERTS — 25 total, sorted newest → oldest (year only)
 //
-//  NOTE: Cards 7 & 8 (DemocraShe + Generative AI) are mapped
-//  to the three unmapped Aug-06 files (215357, 215412, 215439).
-//  Open those files locally and swap the paths below to match
-//  the correct certificates. The third unmapped file (215357)
-//  is assigned to the SheShines cert (#16).
-// =============================================================
+//  2026 (12) → 2025 (7) → 2024 (2) → 2023 (2) → undated (2)
+//
+//  Cards 7 & 8 (DemocraShe + Generative AI) use the
+//  three unmapped Aug-06 screenshots. Open them locally
+//  to verify and swap the img path if needed:
+//    215357.png, 215412.png, 215439.png
+// =====================================================
 const CERTS = [
 
-  // 01 ── Udacity Nanodegrees ────────────────────────────────
-  {
-    name:  "Level Three: Data Science and AI \u2014 Nanodegree",
-    org:   "Digital Egypt Cubs Initiative \u00b7 Udacity \u00b7 MoICT Egypt",
-    date:  "October 2025",
-    img:   "certs/Screenshot 2026-07-19 235213.png",
-    badge: "Nanodegree"
-  },
+  /* ── 2026 ──────────────────────────────────────── */
 
-  // 02
-  {
-    name:  "Level Two \u2014 Nanodegree",
-    org:   "Digital Egypt Cubs Initiative \u00b7 Udacity \u00b7 MoICT Egypt",
-    date:  "October 2024",
-    img:   "certs/Screenshot 2026-07-19 235256.png",
-    badge: "Nanodegree"
-  },
-
-  // 03
-  {
-    name:  "Lite One \u2014 Nanodegree",
-    org:   "Digital Egypt Cubs Initiative \u00b7 Udacity \u00b7 MoICT Egypt",
-    date:  "October 2023",
-    img:   "certs/Screenshot 2026-07-19 235619.png",
-    badge: "Nanodegree"
-  },
-
-  // 04 ── TOFAS ──────────────────────────────────────────────
+  // 01
   {
     name:  "JavaScript Level 3",
     org:   "TOFAS \u2014 International Test of Fundamental Academic Skills",
-    date:  "July 30, 2026",
+    date:  "2026",
     img:   "certs/Screenshot 2026-08-06 215457.png",
     badge: "Achievement"
   },
-
-  // 05
+  // 02
   {
     name:  "JavaScript Level 2",
     org:   "TOFAS \u2014 International Test of Fundamental Academic Skills",
-    date:  "June 11, 2026",
+    date:  "2026",
     img:   "certs/Screenshot 2026-07-19 235827.png",
     badge: "Achievement"
   },
-
-  // 06 ── STEAM for All ──────────────────────────────────────
+  // 03 — VERIFY: open 215412.png locally; swap if wrong
+  {
+    name:  "Leadership Training Course \u2014 Certificate of Graduation",
+    org:   "DemocraShe \u00b7 Engage. Empower. Elect.",
+    date:  "2026",
+    img:   "certs/Screenshot 2026-08-06 215412.png",
+    badge: "Completion"
+  },
+  // 04 — VERIFY: open 215439.png locally; swap if wrong
+  {
+    name:  "Generative AI for Beginners",
+    org:   "Simplilearn SkillUp",
+    date:  "2026",
+    img:   "certs/Screenshot 2026-08-06 215439.png",
+    badge: "Completion"
+  },
+  // 05
+  {
+    name:  "Robotics and Programming (Arduino) Level 1",
+    org:   "EGY STEM \u2014 Certificate of Appreciation",
+    date:  "2026",
+    img:   "certs/Screenshot 2026-07-19 235238.png",
+    badge: "Completion"
+  },
+  // 06
   {
     name:  "Certificate of Exceptional Efficiency",
     org:   "STEAM for All",
@@ -1137,30 +863,7 @@ const CERTS = [
     img:   "certs/Screenshot 2026-08-06 215425.png",
     badge: "Award"
   },
-
-  // 07 ── DemocraShe ─────────────────────────────────────────
-  // VERIFY: check Screenshot 2026-08-06 215412.png locally.
-  // If it is not this cert, swap the path for the correct one.
-  {
-    name:  "Leadership Training Course \u2014 Certificate of Graduation",
-    org:   "DemocraShe \u00b7 Engage. Empower. Elect.",
-    date:  "July 18, 2026",
-    img:   "certs/Screenshot 2026-08-06 215412.png",
-    badge: "Completion"
-  },
-
-  // 08 ── Generative AI ──────────────────────────────────────
-  // VERIFY: check Screenshot 2026-08-06 215439.png locally.
-  // If it is not this cert, swap the path for the correct one.
-  {
-    name:  "Generative AI for Beginners",
-    org:   "Simplilearn SkillUp",
-    date:  "July 19, 2026",
-    img:   "certs/Screenshot 2026-08-06 215439.png",
-    badge: "Completion"
-  },
-
-  // 09 ── Break the Code ─────────────────────────────────────
+  // 07
   {
     name:  "Break the Code 2026",
     org:   "Certificate of Completion \u00b7 Sponsored by Mobbin",
@@ -1168,66 +871,7 @@ const CERTS = [
     img:   "certs/Screenshot 2026-08-06 215348.png",
     badge: "Completion"
   },
-
-  // 10 ── STEM Posters ───────────────────────────────────────
-  {
-    name:   "GREENADO \u2014 Eco-Friendly Building System",
-    org:    "STEM Research Project Poster \u00b7 Menofia STEM School \u00b7 S1 2025/2026",
-    date:   "Semester 1, 2025/2026",
-    img:    "certs/Screenshot 2026-07-20 013120.png",
-    badge:  "Poster",
-    poster: true
-  },
-
-  // 11
-  {
-    name:   "GALVINO \u2014 Galvanic Cell Energy Generator",
-    org:    "STEM Research Project Poster \u00b7 Menofia STEM School \u00b7 S2 2026",
-    date:   "Semester 2, 2026",
-    img:    "certs/Screenshot 2026-07-20 013110.png",
-    badge:  "Poster",
-    poster: true
-  },
-
-  // 12 ── Art & Language ─────────────────────────────────────
-  {
-    name:  "1er Prix \u2014 French Art Competition",
-    org:   "TREFLE \u00b7 Institut Fran\u00e7ais \u00b7 Ambassade de France en \u00c9gypte",
-    date:  "November 19, 2024",
-    img:   "certs/Screenshot 2026-07-20 010758.png",
-    badge: "1st Prize"
-  },
-
-  // 13
-  {
-    name:  "DELF Prep Course \u2014 Certificate of Appreciation",
-    org:   "Misr El-Bursa IDEL School",
-    date:  "2025",
-    img:   "certs/Screenshot 2026-07-20 010748.png",
-    badge: "Appreciation"
-  },
-
-  // 14
-  {
-    name:  "Chinese My Dream Art \u2014 2nd Position, African Region",
-    org:   "Chinese Cultural Art Competition",
-    date:  "2023",
-    img:   "certs/Screenshot 2026-07-20 010740.png",
-    badge: "2nd Place"
-  },
-
-  // 15 ── DIGITOPIA ──────────────────────────────────────────
-  {
-    name:  "DIGITOPIA \u2014 Certificate of Appreciation (Games & Digital Arts Track)",
-    org:   "Ministry of Communications & IT, Egypt \u00b7 Edition 1 \u00b7 2025",
-    date:  "2025",
-    img:   "certs/Screenshot 2026-07-19 235949.png",
-    badge: "Appreciation"
-  },
-
-  // 16 ── SheShines ──────────────────────────────────────────
-  // VERIFY: check Screenshot 2026-08-06 215357.png locally.
-  // If it is not this cert, swap the path for the correct one.
+  // 08 — VERIFY: open 215357.png locally; swap if wrong
   {
     name:  "Study Abroad: What You Need to Know \u2014 Certificate of Completion",
     org:   "SheShines \u00b7 Study Abroad, Scholarships & STEM Pathways",
@@ -1235,17 +879,92 @@ const CERTS = [
     img:   "certs/Screenshot 2026-08-06 215357.png",
     badge: "Completion"
   },
+  // 09
+  {
+    name:   "GALVINO \u2014 Galvanic Cell Energy Generator",
+    org:    "STEM Research Project Poster \u00b7 Menofia STEM School \u00b7 S2 2026",
+    date:   "2026",
+    img:    "certs/Screenshot 2026-07-20 013110.png",
+    badge:  "Poster",
+    poster: true
+  },
+  // 10
+  {
+    name:   "GREENADO \u2014 Eco-Friendly Building System",
+    org:    "STEM Research Project Poster \u00b7 Menofia STEM School \u00b7 S1 2026",
+    date:   "2026",
+    img:    "certs/Screenshot 2026-07-20 013120.png",
+    badge:  "Poster",
+    poster: true
+  },
+  // 11
+  {
+    name:  "Python Programming Basics",
+    org:   "Huawei ICT Academy \u2014 Certificate of Completion",
+    date:  "2026",
+    img:   "certs/Screenshot 2026-07-19 235740.png",
+    badge: "Completion"
+  },
+  // 12
+  {
+    name:  "Information Representation and Data Organization",
+    org:   "Huawei ICT Academy \u2014 Certificate of Completion",
+    date:  "2026",
+    img:   "certs/Screenshot 2026-07-19 235801.png",
+    badge: "Completion"
+  },
 
+  /* ── 2025 ──────────────────────────────────────── */
+
+  // 13
+  {
+    name:  "Level Three: Data Science and AI \u2014 Nanodegree",
+    org:   "Digital Egypt Cubs Initiative \u00b7 Udacity \u00b7 MoICT Egypt",
+    date:  "2025",
+    img:   "certs/Screenshot 2026-07-19 235213.png",
+    badge: "Nanodegree"
+  },
+  // 14
+  {
+    name:  "Development and Basic Concepts of Cloud Computing",
+    org:   "Huawei ICT Academy \u2014 Certificate of Completion",
+    date:  "2025",
+    img:   "certs/Screenshot 2026-07-19 235751.png",
+    badge: "Completion"
+  },
+  // 15
+  {
+    name:  "AI Basic: Overview of AI (CRA Training Program)",
+    org:   "Huawei ICT Academy \u2014 Certificate of Completion",
+    date:  "2025",
+    img:   "certs/Screenshot 2026-07-19 235727.png",
+    badge: "Completion"
+  },
+  // 16
+  {
+    name:  "DELF Prep Course \u2014 Certificate of Appreciation",
+    org:   "Misr El-Bursa IDEL School",
+    date:  "2025",
+    img:   "certs/Screenshot 2026-07-20 010748.png",
+    badge: "Appreciation"
+  },
   // 17
   {
+    name:  "DIGITOPIA \u2014 Certificate of Appreciation (Games & Digital Arts Track)",
+    org:   "Ministry of Communications & IT, Egypt \u00b7 Edition 1",
+    date:  "2025",
+    img:   "certs/Screenshot 2026-07-19 235949.png",
+    badge: "Appreciation"
+  },
+  // 18
+  {
     name:  "DIGITOPIA \u2014 Certificate of Appreciation (Effective Participation)",
-    org:   "Ministry of Communications & IT, Egypt \u00b7 Edition 1 \u00b7 2025",
+    org:   "Ministry of Communications & IT, Egypt \u00b7 Edition 1",
     date:  "2025",
     img:   "certs/Screenshot 2026-07-19 235850.png",
     badge: "Appreciation"
   },
-
-  // 18 ── TOFAS Level 1 ──────────────────────────────────────
+  // 19
   {
     name:  "JavaScript Level 1",
     org:   "TOFAS \u2014 International Test of Fundamental Academic Skills",
@@ -1254,52 +973,47 @@ const CERTS = [
     badge: "Achievement"
   },
 
-  // 19 ── Huawei ICT Academy ─────────────────────────────────
-  {
-    name:  "Information Representation and Data Organization",
-    org:   "Huawei ICT Academy \u2014 Certificate of Completion",
-    date:  "January 28, 2026",
-    img:   "certs/Screenshot 2026-07-19 235801.png",
-    badge: "Completion"
-  },
+  /* ── 2024 ──────────────────────────────────────── */
 
   // 20
   {
-    name:  "Development and Basic Concepts of Cloud Computing",
-    org:   "Huawei ICT Academy \u2014 Certificate of Completion",
-    date:  "December 24, 2025",
-    img:   "certs/Screenshot 2026-07-19 235751.png",
-    badge: "Completion"
+    name:  "Level Two \u2014 Nanodegree",
+    org:   "Digital Egypt Cubs Initiative \u00b7 Udacity \u00b7 MoICT Egypt",
+    date:  "2024",
+    img:   "certs/Screenshot 2026-07-19 235256.png",
+    badge: "Nanodegree"
   },
-
   // 21
   {
-    name:  "Python Programming Basics",
-    org:   "Huawei ICT Academy \u2014 Certificate of Completion",
-    date:  "January 30, 2026",
-    img:   "certs/Screenshot 2026-07-19 235740.png",
-    badge: "Completion"
+    name:  "1er Prix \u2014 French Art Competition",
+    org:   "TREFLE \u00b7 Institut Fran\u00e7ais \u00b7 Ambassade de France en \u00c9gypte",
+    date:  "2024",
+    img:   "certs/Screenshot 2026-07-20 010758.png",
+    badge: "1st Prize"
   },
+
+  /* ── 2023 ──────────────────────────────────────── */
 
   // 22
   {
-    name:  "AI Basic: Overview of AI (CRA Training Program)",
-    org:   "Huawei ICT Academy \u2014 Certificate of Completion",
-    date:  "December 12, 2025",
-    img:   "certs/Screenshot 2026-07-19 235727.png",
-    badge: "Completion"
+    name:  "Lite One \u2014 Nanodegree",
+    org:   "Digital Egypt Cubs Initiative \u00b7 Udacity \u00b7 MoICT Egypt",
+    date:  "2023",
+    img:   "certs/Screenshot 2026-07-19 235619.png",
+    badge: "Nanodegree"
   },
-
-  // 23 ── EGY STEM ────────────────────────────────────────────
+  // 23
   {
-    name:  "Robotics and Programming (Arduino) Level 1",
-    org:   "EGY STEM \u2014 Certificate of Appreciation",
-    date:  "June 2026",
-    img:   "certs/Screenshot 2026-07-19 235238.png",
-    badge: "Completion"
+    name:  "Chinese My Dream Art \u2014 2nd Position, African Region",
+    org:   "Chinese Cultural Art Competition",
+    date:  "2023",
+    img:   "certs/Screenshot 2026-07-20 010740.png",
+    badge: "2nd Place"
   },
 
-  // 24 ── Lingua Stochos ─────────────────────────────────────
+  /* ── Undated ────────────────────────────────────── */
+
+  // 24
   {
     name:  "Translation Workshop \u2014 Certificate of Achievement",
     org:   "Lingua Stochos",
@@ -1307,7 +1021,6 @@ const CERTS = [
     img:   "certs/Screenshot 2026-07-19 235656.png",
     badge: "Achievement"
   },
-
   // 25
   {
     name:  "Microsoft Word & Excel Workshop \u2014 Certificate of Appreciation",
@@ -1319,10 +1032,10 @@ const CERTS = [
 
 ];
 
-/* ── Dynamic cert count ───────────────────────── */
+/* ── Dynamic cert count ─────────────────────── */
 document.getElementById('certCount').textContent = CERTS.length;
 
-/* ── Lightbox helpers ─────────────────────────── */
+/* ── Lightbox helpers ───────────────────────── */
 var overlay = document.getElementById('lightboxOverlay');
 var lbImg   = document.getElementById('lightboxImg');
 var lbName  = document.getElementById('lightboxName');
@@ -1346,7 +1059,7 @@ function closeLightbox() {
   lbImg.src = '';
 }
 
-/* ── Placeholder SVG for missing images ───────── */
+/* ── Placeholder SVG for missing images ─────── */
 var phSVG = "data:image/svg+xml," + encodeURIComponent(
   '<svg xmlns="http://www.w3.org/2000/svg" width="320" height="200">' +
     '<rect fill="#110A1C" width="320" height="200"/>' +
@@ -1359,7 +1072,7 @@ var phSVG = "data:image/svg+xml," + encodeURIComponent(
   '</svg>'
 );
 
-/* ── Build grid ──────────────────────────────── */
+/* ── Build grid ─────────────────────────────── */
 var grid  = document.getElementById('certsGrid');
 var TOTAL = CERTS.length;
 
@@ -1381,7 +1094,7 @@ CERTS.forEach(function(cert, i) {
       '<img src="' + cert.img + '" alt="' + cert.name + '" loading="lazy" />' +
     '</div>' +
     '<div class="cert-card-footer">' +
-      '<div class="cert-card-date">' + (cert.date ? cert.date : '') + '</div>' +
+      '<div class="cert-card-date">' + (cert.date || '') + '</div>' +
       (cert.badge ? '<div class="cert-card-badge">' + cert.badge + '</div>' : '') +
     '</div>';
 
@@ -1398,7 +1111,7 @@ CERTS.forEach(function(cert, i) {
   grid.appendChild(card);
 });
 
-/* ── Lightbox controls ─────────────────────── */
+/* ── Lightbox controls ──────────────────────── */
 lbClose.addEventListener('click', closeLightbox);
 overlay.addEventListener('click', function(e) { if (e.target === overlay) closeLightbox(); });
 document.addEventListener('keydown', function(e) {
