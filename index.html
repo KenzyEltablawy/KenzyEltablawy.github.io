@@ -644,6 +644,10 @@ body {
 
         <div class="cert-group">
           <div class="cert-group-label">Individual Certifications</div>
+          <!-- ★ NEW: Sololearn — Social Media Marketing with AI -->
+          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Social Media Marketing with AI</span><span class="cert-org">&mdash; Sololearn</span><span class="cert-date">Aug 2026</span></div>
+          <!-- ★ NEW: HP LIFE — Effective Leadership -->
+          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Effective Leadership</span><span class="cert-org">&mdash; HP LIFE &middot; HP Foundation</span><span class="cert-date">Aug 2026</span></div>
           <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Generative AI for Beginners</span><span class="cert-org">&mdash; Simplilearn SkillUp</span><span class="cert-date">2026</span></div>
           <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Robotics and Programming (Arduino) Level 1</span><span class="cert-org">&mdash; EGY STEM</span><span class="cert-date">2026</span></div>
           <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Leadership Training Course</span><span class="cert-org">&mdash; DemocraShe</span><span class="cert-date">2026</span></div>
@@ -802,20 +806,30 @@ body {
 
 <script>
 // =====================================================
-//  CERTS — 25 total, sorted newest → oldest (year only)
-//
-//  2026 (12) → 2025 (7) → 2024 (2) → 2023 (2) → undated (2)
-//
-//  Cards 7 & 8 (DemocraShe + Generative AI) use the
-//  three unmapped Aug-06 screenshots. Open them locally
-//  to verify and swap the img path if needed:
-//    215357.png, 215412.png, 215439.png
+//  CERTS — 27 total, sorted newest → oldest
+//  2026 (14) → 2025 (7) → 2024 (2) → 2023 (2) → undated (2)
 // =====================================================
 const CERTS = [
 
   /* ── 2026 ──────────────────────────────────────── */
 
-  // 01
+  // ★ 01 — NEW: Sololearn — Social Media Marketing with AI
+  {
+    name:  "Social Media Marketing with AI",
+    org:   "Sololearn \u2014 Course Certificate",
+    date:  "Aug 2026",
+    img:   "certs/Screenshot_2026-08-08_022303.png",
+    badge: "Completion"
+  },
+  // ★ 02 — NEW: HP LIFE — Effective Leadership
+  {
+    name:  "Effective Leadership",
+    org:   "HP LIFE \u00b7 HP Foundation \u2014 Certificate of Completion",
+    date:  "Aug 2026",
+    img:   "certs/Screenshot_2026-08-08_022336.png",
+    badge: "Completion"
+  },
+  // 03
   {
     name:  "JavaScript Level 3",
     org:   "TOFAS \u2014 International Test of Fundamental Academic Skills",
@@ -823,7 +837,7 @@ const CERTS = [
     img:   "certs/Screenshot 2026-08-06 215457.png",
     badge: "Achievement"
   },
-  // 02
+  // 04
   {
     name:  "JavaScript Level 2",
     org:   "TOFAS \u2014 International Test of Fundamental Academic Skills",
@@ -831,7 +845,7 @@ const CERTS = [
     img:   "certs/Screenshot 2026-07-19 235827.png",
     badge: "Achievement"
   },
-  // 03 — VERIFY: open 215412.png locally; swap if wrong
+  // 05
   {
     name:  "Leadership Training Course \u2014 Certificate of Graduation",
     org:   "DemocraShe \u00b7 Engage. Empower. Elect.",
@@ -839,7 +853,7 @@ const CERTS = [
     img:   "certs/Screenshot 2026-08-06 215412.png",
     badge: "Completion"
   },
-  // 04 — VERIFY: open 215439.png locally; swap if wrong
+  // 06
   {
     name:  "Generative AI for Beginners",
     org:   "Simplilearn SkillUp",
@@ -847,7 +861,7 @@ const CERTS = [
     img:   "certs/Screenshot 2026-08-06 215439.png",
     badge: "Completion"
   },
-  // 05
+  // 07
   {
     name:  "Robotics and Programming (Arduino) Level 1",
     org:   "EGY STEM \u2014 Certificate of Appreciation",
@@ -855,7 +869,7 @@ const CERTS = [
     img:   "certs/Screenshot 2026-07-19 235238.png",
     badge: "Completion"
   },
-  // 06
+  // 08
   {
     name:  "Certificate of Exceptional Efficiency",
     org:   "STEAM for All",
@@ -863,7 +877,7 @@ const CERTS = [
     img:   "certs/Screenshot 2026-08-06 215425.png",
     badge: "Award"
   },
-  // 07
+  // 09
   {
     name:  "Break the Code 2026",
     org:   "Certificate of Completion \u00b7 Sponsored by Mobbin",
@@ -871,7 +885,7 @@ const CERTS = [
     img:   "certs/Screenshot 2026-08-06 215348.png",
     badge: "Completion"
   },
-  // 08 — VERIFY: open 215357.png locally; swap if wrong
+  // 10
   {
     name:  "Study Abroad: What You Need to Know \u2014 Certificate of Completion",
     org:   "SheShines \u00b7 Study Abroad, Scholarships & STEM Pathways",
@@ -879,7 +893,7 @@ const CERTS = [
     img:   "certs/Screenshot 2026-08-06 215357.png",
     badge: "Completion"
   },
-  // 09
+  // 11
   {
     name:   "GALVINO \u2014 Galvanic Cell Energy Generator",
     org:    "STEM Research Project Poster \u00b7 Menofia STEM School \u00b7 S2 2026",
@@ -888,7 +902,7 @@ const CERTS = [
     badge:  "Poster",
     poster: true
   },
-  // 10
+  // 12
   {
     name:   "GREENADO \u2014 Eco-Friendly Building System",
     org:    "STEM Research Project Poster \u00b7 Menofia STEM School \u00b7 S1 2026",
@@ -897,7 +911,7 @@ const CERTS = [
     badge:  "Poster",
     poster: true
   },
-  // 11
+  // 13
   {
     name:  "Python Programming Basics",
     org:   "Huawei ICT Academy \u2014 Certificate of Completion",
@@ -905,7 +919,7 @@ const CERTS = [
     img:   "certs/Screenshot 2026-07-19 235740.png",
     badge: "Completion"
   },
-  // 12
+  // 14
   {
     name:  "Information Representation and Data Organization",
     org:   "Huawei ICT Academy \u2014 Certificate of Completion",
@@ -916,7 +930,7 @@ const CERTS = [
 
   /* ── 2025 ──────────────────────────────────────── */
 
-  // 13
+  // 15
   {
     name:  "Level Three: Data Science and AI \u2014 Nanodegree",
     org:   "Digital Egypt Cubs Initiative \u00b7 Udacity \u00b7 MoICT Egypt",
@@ -924,7 +938,7 @@ const CERTS = [
     img:   "certs/Screenshot 2026-07-19 235213.png",
     badge: "Nanodegree"
   },
-  // 14
+  // 16
   {
     name:  "Development and Basic Concepts of Cloud Computing",
     org:   "Huawei ICT Academy \u2014 Certificate of Completion",
@@ -932,7 +946,7 @@ const CERTS = [
     img:   "certs/Screenshot 2026-07-19 235751.png",
     badge: "Completion"
   },
-  // 15
+  // 17
   {
     name:  "AI Basic: Overview of AI (CRA Training Program)",
     org:   "Huawei ICT Academy \u2014 Certificate of Completion",
@@ -940,7 +954,7 @@ const CERTS = [
     img:   "certs/Screenshot 2026-07-19 235727.png",
     badge: "Completion"
   },
-  // 16
+  // 18
   {
     name:  "DELF Prep Course \u2014 Certificate of Appreciation",
     org:   "Misr El-Bursa IDEL School",
@@ -948,7 +962,7 @@ const CERTS = [
     img:   "certs/Screenshot 2026-07-20 010748.png",
     badge: "Appreciation"
   },
-  // 17
+  // 19
   {
     name:  "DIGITOPIA \u2014 Certificate of Appreciation (Games & Digital Arts Track)",
     org:   "Ministry of Communications & IT, Egypt \u00b7 Edition 1",
@@ -956,7 +970,7 @@ const CERTS = [
     img:   "certs/Screenshot 2026-07-19 235949.png",
     badge: "Appreciation"
   },
-  // 18
+  // 20
   {
     name:  "DIGITOPIA \u2014 Certificate of Appreciation (Effective Participation)",
     org:   "Ministry of Communications & IT, Egypt \u00b7 Edition 1",
@@ -964,7 +978,7 @@ const CERTS = [
     img:   "certs/Screenshot 2026-07-19 235850.png",
     badge: "Appreciation"
   },
-  // 19
+  // 21
   {
     name:  "JavaScript Level 1",
     org:   "TOFAS \u2014 International Test of Fundamental Academic Skills",
@@ -975,7 +989,7 @@ const CERTS = [
 
   /* ── 2024 ──────────────────────────────────────── */
 
-  // 20
+  // 22
   {
     name:  "Level Two \u2014 Nanodegree",
     org:   "Digital Egypt Cubs Initiative \u00b7 Udacity \u00b7 MoICT Egypt",
@@ -983,7 +997,7 @@ const CERTS = [
     img:   "certs/Screenshot 2026-07-19 235256.png",
     badge: "Nanodegree"
   },
-  // 21
+  // 23
   {
     name:  "1er Prix \u2014 French Art Competition",
     org:   "TREFLE \u00b7 Institut Fran\u00e7ais \u00b7 Ambassade de France en \u00c9gypte",
@@ -994,7 +1008,7 @@ const CERTS = [
 
   /* ── 2023 ──────────────────────────────────────── */
 
-  // 22
+  // 24
   {
     name:  "Lite One \u2014 Nanodegree",
     org:   "Digital Egypt Cubs Initiative \u00b7 Udacity \u00b7 MoICT Egypt",
@@ -1002,7 +1016,7 @@ const CERTS = [
     img:   "certs/Screenshot 2026-07-19 235619.png",
     badge: "Nanodegree"
   },
-  // 23
+  // 25
   {
     name:  "Chinese My Dream Art \u2014 2nd Position, African Region",
     org:   "Chinese Cultural Art Competition",
@@ -1013,7 +1027,7 @@ const CERTS = [
 
   /* ── Undated ────────────────────────────────────── */
 
-  // 24
+  // 26
   {
     name:  "Translation Workshop \u2014 Certificate of Achievement",
     org:   "Lingua Stochos",
@@ -1021,7 +1035,7 @@ const CERTS = [
     img:   "certs/Screenshot 2026-07-19 235656.png",
     badge: "Achievement"
   },
-  // 25
+  // 27
   {
     name:  "Microsoft Word & Excel Workshop \u2014 Certificate of Appreciation",
     org:   "Lingua Stochos",
