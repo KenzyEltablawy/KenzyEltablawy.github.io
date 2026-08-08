@@ -644,9 +644,7 @@ body {
 
         <div class="cert-group">
           <div class="cert-group-label">Individual Certifications</div>
-          <!-- ★ NEW: Sololearn — Social Media Marketing with AI -->
           <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Social Media Marketing with AI</span><span class="cert-org">&mdash; Sololearn</span><span class="cert-date">Aug 2026</span></div>
-          <!-- ★ NEW: HP LIFE — Effective Leadership -->
           <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Effective Leadership</span><span class="cert-org">&mdash; HP LIFE &middot; HP Foundation</span><span class="cert-date">Aug 2026</span></div>
           <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Generative AI for Beginners</span><span class="cert-org">&mdash; Simplilearn SkillUp</span><span class="cert-date">2026</span></div>
           <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Robotics and Programming (Arduino) Level 1</span><span class="cert-org">&mdash; EGY STEM</span><span class="cert-date">2026</span></div>
@@ -807,26 +805,27 @@ body {
 <script>
 // =====================================================
 //  CERTS — 27 total, sorted newest → oldest
-//  2026 (14) → 2025 (7) → 2024 (2) → 2023 (2) → undated (2)
+//  FIX: all spaces in filenames encoded as %20
+//       entries 01 & 02 underscores corrected to %20
 // =====================================================
 const CERTS = [
 
   /* ── 2026 ──────────────────────────────────────── */
 
-  // ★ 01 — NEW: Sololearn — Social Media Marketing with AI
+  // 01 — Sololearn — Social Media Marketing with AI
   {
     name:  "Social Media Marketing with AI",
     org:   "Sololearn \u2014 Course Certificate",
     date:  "Aug 2026",
-    img:   "certs/Screenshot_2026-08-08_022303.png",
+    img:   "certs/Screenshot%202026-08-08%20022303.png",
     badge: "Completion"
   },
-  // ★ 02 — NEW: HP LIFE — Effective Leadership
+  // 02 — HP LIFE — Effective Leadership
   {
     name:  "Effective Leadership",
     org:   "HP LIFE \u00b7 HP Foundation \u2014 Certificate of Completion",
     date:  "Aug 2026",
-    img:   "certs/Screenshot_2026-08-08_022336.png",
+    img:   "certs/Screenshot%202026-08-08%20022336.png",
     badge: "Completion"
   },
   // 03
@@ -834,7 +833,7 @@ const CERTS = [
     name:  "JavaScript Level 3",
     org:   "TOFAS \u2014 International Test of Fundamental Academic Skills",
     date:  "2026",
-    img:   "certs/Screenshot 2026-08-06 215457.png",
+    img:   "certs/Screenshot%202026-08-06%20215457.png",
     badge: "Achievement"
   },
   // 04
@@ -842,7 +841,7 @@ const CERTS = [
     name:  "JavaScript Level 2",
     org:   "TOFAS \u2014 International Test of Fundamental Academic Skills",
     date:  "2026",
-    img:   "certs/Screenshot 2026-07-19 235827.png",
+    img:   "certs/Screenshot%202026-07-19%20235827.png",
     badge: "Achievement"
   },
   // 05
@@ -850,7 +849,7 @@ const CERTS = [
     name:  "Leadership Training Course \u2014 Certificate of Graduation",
     org:   "DemocraShe \u00b7 Engage. Empower. Elect.",
     date:  "2026",
-    img:   "certs/Screenshot 2026-08-06 215412.png",
+    img:   "certs/Screenshot%202026-08-06%20215412.png",
     badge: "Completion"
   },
   // 06
@@ -858,7 +857,7 @@ const CERTS = [
     name:  "Generative AI for Beginners",
     org:   "Simplilearn SkillUp",
     date:  "2026",
-    img:   "certs/Screenshot 2026-08-06 215439.png",
+    img:   "certs/Screenshot%202026-08-06%20215439.png",
     badge: "Completion"
   },
   // 07
@@ -866,7 +865,7 @@ const CERTS = [
     name:  "Robotics and Programming (Arduino) Level 1",
     org:   "EGY STEM \u2014 Certificate of Appreciation",
     date:  "2026",
-    img:   "certs/Screenshot 2026-07-19 235238.png",
+    img:   "certs/Screenshot%202026-07-19%20235238.png",
     badge: "Completion"
   },
   // 08
@@ -874,7 +873,7 @@ const CERTS = [
     name:  "Certificate of Exceptional Efficiency",
     org:   "STEAM for All",
     date:  "2026",
-    img:   "certs/Screenshot 2026-08-06 215425.png",
+    img:   "certs/Screenshot%202026-08-06%20215425.png",
     badge: "Award"
   },
   // 09
@@ -882,7 +881,7 @@ const CERTS = [
     name:  "Break the Code 2026",
     org:   "Certificate of Completion \u00b7 Sponsored by Mobbin",
     date:  "2026",
-    img:   "certs/Screenshot 2026-08-06 215348.png",
+    img:   "certs/Screenshot%202026-08-06%20215348.png",
     badge: "Completion"
   },
   // 10
@@ -890,7 +889,7 @@ const CERTS = [
     name:  "Study Abroad: What You Need to Know \u2014 Certificate of Completion",
     org:   "SheShines \u00b7 Study Abroad, Scholarships & STEM Pathways",
     date:  "2026",
-    img:   "certs/Screenshot 2026-08-06 215357.png",
+    img:   "certs/Screenshot%202026-08-06%20215357.png",
     badge: "Completion"
   },
   // 11
@@ -898,7 +897,7 @@ const CERTS = [
     name:   "GALVINO \u2014 Galvanic Cell Energy Generator",
     org:    "STEM Research Project Poster \u00b7 Menofia STEM School \u00b7 S2 2026",
     date:   "2026",
-    img:    "certs/Screenshot 2026-07-20 013110.png",
+    img:    "certs/Screenshot%202026-07-20%20013110.png",
     badge:  "Poster",
     poster: true
   },
@@ -907,7 +906,7 @@ const CERTS = [
     name:   "GREENADO \u2014 Eco-Friendly Building System",
     org:    "STEM Research Project Poster \u00b7 Menofia STEM School \u00b7 S1 2026",
     date:   "2026",
-    img:    "certs/Screenshot 2026-07-20 013120.png",
+    img:    "certs/Screenshot%202026-07-20%20013120.png",
     badge:  "Poster",
     poster: true
   },
@@ -916,7 +915,7 @@ const CERTS = [
     name:  "Python Programming Basics",
     org:   "Huawei ICT Academy \u2014 Certificate of Completion",
     date:  "2026",
-    img:   "certs/Screenshot 2026-07-19 235740.png",
+    img:   "certs/Screenshot%202026-07-19%20235740.png",
     badge: "Completion"
   },
   // 14
@@ -924,7 +923,7 @@ const CERTS = [
     name:  "Information Representation and Data Organization",
     org:   "Huawei ICT Academy \u2014 Certificate of Completion",
     date:  "2026",
-    img:   "certs/Screenshot 2026-07-19 235801.png",
+    img:   "certs/Screenshot%202026-07-19%20235801.png",
     badge: "Completion"
   },
 
@@ -935,7 +934,7 @@ const CERTS = [
     name:  "Level Three: Data Science and AI \u2014 Nanodegree",
     org:   "Digital Egypt Cubs Initiative \u00b7 Udacity \u00b7 MoICT Egypt",
     date:  "2025",
-    img:   "certs/Screenshot 2026-07-19 235213.png",
+    img:   "certs/Screenshot%202026-07-19%20235213.png",
     badge: "Nanodegree"
   },
   // 16
@@ -943,7 +942,7 @@ const CERTS = [
     name:  "Development and Basic Concepts of Cloud Computing",
     org:   "Huawei ICT Academy \u2014 Certificate of Completion",
     date:  "2025",
-    img:   "certs/Screenshot 2026-07-19 235751.png",
+    img:   "certs/Screenshot%202026-07-19%20235751.png",
     badge: "Completion"
   },
   // 17
@@ -951,7 +950,7 @@ const CERTS = [
     name:  "AI Basic: Overview of AI (CRA Training Program)",
     org:   "Huawei ICT Academy \u2014 Certificate of Completion",
     date:  "2025",
-    img:   "certs/Screenshot 2026-07-19 235727.png",
+    img:   "certs/Screenshot%202026-07-19%20235727.png",
     badge: "Completion"
   },
   // 18
@@ -959,7 +958,7 @@ const CERTS = [
     name:  "DELF Prep Course \u2014 Certificate of Appreciation",
     org:   "Misr El-Bursa IDEL School",
     date:  "2025",
-    img:   "certs/Screenshot 2026-07-20 010748.png",
+    img:   "certs/Screenshot%202026-07-20%20010748.png",
     badge: "Appreciation"
   },
   // 19
@@ -967,7 +966,7 @@ const CERTS = [
     name:  "DIGITOPIA \u2014 Certificate of Appreciation (Games & Digital Arts Track)",
     org:   "Ministry of Communications & IT, Egypt \u00b7 Edition 1",
     date:  "2025",
-    img:   "certs/Screenshot 2026-07-19 235949.png",
+    img:   "certs/Screenshot%202026-07-19%20235949.png",
     badge: "Appreciation"
   },
   // 20
@@ -975,7 +974,7 @@ const CERTS = [
     name:  "DIGITOPIA \u2014 Certificate of Appreciation (Effective Participation)",
     org:   "Ministry of Communications & IT, Egypt \u00b7 Edition 1",
     date:  "2025",
-    img:   "certs/Screenshot 2026-07-19 235850.png",
+    img:   "certs/Screenshot%202026-07-19%20235850.png",
     badge: "Appreciation"
   },
   // 21
@@ -983,7 +982,7 @@ const CERTS = [
     name:  "JavaScript Level 1",
     org:   "TOFAS \u2014 International Test of Fundamental Academic Skills",
     date:  "2025",
-    img:   "certs/Screenshot 2026-07-19 235838.png",
+    img:   "certs/Screenshot%202026-07-19%20235838.png",
     badge: "Achievement"
   },
 
@@ -994,7 +993,7 @@ const CERTS = [
     name:  "Level Two \u2014 Nanodegree",
     org:   "Digital Egypt Cubs Initiative \u00b7 Udacity \u00b7 MoICT Egypt",
     date:  "2024",
-    img:   "certs/Screenshot 2026-07-19 235256.png",
+    img:   "certs/Screenshot%202026-07-19%20235256.png",
     badge: "Nanodegree"
   },
   // 23
@@ -1002,7 +1001,7 @@ const CERTS = [
     name:  "1er Prix \u2014 French Art Competition",
     org:   "TREFLE \u00b7 Institut Fran\u00e7ais \u00b7 Ambassade de France en \u00c9gypte",
     date:  "2024",
-    img:   "certs/Screenshot 2026-07-20 010758.png",
+    img:   "certs/Screenshot%202026-07-20%20010758.png",
     badge: "1st Prize"
   },
 
@@ -1013,7 +1012,7 @@ const CERTS = [
     name:  "Lite One \u2014 Nanodegree",
     org:   "Digital Egypt Cubs Initiative \u00b7 Udacity \u00b7 MoICT Egypt",
     date:  "2023",
-    img:   "certs/Screenshot 2026-07-19 235619.png",
+    img:   "certs/Screenshot%202026-07-19%20235619.png",
     badge: "Nanodegree"
   },
   // 25
@@ -1021,7 +1020,7 @@ const CERTS = [
     name:  "Chinese My Dream Art \u2014 2nd Position, African Region",
     org:   "Chinese Cultural Art Competition",
     date:  "2023",
-    img:   "certs/Screenshot 2026-07-20 010740.png",
+    img:   "certs/Screenshot%202026-07-20%20010740.png",
     badge: "2nd Place"
   },
 
@@ -1032,7 +1031,7 @@ const CERTS = [
     name:  "Translation Workshop \u2014 Certificate of Achievement",
     org:   "Lingua Stochos",
     date:  "",
-    img:   "certs/Screenshot 2026-07-19 235656.png",
+    img:   "certs/Screenshot%202026-07-19%20235656.png",
     badge: "Achievement"
   },
   // 27
@@ -1040,7 +1039,7 @@ const CERTS = [
     name:  "Microsoft Word & Excel Workshop \u2014 Certificate of Appreciation",
     org:   "Lingua Stochos",
     date:  "",
-    img:   "certs/Screenshot 2026-07-19 235711.png",
+    img:   "certs/Screenshot%202026-07-19%20235711.png",
     badge: "Appreciation"
   }
 
