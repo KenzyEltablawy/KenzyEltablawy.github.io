@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0A050D">
 <title>Kenzy Eltablawy — STEM Student · Data Science & AI</title>
-<meta name="description" content="STEM student specialising in Data Science, AI, and Python — three Udacity Nanodegrees, two STEM capstone prototypes, the BLOOMS C++ / Unreal Engine 5.8 project, and a roadmap into systems programming.">
+<meta name="description" content="STEM student specialising in Data Science, AI, and Python — three Udacity Nanodegrees, two STEM capstone prototypes, and a roadmap into systems programming.">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
@@ -299,16 +299,6 @@ body::before {
 }
 
 .job li .kw { color: var(--text); font-size: 11px; opacity: 0.78; }
-
-.job li code {
-  font-family: var(--mono);
-  font-size: 11px;
-  color: var(--blush);
-  background: rgba(255,127,176,0.08);
-  border: 1px solid var(--r-bd);
-  border-radius: 3px;
-  padding: 0 4px;
-}
 
 /* ── Portfolio cards ──────────────────────────── */
 .project {
@@ -707,72 +697,6 @@ body::before {
   .cursor { display: none; }
   .gallery-wrapper { display: none; }
 }
-
-/* ═════════════════════════════════════════════ */
-/*  GARDEN ICONS                                 */
-/* ═════════════════════════════════════════════ */
-.gi { display: inline-block; flex-shrink: 0; }
-.section-label.has-ic::before, .gallery-title.has-ic::before { display: none; }
-.section-label .gi, .gallery-title .gi { width: 16px; height: 16px; filter: drop-shadow(0 0 6px rgba(255,77,115,.35)); }
-.gi-slot { display: inline-flex; width: 20px; height: 20px; flex-shrink: 0; }
-.gi-slot .gi { width: 20px; height: 20px; }
-
-.fl-fall { position: absolute; top: -40px; width: 26px; height: 26px; animation: petalFall linear infinite; will-change: transform; }
-.bg-garden { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; opacity: .07; pointer-events: none; }
-
-.vine { display: flex; justify-content: center; align-items: center; gap: 6px; margin: 0 auto 34px; max-width: 640px;
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 14%, #000 86%, transparent);
-          mask-image: linear-gradient(90deg, transparent, #000 14%, #000 86%, transparent); }
-.vine .gi { width: 26px; height: 26px; }
-.vine .gi:nth-child(even) { transform: translateY(5px) scale(.8); }
-
-/* ═════════════════════════════════════════════ */
-/*  ISEF                                         */
-/* ═════════════════════════════════════════════ */
-.isef-brief { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin-bottom: 18px; }
-.isef-stat { position: relative; padding: 14px 16px; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); }
-.isef-stat::before { content: ''; position: absolute; top: -1px; left: 14px; width: 38px; height: 2px; border-radius: 2px; background: linear-gradient(90deg, var(--red), var(--rose)); }
-.isef-stat b { display: block; font-family: var(--mono); font-size: 20px; color: var(--blush); letter-spacing: -.02em; margin-bottom: 4px; }
-.isef-stat span { font-size: 11.5px; color: var(--muted); line-height: 1.5; }
-.isef-note { font-size: 12.5px; color: var(--muted); line-height: 1.75; margin-bottom: 22px; border-left: 2px solid var(--c-bd); padding-left: 12px; }
-
-.isef-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(168px, 1fr)); gap: 14px; }
-.isef-card { position: relative; border: 1px solid var(--border); border-radius: 7px; overflow: hidden; background: var(--surface); cursor: zoom-in;
-  transition: border-color .22s, transform .22s, box-shadow .22s; }
-.isef-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; z-index: 2; background: linear-gradient(90deg, var(--red), var(--rose) 55%, transparent); }
-.isef-card:hover, .isef-card:focus-visible { border-color: var(--c-bd); transform: translateY(-4px); outline: none;
-  box-shadow: 0 16px 40px rgba(217,31,74,.18), 0 4px 18px rgba(255,127,176,.12); }
-.isef-card:hover .cert-card-zoom, .isef-card:focus-visible .cert-card-zoom { opacity: 1; }
-
-/* image rotated 90deg clockwise (to the right), fitted inside a portrait box */
-.rot-wrap { position: relative; container-type: size; aspect-ratio: 3 / 4; background: #fbf3f7; overflow: hidden; }
-.rot-wrap img { position: absolute; left: 50%; top: 50%; width: 100cqh; height: 100cqw; object-fit: contain; display: block;
-  transform: translate(-50%, -50%) rotate(90deg); }
-.rot-wrap img.missing { width: 100cqw; height: 100cqh; transform: translate(-50%, -50%); }
-.isef-tag { position: absolute; left: 8px; bottom: 8px; z-index: 2; font-family: var(--mono); font-size: 8.5px; letter-spacing: .08em; text-transform: uppercase;
-  padding: 2px 7px; border-radius: 3px; border: 1px solid var(--c-bd); color: var(--red); background: rgba(10,5,13,.78); backdrop-filter: blur(4px); }
-
-.lightbox-img-box.rot img { position: absolute; left: 50%; top: 50%; max-width: none; max-height: none; transform: translate(-50%, -50%) rotate(90deg); }
-
-/* ═════════════════════════════════════════════ */
-/*  ICON GARDEN GRID                             */
-/* ═════════════════════════════════════════════ */
-.garden-bar { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
-.garden-chip { font-family: var(--mono); font-size: 10px; padding: 3px 9px; border-radius: 3px; border: 1px solid var(--border);
-  background: transparent; color: var(--muted); cursor: pointer; transition: color .15s, border-color .15s, background .15s; }
-.garden-chip:hover { color: var(--rose); border-color: var(--c-bd); }
-.garden-chip.on { color: var(--red); border-color: var(--c-bd); background: var(--c-bg); }
-.garden-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(58px, 1fr)); gap: 8px; }
-.garden-cell { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; padding: 6px; cursor: pointer;
-  border: 1px solid var(--border); border-radius: 6px; background: var(--surface); transition: transform .18s, border-color .18s, box-shadow .18s; }
-.garden-cell:hover, .garden-cell:focus-visible { transform: translateY(-2px) scale(1.06); border-color: var(--c-bd); outline: none; box-shadow: 0 8px 22px rgba(217,31,74,.2); }
-.garden-cell .gi { width: 100%; height: 100%; }
-.toast { position: fixed; left: 50%; bottom: 26px; z-index: 9100; transform: translate(-50%, 20px); opacity: 0; pointer-events: none;
-  font-family: var(--mono); font-size: 10.5px; color: var(--blush); padding: 7px 14px; border-radius: 5px;
-  background: rgba(21,10,23,.94); border: 1px solid var(--c-bd); transition: opacity .2s, transform .2s; }
-.toast.on { opacity: 1; transform: translate(-50%, 0); }
-
-@media print { .isef, .garden, .vine, .bg-garden, .fl-fall, .toast { display: none; } }
 </style>
 </head>
 <body>
@@ -949,7 +873,7 @@ body::before {
 
   <header class="header">
     <div class="name">Kenzy Eltablawy<span class="cursor"></span></div>
-    <div class="role-line">STEM Student (Grade 11, A) &nbsp;&middot;&nbsp; Data Science &amp; AI &nbsp;&middot;&nbsp; Python &nbsp;&middot;&nbsp; C &amp; C++ (UE5 project) &nbsp;&middot;&nbsp; Egypt</div>
+    <div class="role-line">STEM Student (Grade 11, A) &nbsp;&middot;&nbsp; Data Science &amp; AI &nbsp;&middot;&nbsp; Python &nbsp;&middot;&nbsp; C &amp; C++ (Learning) &nbsp;&middot;&nbsp; Egypt</div>
     <div class="contacts">
       <a href="tel:+201065304179">+20 106 530 4179</a>
       <a href="mailto:Kenzyrafat98@gmail.com">Kenzyrafat98@gmail.com</a>
@@ -964,7 +888,7 @@ body::before {
       <section class="section">
         <div class="section-label">Profile</div>
         <p class="summary">
-          STEM student (11th grade, Grade A) with a strong foundation in data science, AI, and software development — validated by three consecutive Udacity Nanodegrees under Egypt's Digital Egypt Cubs Initiative (Ministry of Communications &amp; IT): Lite One &rarr; Level Two &rarr; Level Three: Data Science &amp; AI, with Level Four currently in progress. Proficient in Python-driven data pipelines, ML modeling with scikit-learn, and full-stack web fundamentals. Led two STEM capstone research teams producing functional prototypes — GREENADO (eco-friendly building) and GALVINO (galvanic energy system) — both addressing Egypt's Grand Challenges. Active competitor in DIGITOPIA 2025. Volunteer at Resala; participant in Girls Who Code, Mint Squad, and the New York Academy of Science. Already built BLOOMS, an event-driven, tick-free NPC system in C++ for Unreal Engine 5.8 (ISEF-format poster and presentation), with a roadmap toward game engine development.
+          STEM student (11th grade, Grade A) with a strong foundation in data science, AI, and software development — validated by three consecutive Udacity Nanodegrees under Egypt's Digital Egypt Cubs Initiative (Ministry of Communications &amp; IT): Lite One &rarr; Level Two &rarr; Level Three: Data Science &amp; AI, with Level Four currently in progress. Proficient in Python-driven data pipelines, ML modeling with scikit-learn, and full-stack web fundamentals. Led two STEM capstone research teams producing functional prototypes — GREENADO (eco-friendly building) and GALVINO (galvanic energy system) — both addressing Egypt's Grand Challenges. Active competitor in DIGITOPIA 2025. Volunteer at Resala; participant in Girls Who Code, Mint Squad, and the New York Academy of Science. Expanding into systems-level programming in C and C++ with a roadmap toward game engine development.
         </p>
       </section>
 
@@ -1000,22 +924,6 @@ body::before {
             <li><span class="kw">Keywords: Galvanic Cell &middot; Graphite &middot; Magnesium Sulfate &middot; Redox Reactions &middot; Salt Bridge &middot; Electrochemistry &middot; Recycled Materials</span></li>
           </ul>
         </div>
-
-        <div class="job">
-          <div class="job-top">
-            <div class="job-company">BLOOMS &mdash; Event-Driven, Tick-Free NPCs in Unreal Engine 5.8</div>
-            <div class="job-date">ISEF format &middot; SFTD</div>
-          </div>
-          <div class="job-role">C++ &middot; Unreal Engine 5.8 &middot; Software Design / Engineering Design &middot; Individual project</div>
-          <ul>
-            <li>Built a small city in UE 5.8 where Citizens greet the player, get uncomfortable if you stand too close, then confront, warn and walk away: a 10-step social ladder with memory (greetings lock for 1000 s after the first walk-away, for good after the second).</li>
-            <li>The Citizen brain (<code>UHumanoidActorComponent</code>) never ticks. Everything starts from overlaps, one-shot <code>FTimerHandle</code> timers or animation callbacks, and the tick flag is off in 11 places in the project code.</li>
-            <li>Replaced the AnimGraph with a custom C++ <code>FAnimInstanceProxy</code>: three cross-fading idles, five walk phases, head look-at clamped at 46&deg; and eyes at 35&deg;. A pose snapshot at walk-stop removes a one-frame pop.</li>
-            <li>Animations, audio, distances, blink and gaze limits live in data assets, loaded once at BeginPlay.</li>
-            <li>Measured: biggest reading 0.01 ms per frame for five Citizens animating together (about 0.002 ms each, 0.06% of a 60 FPS frame). The Blueprint and C++-ticking builds are not measured yet, so no &ldquo;cheaper than&rdquo; claim is made.</li>
-            <li><span class="kw">Keywords: C++ &middot; Unreal Engine 5.8 &middot; Event-driven &middot; FTimerHandle &middot; FAnimInstanceProxy &middot; Data Assets &middot; Tick-free</span></li>
-          </ul>
-        </div>
       </section>
 
       <section class="section">
@@ -1029,11 +937,6 @@ body::before {
           <div class="project-num">II &nbsp;&mdash;&nbsp; WEB &amp; PYTHON</div>
           <div class="project-name">Python &amp; Web Application Portfolio <span class="project-badge">&middot; Ongoing</span></div>
           <div class="project-desc">Multiple standalone Python applications across automation, data analysis, and AI/ML integration. Front-end web projects in HTML, CSS, and JavaScript with Angular component experimentation. Mobile and visual programming prototypes built with Thunkable and Blockly.</div>
-        </div>
-        <div class="project">
-          <div class="project-num">III &nbsp;&mdash;&nbsp; C++ &middot; UNREAL ENGINE 5.8</div>
-          <div class="project-name">BLOOMS &mdash; Tick-Free Citizens <span class="project-badge">&middot; ISEF format</span></div>
-          <div class="project-desc">Event-driven NPC brain in C++ (overlaps, one-shot timers, animation callbacks), a custom FAnimInstanceProxy instead of an AnimGraph, and content in data assets. Poster and 12-slide presentation included below as screenshots.</div>
         </div>
       </section>
 
@@ -1129,8 +1032,7 @@ body::before {
           <div class="tags">
             <span class="tag hi">Python</span><span class="tag hi">JavaScript</span><span class="tag hi">SQL</span>
             <span class="tag hi">HTML</span><span class="tag hi">CSS</span>
-            <span class="tag hi">C++ (UE5 project)</span><span class="tag lo">C (learning)</span>
-            <span class="tag hi">Unreal Engine 5.8</span><span class="tag lo">FTimerHandle</span><span class="tag lo">FAnimInstanceProxy</span><span class="tag lo">Data Assets</span>
+            <span class="tag lo">C (learning)</span><span class="tag lo">C++ (learning)</span>
           </div>
         </div>
         <div class="skill-group">
@@ -1246,26 +1148,6 @@ body::before {
 
 
 <!-- ─────────────────────────────────────────── -->
-<!--  ISEF · BLOOMS  (C / C++ · Unreal Engine)   -->
-<!-- ─────────────────────────────────────────── -->
-<section class="gallery-wrapper isef" id="isef">
-  <div class="vine" data-n="22"></div>
-  <div class="gallery-header">
-    <div class="gallery-title">ISEF &middot; BLOOMS &mdash; C++ / Unreal Engine 5.8 project</div>
-    <div class="gallery-subtitle"><span id="isefCount"></span> screenshots &middot; rotated 90&deg; to the right &middot; click to open</div>
-  </div>
-  <div class="isef-brief">
-    <div class="isef-stat"><b>0.01 ms</b><span>biggest reading per frame, 5 Citizens animating together, 30 s watch</span></div>
-    <div class="isef-stat"><b>tick = false</b><span>off in 11 places in the project code, so the brain only reacts to events</span></div>
-    <div class="isef-stat"><b>10 steps</b><span>notice, greet, reply, look again, comfort zone, discomfort, confront, last warning, final look, walk away</span></div>
-    <div class="isef-stat"><b>C++ &middot; UE 5.8</b><span>overlaps, FTimerHandle, custom FAnimInstanceProxy, data assets, no AnimGraph</span></div>
-  </div>
-  <p class="isef-note">Honest status: Build A (Blueprint) and Build B (C++, ticking on) are not measured yet, so the project claims &ldquo;cheap&rdquo;, not &ldquo;cheaper than&rdquo;.</p>
-  <div class="isef-grid" id="isefGrid"></div>
-</section>
-
-
-<!-- ─────────────────────────────────────────── -->
 <!--  CERTIFICATES & AWARDS GALLERY              -->
 <!-- ─────────────────────────────────────────── -->
 
@@ -1279,21 +1161,6 @@ body::before {
   </div>
   <div class="certs-grid" id="certsGrid"></div>
 </div>
-
-
-<!-- ─────────────────────────────────────────── -->
-<!--  ICON GARDEN  (500+ procedural icons)       -->
-<!-- ─────────────────────────────────────────── -->
-<section class="gallery-wrapper garden" id="garden">
-  <div class="vine" data-n="22"></div>
-  <div class="gallery-header">
-    <div class="gallery-title">Icon Garden</div>
-    <div class="gallery-subtitle"><span id="gardenShown"></span> of <span id="gardenCount"></span> procedural icons &middot; 14 families &times; 12 palettes &times; 3 variants &middot; click one to copy its SVG</div>
-  </div>
-  <div class="garden-bar" id="gardenBar"></div>
-  <div class="garden-grid" id="gardenGrid"></div>
-</section>
-<div class="toast" id="toast"></div>
 
 <footer class="site-footer">
   <svg class="garland" viewBox="0 0 600 60" aria-hidden="true" focusable="false"><use href="#garland"/></svg>
@@ -1320,11 +1187,15 @@ body::before {
 //  Filenames are written EXACTLY as they appear in the
 //  GitHub certs/ folder (real spaces, no %20).
 //  The script encodes them automatically with encodeURI().
+//  Entries marked  ★ NEW  use the 2026-11-01 20:xx uploads.
+//  (HP LIFE, EthicWise and Break the Code now use the clean
+//   digital screenshots instead of the phone photos.)
 // =====================================================
 const CERTS = [
 
   /* ── Autumn 2026 ───────────────────────────────── */
 
+  // ★ NEW
   {
     name:  "International Youth Math Challenge \u2014 Participation Certificate (Qualification Round 2026)",
     org:   "IYMC \u00b7 Egypt \u00b7 special honour for a digitally written solution",
@@ -1332,6 +1203,7 @@ const CERTS = [
     img:   "certs/Screenshot 2026-11-01 202417.png",
     badge: "Participation"
   },
+  // ★ NEW
   {
     name:  "Global Logic & Reasoning Competition \u2014 Participation Certificate (Qualification Round)",
     org:   "Menofia STEM School \u00b7 Edition of 2026",
@@ -1339,6 +1211,7 @@ const CERTS = [
     img:   "certs/Screenshot 2026-11-01 202428.png",
     badge: "Participation"
   },
+  // ★ NEW
   {
     name:  "Youth Physics Writing Contest \u2014 Rank #3 \u00b7 Top 10 Finalist",
     org:   "Physics Club Magazine \u00b7 \u201CGPS & Relativity\u201D \u00b7 ID YPWC-2026-03",
@@ -1349,6 +1222,7 @@ const CERTS = [
 
   /* ── August 2026 ───────────────────────────────── */
 
+  // ★ NEW
   {
     name:  "International BioLeague Competition \u2014 Certificate of Appreciation (First Round)",
     org:   "BioLeague \u00b7 Partners: Leaf, Geneious",
@@ -1363,6 +1237,7 @@ const CERTS = [
     img:   "certs/Screenshot 2026-08-08 022303.png",
     badge: "Completion"
   },
+  // ★ NEW (clean digital version)
   {
     name:  "Effective Leadership \u2014 Certificate of Completion",
     org:   "HP LIFE \u00b7 HP Foundation",
@@ -1370,6 +1245,7 @@ const CERTS = [
     img:   "certs/Screenshot 2026-11-01 202445.png",
     badge: "Completion"
   },
+  // ★ NEW (clean digital version)
   {
     name:  "Certificate of Volunteer Service \u2014 AI Ethics and Responsible AI",
     org:   "EthicWise AI \u00b7 501(c)(3) Nonprofit \u00b7 3 verified hours",
@@ -1387,6 +1263,7 @@ const CERTS = [
     img:   "certs/Screenshot 2026-08-06 215457.png",
     badge: "Achievement"
   },
+  // ★ NEW
   {
     name:  "IEEE SSCS Arduino Contest 2026 \u2014 Certificate of Participation",
     org:   "IEEE Solid-State Circuits Society (SSCS)",
@@ -1429,6 +1306,7 @@ const CERTS = [
     img:   "certs/Screenshot 2026-08-06 215425.png",
     badge: "Award"
   },
+  // ★ NEW (clean digital version)
   {
     name:  "Break the Code 2026 \u2014 Certificate of Completion",
     org:   "4-week program \u00b7 Web Dev, UI/UX, Data Analysis \u00b7 Sponsored by Mobbin",
@@ -1621,6 +1499,7 @@ const CERTS = [
     img:   "certs/Screenshot 2026-11-01 192511.png",
     badge: "Appreciation"
   },
+  // ★ NEW
   {
     name:  "Artificial Intelligence Diploma Program \u2014 Certificate of Recognition",
     org:   "El-Forsa Academy \u00b7 ML, Deep Learning, Neural Networks, NLP, Image Classification",
@@ -1628,6 +1507,7 @@ const CERTS = [
     img:   "certs/Screenshot 2026-11-01 202341.png",
     badge: "Diploma"
   },
+  // ★ NEW
   {
     name:  "AI and Society Case Study \u2014 Certificate of Completion",
     org:   "Girls Who Code",
@@ -1753,421 +1633,6 @@ document.addEventListener('keydown', function(e) {
     p.style.opacity = (0.25 + Math.random() * 0.35).toFixed(2);
     box.appendChild(p);
   }
-})();
-
-/* ═══════════════════════════════════════════════════════════
-   GARDEN ICON FORGE — 504 procedural SVG icons
-   14 families x 12 palettes x 3 variants
-   ═══════════════════════════════════════════════════════════ */
-function seeded(a) {                       // mulberry32
-  return function () {
-    a |= 0; a = a + 0x6D2B79F5 | 0;
-    var t = Math.imul(a ^ a >>> 15, 1 | a);
-    t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
-    return ((t ^ t >>> 14) >>> 0) / 4294967296;
-  };
-}
-
-var GARDEN = (function () {
-  var PAL = [
-    { n: 'Crimson',    a: '#B8143F', b: '#DB2D5C', c: '#FF5C87', e: '#5E0820', k: '#FFD98A' },
-    { n: 'Rose',       a: '#E0386F', b: '#FF5C8E', c: '#FF9BBE', e: '#7B0F33', k: '#FFD98A' },
-    { n: 'Blush',      a: '#F6A3C3', b: '#FFC3DA', c: '#FFE6F0', e: '#B8456F', k: '#FFD98A' },
-    { n: 'Hot Rose',   a: '#E8457A', b: '#FF6B9A', c: '#FFA3C2', e: '#8A1239', k: '#FFE2A0' },
-    { n: 'Wine',       a: '#A01238', b: '#CF2A58', c: '#F05A82', e: '#52071C', k: '#FFD98A' },
-    { n: 'Peach',      a: '#FF9E80', b: '#FFB89C', c: '#FFD9C7', e: '#B5502E', k: '#FFF0A8' },
-    { n: 'Cream',      a: '#FFE3EC', b: '#FFF1F6', c: '#FFFFFF', e: '#C98AA5', k: '#FFC94D' },
-    { n: 'Lilac',      a: '#B58AE6', b: '#CFA8F5', c: '#EBD6FF', e: '#6A3DA3', k: '#FFE08A' },
-    { n: 'Coral',      a: '#FF6B6B', b: '#FF8F8F', c: '#FFC1BA', e: '#9B2C34', k: '#FFE08A' },
-    { n: 'Gold',       a: '#F5B83D', b: '#FFD166', c: '#FFF0B8', e: '#9A6A0A', k: '#8B4A2B' },
-    { n: 'Periwinkle', a: '#7FA8FF', b: '#A9C4FF', c: '#D6E3FF', e: '#3D5BA3', k: '#FFE08A' },
-    { n: 'Magenta',    a: '#C2185B', b: '#E91E8C', c: '#FF6EC7', e: '#6A0D3A', k: '#FFD98A' }
-  ];
-  var V = 3, P = PAL.length, STEM = '#2B6048', LEAF = '#3F8A68', FN = {};
-
-  function f(n) { return Math.round(n * 100) / 100; }
-  function gid(fi, pi, v) { return 'gd' + ((fi * P + pi) * V + v); }
-
-  /* n copies of a shape (drawn pointing UP from 32,32) spread around the centre */
-  function ring(n, shape, off) {
-    var s = '', i;
-    for (i = 0; i < n; i++) s += shape.replace('/>', ' transform="rotate(' + f((off || 0) + 360 / n * i) + ' 32 32)"/>');
-    return s;
-  }
-  function G(fill, p, inner) {
-    return '<g fill="' + fill + '" stroke="' + p.e + '" stroke-width=".7" stroke-opacity=".55" stroke-linejoin="round">' + inner + '</g>';
-  }
-  function leaf(x, y, a, s) {
-    return '<path d="M0 0C-5-6-5-15 0-22C5-15 5-6 0 0z" fill="' + LEAF + '" stroke="#1F4D3A" stroke-opacity=".5" stroke-width=".6" transform="translate(' + f(x) + ' ' + f(y) + ') rotate(' + f(a) + ') scale(' + s + ')"/>';
-  }
-  function ref(name, pi, v, x, y, s) {      // nested icon of the same palette
-    return '<use href="#' + gid(FN[name], pi, v) + '" x="' + f(x) + '" y="' + f(y) + '" width="' + f(s) + '" height="' + f(s) + '"/>';
-  }
-
-  /* ── 14 families ───────────────────────────────────────── */
-  function daisy(p, v) {
-    var n = [8, 12, 16][v], rx = [4.2, 3.4, 2.8][v], ry = [12, 12.5, 13][v];
-    return G(p.b, p, ring(n, '<ellipse cx="32" cy="' + (32 - ry - 4) + '" rx="' + rx + '" ry="' + ry + '"/>'))
-      + '<circle cx="32" cy="32" r="6.5" fill="' + p.k + '" stroke="' + p.e + '" stroke-opacity=".5" stroke-width=".8"/>'
-      + '<circle cx="30" cy="30" r="1.6" fill="#fff" fill-opacity=".55"/>';
-  }
-  function rose(p, v) {
-    var n = [5, 6, 7][v];
-    return G(p.a, p, ring(n, '<ellipse cx="32" cy="14" rx="11" ry="12"/>'))
-      + G(p.b, p, ring(n - 1, '<ellipse cx="32" cy="20" rx="8.5" ry="9"/>', 18))
-      + G(p.c, p, ring(4, '<ellipse cx="32" cy="25" rx="6" ry="6"/>', 25))
-      + '<circle cx="32" cy="32" r="5" fill="' + p.b + '" stroke="' + p.e + '" stroke-opacity=".4" stroke-width=".7"/>'
-      + '<path d="M32 32a1.6 1.6 0 0 1 3.2 0a3.2 3.2 0 0 1-6.4 0a4.8 4.8 0 0 1 9.6 0" fill="none" stroke="' + p.e + '" stroke-opacity=".7" stroke-width=".9" stroke-linecap="round"/>';
-  }
-  function tulip(p, v) {
-    var w = [10, 12, 9][v], c = 32;
-    var cup = 'M' + (c - w) + ' 18C' + (c - w) + ' 32 ' + f(c - w * .4) + ' 40 ' + c + ' 40C' + f(c + w * .4) + ' 40 ' + (c + w) + ' 32 ' + (c + w) + ' 18C' + f(c + w * .5) + ' 24 ' + c + ' 22 ' + c + ' 8C' + c + ' 22 ' + f(c - w * .5) + ' 24 ' + (c - w) + ' 18z';
-    var l = 'M' + c + ' 40C' + f(c - w * .9) + ' 38 ' + f(c - w * .7) + ' 24 ' + f(c - w * .5) + ' 14C' + f(c - w * .2) + ' 22 ' + c + ' 24 ' + c + ' 40z';
-    var r = 'M' + c + ' 40C' + f(c + w * .9) + ' 38 ' + f(c + w * .7) + ' 24 ' + f(c + w * .5) + ' 14C' + f(c + w * .2) + ' 22 ' + c + ' 24 ' + c + ' 40z';
-    return '<path d="M32 62C32 52 31 45 32 38" stroke="' + STEM + '" stroke-width="2.4" fill="none" stroke-linecap="round"/>'
-      + leaf(32, 58, -30, 1.05) + leaf(32, 54, 32, .9)
-      + G(p.a, p, '<path d="' + cup + '"/>') + G(p.b, p, '<path d="' + l + '"/>') + G(p.c, p, '<path d="' + r + '"/>');
-  }
-  function blossom(p, v) {
-    var n = [5, 6, 8][v];
-    return G(p.b, p, ring(n, '<path d="M32 33C20 26 19 10 28 4q4 3 8 0c9 6 8 22-4 29z"/>'))
-      + ring(n, '<path d="M32 30V19" stroke="' + p.e + '" stroke-opacity=".55" stroke-width=".9" stroke-linecap="round" fill="none"/>')
-      + ring(n, '<circle cx="32" cy="17" r="1.5" fill="' + p.k + '"/>')
-      + '<circle cx="32" cy="32" r="4" fill="' + p.k + '" stroke="' + p.e + '" stroke-opacity=".4" stroke-width=".7"/>';
-  }
-  function lotus(p, v) {
-    function fan(k, spread, sc, fill) {
-      var s = '', i, a;
-      for (i = 0; i < k; i++) {
-        a = k === 1 ? 0 : -spread + 2 * spread * i / (k - 1);
-        s += '<path d="M32 52C22 42 22 22 32 8C42 22 42 42 32 52z" fill="' + fill + '" transform="rotate(' + f(a) + ' 32 52) translate(32 52) scale(' + sc + ') translate(-32 -52)"/>';
-      }
-      return s;
-    }
-    return G(p.a, p, fan(2 + v * 2, 62, .72, p.a)) + G(p.b, p, fan(3 + v, 32, .88, p.b)) + G(p.c, p, fan(1, 0, 1, p.c))
-      + '<path d="M9 55C20 50 44 50 55 55C44 61 20 61 9 55z" fill="#3F8A68" stroke="#1F4D3A" stroke-opacity=".5" stroke-width=".7"/>';
-  }
-  function sunflower(p, v) {
-    var n = [14, 18, 22][v], s, i, r, a;
-    s = G(p.b, p, ring(n, '<path d="M32 28C27 22 27 10 32 3C37 10 37 22 32 28z"/>'))
-      + G(p.a, p, ring(n, '<path d="M32 28C29.5 23 29.5 15 32 9C34.5 15 34.5 23 32 28z"/>', 180 / n))
-      + '<circle cx="32" cy="32" r="9.5" fill="#6B3F24" stroke="#3E2414" stroke-width=".8"/>';
-    for (i = 0; i < 22; i++) {                         // golden-angle seed spiral
-      r = 1.84 * Math.sqrt(i + 1); a = i * 2.39996;
-      s += '<circle cx="' + f(32 + r * Math.cos(a)) + '" cy="' + f(32 + r * Math.sin(a)) + '" r=".8" fill="' + p.k + '" fill-opacity=".75"/>';
-    }
-    return s;
-  }
-  function heartflower(p, v) {
-    var n = [5, 6, 8][v];
-    return G(p.a, p, ring(n, '<path d="M32 30C24 24 20 17 24 11C27 7 31 8 32 12C33 8 37 7 40 11C44 17 40 24 32 30z"/>'))
-      + G(p.c, p, ring(n, '<path d="M32 29C27 25 25.5 21 27.5 17C29.5 14.5 31.5 15.5 32 18C32.5 15.5 34.5 14.5 36.5 17C38.5 21 37 25 32 29z"/>', 180 / n))
-      + '<circle cx="32" cy="32" r="4.2" fill="' + p.k + '" stroke="' + p.e + '" stroke-opacity=".45" stroke-width=".7"/>';
-  }
-  function bud(p, v) {
-    var lean = [0, -9, 9][v];
-    return '<g transform="rotate(' + lean + ' 32 62)">'
-      + '<path d="M32 62V32" stroke="' + STEM + '" stroke-width="2.4" stroke-linecap="round" fill="none"/>'
-      + leaf(32, 54, -52, 1) + leaf(32, 46, 50, .85)
-      + G(p.a, p, '<path d="M32 36C21 34 18 21 24 13C27 17 29 15 32 9C35 15 37 17 40 13C46 21 43 34 32 36z"/>')
-      + G(p.b, p, '<path d="M32 36C26 32 25 21 32 13C39 21 38 32 32 36z"/>')
-      + '<path d="M32 14C30 20 31 26 33 31" stroke="' + p.e + '" stroke-opacity=".5" fill="none" stroke-width=".8"/>'
-      + '<path d="M22 33C26 40 29 38 32 38C35 38 38 40 42 33C38 35 35 33 32 33C29 33 26 35 22 33z" fill="#3F8A68" stroke="#1F4D3A" stroke-opacity=".5" stroke-width=".6"/>'
-      + '</g>';
-  }
-  function butterfly(p, v) {
-    var w = G(p.a, p, '<path d="M32 31C25 11 6 7 6 20C6 29 17 33 32 34z"/>')
-      + G(p.b, p, '<path d="M32 34C17 36 12 46 19 52C26 57 31 46 32 38z"/>')
-      + '<circle cx="17" cy="21" r="' + [3.2, 4.2, 2.4][v] + '" fill="' + p.c + '" fill-opacity=".9"/>'
-      + '<circle cx="21" cy="46" r="' + [2.2, 1.6, 2.8][v] + '" fill="' + p.c + '" fill-opacity=".9"/>';
-    return w + '<g transform="matrix(-1 0 0 1 64 0)">' + w + '</g>'
-      + '<rect x="30.4" y="22" width="3.2" height="26" rx="1.6" fill="' + p.e + '"/>'
-      + '<path d="M31 23C28 16 25 14 22 14M33 23C36 16 39 14 42 14" stroke="' + p.e + '" stroke-width="1" fill="none" stroke-linecap="round"/>';
-  }
-  function bee(p, v) {
-    var tilt = [-12, 0, 12][v], wing = ' fill="' + p.c + '" fill-opacity=".75" stroke="' + p.e + '" stroke-opacity=".5" stroke-width=".7"';
-    return '<g transform="rotate(' + tilt + ' 32 32)">'
-      + '<ellipse cx="22" cy="20" rx="8" ry="12" transform="rotate(-30 22 20)"' + wing + '/>'
-      + '<ellipse cx="42" cy="20" rx="8" ry="12" transform="rotate(30 42 20)"' + wing + '/>'
-      + '<ellipse cx="32" cy="36" rx="12" ry="15" fill="' + p.k + '" stroke="' + p.e + '" stroke-width=".8"/>'
-      + '<path d="M22 31H42M21.5 38H42.5M23.5 45H40.5" stroke="' + p.e + '" stroke-width="3"/>'
-      + '<circle cx="32" cy="21" r="6" fill="' + p.e + '"/>'
-      + '<circle cx="29.5" cy="20" r="1.3" fill="#fff"/><circle cx="34.5" cy="20" r="1.3" fill="#fff"/>'
-      + '<path d="M29 16C27 11 25 10 23 10M35 16C37 11 39 10 41 10" stroke="' + p.e + '" stroke-width="1" fill="none" stroke-linecap="round"/>'
-      + '<path d="M32 51V57" stroke="' + p.e + '" stroke-width="2" stroke-linecap="round"/></g>';
-  }
-  function ladybug(p, v) {
-    var pts = [[23, 30], [41, 30], [21, 42], [43, 42], [32, 25], [32, 49]], s = '';
-    pts.slice(0, [4, 6, 2][v]).forEach(function (d) { s += '<circle cx="' + d[0] + '" cy="' + d[1] + '" r="3.4" fill="#2B1B22"/>'; });
-    return '<path d="M26 10C24 6 22 5 20 5M38 10C40 6 42 5 44 5" stroke="#2B1B22" stroke-width="1.2" fill="none" stroke-linecap="round"/>'
-      + '<circle cx="32" cy="14" r="7" fill="#2B1B22"/>'
-      + '<ellipse cx="32" cy="38" rx="19" ry="21" fill="' + p.a + '" stroke="' + p.e + '" stroke-width=".9"/>'
-      + '<path d="M32 17V59" stroke="#2B1B22" stroke-width="1.6"/>'
-      + '<path d="M22 24C26 20 30 19 32 19" stroke="#fff" stroke-opacity=".4" stroke-width="2" fill="none" stroke-linecap="round"/>' + s;
-  }
-  function vase(p, v, pi) {
-    var cb = [['blossom', 'rose', 'daisy'], ['heartflower', 'sunflower', 'blossom'], ['daisy', 'rose', 'heartflower']][v];
-    return '<path d="M32 44C30 36 23 32 18 25M32 44V24M32 44C34 36 41 32 46 25" stroke="' + STEM + '" stroke-width="1.8" fill="none" stroke-linecap="round"/>'
-      + leaf(31, 41, -42, .7) + leaf(33, 41, 42, .7)
-      + ref(cb[0], pi, v, 7, 10, 22) + ref(cb[2], pi, (v + 1) % 3, 35, 10, 22) + ref(cb[1], pi, v, 20, 0, 26)
-      + '<path d="M23 42H41C42 48 45 51 45 56C45 60 40 62 32 62C24 62 19 60 19 56C19 51 22 48 23 42z" fill="' + p.c + '" stroke="' + p.e + '" stroke-opacity=".6" stroke-width=".8"/>'
-      + '<path d="M20 54H44" stroke="' + p.a + '" stroke-width="2.2"/>'
-      + '<path d="M25 47C24 51 24 55 25.5 58" stroke="#fff" stroke-opacity=".6" stroke-width="1.6" fill="none" stroke-linecap="round"/>';
-  }
-  function can(p, v) {
-    var body = [p.b, p.a, p.c][v], drops = [[58, 38], [53, 44], [61, 45], [56, 52]].slice(0, 2 + v), s = '';
-    drops.forEach(function (d) {
-      s += '<path d="M' + d[0] + ' ' + (d[1] - 3) + 'c-1.2 2-2.4 3-2.4 4.4a2.4 2.4 0 0 0 4.8 0c0-1.4-1.2-2.4-2.4-4.4z" fill="#8EC9F5" fill-opacity=".9"/>';
-    });
-    return '<path d="M16 30C6 30 6 48 16 48" fill="none" stroke="' + p.e + '" stroke-opacity=".8" stroke-width="3" stroke-linecap="round"/>'
-      + '<path d="M21 30C21 18 35 18 35 30" fill="none" stroke="' + p.e + '" stroke-opacity=".8" stroke-width="2.6" stroke-linecap="round"/>'
-      + '<path d="M39 38L55 24" stroke="' + p.e + '" stroke-opacity=".85" stroke-width="3.4" stroke-linecap="round"/>'
-      + G(p.a, p, '<path d="M50 18L61 26L57 31L47 23z"/>')
-      + G(body, p, '<path d="M14 30H42V52C42 56 40 58 36 58H20C16 58 14 56 14 52z"/>')
-      + '<path d="M14 36H42" stroke="' + p.e + '" stroke-opacity=".35" stroke-width="1"/>'
-      + '<path d="M19 40V54" stroke="#fff" stroke-opacity=".5" stroke-width="2" stroke-linecap="round"/>' + s;
-  }
-  function wreath(p, v, pi) {
-    var n = [8, 10, 12][v], r = 22, fs = [17, 15, 13][v], i, t, x, y, d = Math.PI / 180,
-        s = '<circle cx="32" cy="32" r="' + r + '" fill="none" stroke="' + STEM + '" stroke-width="1.8"/>';
-    for (i = 0; i < n; i++) {                          // leaves between the flowers
-      t = (i + .5) * 360 / n - 90; x = 32 + r * Math.cos(t * d); y = 32 + r * Math.sin(t * d);
-      s += leaf(x, y, t + 180 - 38, .62) + leaf(x, y, t + 180 + 38, .62);
-    }
-    for (i = 0; i < n; i++) {                          // flowers on the ring
-      t = i * 360 / n - 90; x = 32 + r * Math.cos(t * d); y = 32 + r * Math.sin(t * d);
-      s += ref(i % 3 === 0 ? 'rose' : 'blossom', pi, i % 3 === 0 ? v : (v + 1) % 3, x - fs / 2, y - fs / 2, fs);
-    }
-    return s;
-  }
-
-  var FAMS = [
-    { n: 'daisy', fn: daisy }, { n: 'rose', fn: rose }, { n: 'tulip', fn: tulip }, { n: 'blossom', fn: blossom },
-    { n: 'lotus', fn: lotus }, { n: 'sunflower', fn: sunflower }, { n: 'heartflower', fn: heartflower },
-    { n: 'bud', fn: bud }, { n: 'butterfly', fn: butterfly }, { n: 'bee', fn: bee }, { n: 'ladybug', fn: ladybug },
-    { n: 'vase', fn: vase }, { n: 'can', fn: can }, { n: 'wreath', fn: wreath }
-  ];
-
-  var ICONS = [];                                      // index k == numeric part of its id
-  FAMS.forEach(function (m, fi) {
-    FN[m.n] = fi;
-    PAL.forEach(function (pal, pi) {
-      for (var v = 0; v < V; v++) ICONS.push({ id: gid(fi, pi, v), fi: fi, pi: pi, v: v, fam: m.n, name: m.n + ' \u00b7 ' + pal.n + ' \u00b7 ' + (v + 1) });
-    });
-  });
-
-  function inner(k) { var ic = ICONS[k]; return FAMS[ic.fi].fn(PAL[ic.pi], ic.v, ic.pi); }
-
-  /* inject one hidden sprite with all 504 symbols */
-  (function () {
-    var out = '<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false"><defs>', k;
-    for (k = 0; k < ICONS.length; k++) out += '<symbol id="' + ICONS[k].id + '" viewBox="0 0 64 64">' + inner(k) + '</symbol>';
-    document.body.insertAdjacentHTML('afterbegin', out + '</defs></svg>');
-  })();
-
-  /* standalone SVG text (nested <use> refs are inlined) for copy/paste */
-  function flat(k) {
-    return inner(k).replace(/<use href="#(gd\d+)" x="([^"]+)" y="([^"]+)" width="([^"]+)" height="([^"]+)"\/>/g,
-      function (m, id, x, y, w, h) {
-        return '<svg x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" viewBox="0 0 64 64">' + flat(+id.slice(2)) + '</svg>';
-      });
-  }
-  function svgText(k) { return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="128" height="128">' + flat(k) + '</svg>'; }
-
-  function use(k, size, cls) {
-    size = size || 20;
-    return '<svg class="gi' + (cls ? ' ' + cls : '') + '" viewBox="0 0 64 64" width="' + size + '" height="' + size + '" aria-hidden="true" focusable="false"><use href="#' + ICONS[k % ICONS.length].id + '"/></svg>';
-  }
-  function pick(names, rnd) {                           // random icon from some families
-    var fi = FN[names[Math.floor(rnd() * names.length)]];
-    return (fi * P + Math.floor(rnd() * P)) * V + Math.floor(rnd() * V);
-  }
-
-  return { count: ICONS.length, icons: ICONS, fams: FAMS, pal: PAL, use: use, svgText: svgText, pick: pick };
-})();
-
-/* ── a) a different flower in front of every section title ── */
-(function () {
-  var r = seeded(7);
-  document.querySelectorAll('.section-label, .gallery-title').forEach(function (node) {
-    node.classList.add('has-ic');
-    node.insertAdjacentHTML('afterbegin', GARDEN.use(GARDEN.pick(['rose', 'blossom', 'daisy', 'heartflower', 'tulip', 'lotus'], r), 16));
-  });
-})();
-
-/* ── b) icon vines (dividers) ── */
-document.querySelectorAll('.vine').forEach(function (node, j) {
-  var n = +node.getAttribute('data-n') || 18, r = seeded(100 + j), s = '', i;
-  for (i = 0; i < n; i++) s += GARDEN.use(GARDEN.pick(i % 3 === 1 ? ['blossom', 'daisy', 'heartflower'] : ['rose', 'tulip', 'bud', 'lotus', 'blossom'], r), 26);
-  node.innerHTML = s;
-});
-
-/* ── c) faint garden wallpaper tile ── */
-(function () {
-  var r = seeded(2026), s = '', i, k, x, y, z, a;
-  for (i = 0; i < 12; i++) {
-    k = GARDEN.pick(['blossom', 'daisy', 'rose', 'heartflower', 'lotus'], r);
-    x = (i % 4) * 90 + r() * 30; y = Math.floor(i / 4) * 120 + r() * 40; z = 28 + r() * 22; a = Math.round(r() * 360);
-    s += '<use href="#' + GARDEN.icons[k].id + '" x="' + x.toFixed(1) + '" y="' + y.toFixed(1) + '" width="' + z.toFixed(1) + '" height="' + z.toFixed(1) +
-         '" transform="rotate(' + a + ' ' + (x + z / 2).toFixed(1) + ' ' + (y + z / 2).toFixed(1) + ')"/>';
-  }
-  document.body.insertAdjacentHTML('afterbegin',
-    '<svg class="bg-garden" aria-hidden="true" focusable="false"><defs><pattern id="pGarden" width="360" height="360" patternUnits="userSpaceOnUse">' + s +
-    '</pattern></defs><rect width="100%" height="100%" fill="url(#pGarden)"/></svg>');
-})();
-
-/* ── d) falling flowers (join the existing petals) ── */
-(function () {
-  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var box = document.getElementById('petals'); if (!box) return;
-  var n = window.innerWidth < 680 ? 6 : 14, r = seeded(31), i, d;
-  for (i = 0; i < n; i++) {
-    d = document.createElement('div');
-    d.className = 'fl-fall';
-    d.innerHTML = GARDEN.use(GARDEN.pick(['blossom', 'daisy', 'heartflower', 'rose', 'lotus'], r), 26);
-    d.style.left = (r() * 100).toFixed(1) + 'vw';
-    d.style.setProperty('--s',   (0.6 + r() * 0.8).toFixed(2));
-    d.style.setProperty('--dx',  Math.round(r() * 200 - 100) + 'px');
-    d.style.setProperty('--rot', Math.round(r() * 540 + 180) + 'deg');
-    d.style.animationDuration = (16 + r() * 18).toFixed(1) + 's';
-    d.style.animationDelay    = (-r() * 34).toFixed(1) + 's';
-    d.style.opacity = (0.35 + r() * 0.35).toFixed(2);
-    box.appendChild(d);
-  }
-})();
-
-/* ── e) every certificate card gets its own icon in the footer ── */
-document.querySelectorAll('.cert-card').forEach(function (c, i) {
-  var foot = c.querySelector('.cert-card-footer'); if (!foot) return;
-  var s = document.createElement('span'); s.className = 'gi-slot';
-  s.innerHTML = GARDEN.use((i * 37 + 11) % GARDEN.count, 20);
-  foot.insertBefore(s, foot.firstChild);
-});
-
-/* ═══════════════════════════════════════════════════════════
-   ISEF — BLOOMS screenshots, always shown rotated 90° to the RIGHT
-   Edit this list: one line per screenshot. File names are
-   written exactly as they are in the certs/ folder.
-   ═══════════════════════════════════════════════════════════ */
-var ISEF_DIR = 'certs/';
-var ISEF = [
-  { name: 'BLOOMS \u2014 ISEF screenshot 01', tag: 'ISEF 01', img: ISEF_DIR + 'Screenshot 2026-11-01 192600.png' },
-  { name: 'BLOOMS \u2014 ISEF screenshot 02', tag: 'ISEF 02', img: ISEF_DIR + 'Screenshot 2026-11-01 192625.png' },
-  { name: 'BLOOMS \u2014 ISEF screenshot 03', tag: 'ISEF 03', img: ISEF_DIR + 'Screenshot 2026-11-01 192637.png' }
-  /* add more lines in the same shape, for example the poster and slides
-     once you have exported them from the PDFs to PNG:
-  ,{ name: 'BLOOMS \u2014 ISEF poster',        tag: 'Poster',   img: ISEF_DIR + 'ISEF-poster.png' }
-  ,{ name: 'BLOOMS \u2014 presentation slide 01', tag: 'Slide 01', img: ISEF_DIR + 'ISEF-slide-01.png' }
-  */
-];
-
-/* rotated lightbox (re-uses the existing overlay) */
-var lbBox = overlay.querySelector('.lightbox-img-box');
-function resetRot() {
-  lbBox.classList.remove('rot');
-  lbBox.style.width = lbBox.style.height = '';
-  lbImg.style.width = lbImg.style.height = lbImg.style.maxWidth = lbImg.style.maxHeight = '';
-  lbImg.onload = lbImg.onerror = null;
-}
-new MutationObserver(function () { if (!overlay.classList.contains('open')) resetRot(); })
-  .observe(overlay, { attributes: true, attributeFilter: ['class'] });
-
-function openRot(it) {
-  lbName.textContent = it.name;
-  lbOrg.textContent  = 'ISEF \u00b7 BLOOMS \u00b7 C++ \u00b7 Unreal Engine 5.8';
-  lbDate.textContent = it.tag;
-  lbImg.onload = function () {
-    var w = lbImg.naturalWidth, h = lbImg.naturalHeight;
-    var s = Math.min(window.innerWidth * 0.92 / h, window.innerHeight * 0.78 / w, 2);   // after the turn the box is h x w
-    lbBox.style.width  = Math.round(h * s) + 'px';
-    lbBox.style.height = Math.round(w * s) + 'px';
-    lbImg.style.width  = Math.round(w * s) + 'px';
-    lbImg.style.height = Math.round(h * s) + 'px';
-    lbBox.classList.add('rot');
-  };
-  lbImg.onerror = function () { lbImg.onload = null; lbImg.src = phSVG; };
-  lbImg.alt = it.name;
-  lbImg.src = encodeURI(it.img);
-  overlay.classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-
-(function () {
-  var gridEl = document.getElementById('isefGrid'); if (!gridEl) return;
-  document.getElementById('isefCount').textContent = ISEF.length;
-  ISEF.forEach(function (it) {
-    var card = document.createElement('div');
-    card.className = 'isef-card'; card.tabIndex = 0;
-    card.setAttribute('role', 'button'); card.setAttribute('aria-label', 'Open ' + it.name);
-
-    var zoom = document.createElement('div'); zoom.className = 'cert-card-zoom'; zoom.textContent = 'view';
-    var wrap = document.createElement('div'); wrap.className = 'rot-wrap';
-    var img  = document.createElement('img');
-    img.src = encodeURI(it.img); img.alt = it.name; img.loading = 'lazy';
-    img.addEventListener('error', function () { this.classList.add('missing'); this.src = phSVG; }, { once: true });
-    wrap.appendChild(img);
-    var tag = document.createElement('div'); tag.className = 'isef-tag'; tag.textContent = it.tag;
-
-    card.appendChild(zoom); card.appendChild(wrap); card.appendChild(tag);
-    card.addEventListener('click', function () { openRot(it); });
-    card.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openRot(it); } });
-    gridEl.appendChild(card);
-  });
-})();
-
-/* ═══════════════════════════════════════════════════════════
-   ICON GARDEN — filter by family / palette, click to copy SVG
-   ═══════════════════════════════════════════════════════════ */
-var _toastT;
-function say(m) {
-  var t = document.getElementById('toast'); if (!t) return;
-  t.textContent = m; t.classList.add('on');
-  clearTimeout(_toastT); _toastT = setTimeout(function () { t.classList.remove('on'); }, 1800);
-}
-
-(function () {
-  var bar = document.getElementById('gardenBar'), gridEl = document.getElementById('gardenGrid');
-  if (!bar || !gridEl) return;
-  document.getElementById('gardenCount').textContent = GARDEN.count;
-  var famNames = ['all'].concat(GARDEN.fams.map(function (m) { return m.n; })), famSel = 'all', palSel = -1;
-
-  function chip(txt, on, fn, swatch) {
-    var b = document.createElement('button'); b.type = 'button'; b.className = 'garden-chip' + (on ? ' on' : '');
-    if (swatch) {
-      var d = document.createElement('i');
-      d.style.cssText = 'display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px;background:' + swatch;
-      b.appendChild(d);
-    }
-    b.appendChild(document.createTextNode(txt)); b.addEventListener('click', fn);
-    return b;
-  }
-
-  function render() {
-    bar.innerHTML = '';
-    famNames.forEach(function (n) { bar.appendChild(chip(n, n === famSel, function () { famSel = n; render(); })); });
-    GARDEN.pal.forEach(function (p, i) {
-      bar.appendChild(chip(p.n, i === palSel, function () { palSel = (palSel === i ? -1 : i); render(); }, p.b));
-    });
-    var html = '', shown = 0;
-    GARDEN.icons.forEach(function (ic, k) {
-      if (famSel !== 'all' && ic.fam !== famSel) return;
-      if (palSel >= 0 && ic.pi !== palSel) return;
-      shown++;
-      html += '<button type="button" class="garden-cell" data-k="' + k + '" title="' + ic.name + '" aria-label="Copy SVG: ' + ic.name + '">' + GARDEN.use(k, 44) + '</button>';
-    });
-    gridEl.innerHTML = html;
-    document.getElementById('gardenShown').textContent = shown;
-  }
-
-  gridEl.addEventListener('click', function (e) {
-    var c = e.target.closest('.garden-cell'); if (!c) return;
-    var k = +c.getAttribute('data-k'), txt = GARDEN.svgText(k);
-    function done(ok) { say(ok ? 'copied SVG \u00b7 ' + GARDEN.icons[k].name : 'copy blocked \u2014 SVG printed in the console'); if (!ok) console.log(txt); }
-    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(function () { done(true); }, function () { done(false); });
-    else done(false);
-  });
-
-  render();
 })();
 </script>
 
