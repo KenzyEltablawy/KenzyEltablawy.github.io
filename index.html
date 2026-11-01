@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#2E0F34">
 <title>Kenzy Eltablawy — STEM Student · Data Science & AI</title>
 <meta name="description" content="STEM student specialising in Data Science, AI, and Python — three Udacity Nanodegrees, two STEM capstone prototypes, and a roadmap into systems programming.">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -11,17 +12,18 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg:      #09060F;
-  --surface: #110A1C;
-  --border:  #261440;
-  --text:    #EEE8F8;
-  --muted:   #9880B0;
-  --violet:  #A968D8;
-  --rose:    #D4689E;
-  --v-bg:    rgba(169,104,216,0.08);
-  --v-bd:    rgba(169,104,216,0.22);
-  --r-bg:    rgba(212,104,158,0.08);
-  --r-bd:    rgba(212,104,158,0.22);
+  --bg:      #1A0A29;
+  --bg-2:    #2E0F34;
+  --surface: rgba(54, 21, 64, 0.62);
+  --border:  #55296F;
+  --text:    #FFF0F8;
+  --muted:   #CFA9CB;
+  --rose:    #FF7DB8;
+  --violet:  #B58AF5;
+  --r-bg:    rgba(255,125,184,0.10);
+  --r-bd:    rgba(255,125,184,0.30);
+  --v-bg:    rgba(181,138,245,0.10);
+  --v-bd:    rgba(181,138,245,0.30);
   --mono:    'JetBrains Mono', monospace;
   --sans:    'Inter', sans-serif;
 }
@@ -29,10 +31,13 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background: var(--bg);
+  background-color: var(--bg);
   background-image:
-    radial-gradient(ellipse 60% 50% at 5% 0%,   rgba(169,104,216,0.06) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 40% at 95% 10%,  rgba(212,104,158,0.04) 0%, transparent 60%);
+    radial-gradient(ellipse 70% 55% at 0% 0%,    rgba(255,125,184,0.20) 0%, transparent 65%),
+    radial-gradient(ellipse 60% 50% at 100% 6%,  rgba(181,138,245,0.22) 0%, transparent 62%),
+    radial-gradient(ellipse 70% 50% at 50% 100%, rgba(255,125,184,0.12) 0%, transparent 70%),
+    linear-gradient(160deg, #1E0B2F 0%, #2E0F34 48%, #1A0A29 100%);
+  background-attachment: fixed;
   color: var(--text);
   font-family: var(--sans);
   font-size: 14px;
@@ -60,7 +65,7 @@ body {
   letter-spacing: -0.025em;
   line-height: 1.1;
   margin-bottom: 10px;
-  background: linear-gradient(105deg, var(--violet) 0%, var(--rose) 100%);
+  background: linear-gradient(105deg, var(--rose) 0%, var(--violet) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -87,7 +92,7 @@ body {
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--violet);
+  color: var(--rose);
   margin-bottom: 20px;
 }
 
@@ -124,7 +129,7 @@ body {
   font-size: 9.5px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--violet);
+  color: var(--rose);
   margin-bottom: 22px;
   display: flex;
   align-items: center;
@@ -175,7 +180,7 @@ body {
 .job-role {
   font-family: var(--mono);
   font-size: 10.5px;
-  color: var(--rose);
+  color: var(--violet);
   margin-bottom: 12px;
 }
 
@@ -193,12 +198,12 @@ body {
   content: '--';
   position: absolute;
   left: 0;
-  color: var(--violet);
+  color: var(--rose);
   font-size: 10px;
   top: 3px;
 }
 
-.job li .kw { color: var(--text); font-size: 11px; opacity: 0.75; }
+.job li .kw { color: var(--text); font-size: 11px; opacity: 0.8; }
 
 /* ── Portfolio cards ──────────────────────────── */
 .project {
@@ -210,11 +215,11 @@ body {
   transition: border-color 0.15s, box-shadow 0.15s;
 }
 
-.project:hover { border-color: var(--v-bd); box-shadow: 0 0 18px rgba(169,104,216,0.06); }
+.project:hover { border-color: var(--r-bd); box-shadow: 0 0 20px rgba(255,125,184,0.10); }
 
-.project-num { font-family: var(--mono); font-size: 9px; color: var(--violet); letter-spacing: 0.1em; margin-bottom: 3px; }
+.project-num { font-family: var(--mono); font-size: 9px; color: var(--rose); letter-spacing: 0.1em; margin-bottom: 3px; }
 .project-name { font-weight: 600; font-size: 13.5px; margin-bottom: 5px; }
-.project-badge { font-family: var(--mono); font-size: 9.5px; color: var(--rose); margin-left: 8px; font-weight: 400; }
+.project-badge { font-family: var(--mono); font-size: 9.5px; color: var(--violet); margin-left: 8px; font-weight: 400; }
 .project-desc { font-size: 12px; color: var(--muted); line-height: 1.58; }
 
 /* ── Certifications ───────────────────────────── */
@@ -233,25 +238,26 @@ body {
   display: flex;
   align-items: baseline;
   padding: 5px 0;
-  border-bottom: 1px solid rgba(38,20,64,0.7);
+  border-bottom: 1px solid rgba(85,41,111,0.55);
   font-size: 12.5px;
 }
 
 .cert-item:last-child { border-bottom: none; }
 
-.cert-arrow { font-family: var(--mono); color: var(--violet); margin-right: 8px; font-size: 11px; flex-shrink: 0; }
+.cert-arrow { font-family: var(--mono); color: var(--rose); margin-right: 8px; font-size: 11px; flex-shrink: 0; }
 .cert-name  { font-weight: 500; color: var(--text); flex: 1; }
 .cert-org   { color: var(--muted); font-size: 11.5px; margin-left: 6px; flex-shrink: 0; }
-.cert-date  { font-family: var(--mono); font-size: 10px; color: var(--rose); margin-left: 10px; white-space: nowrap; flex-shrink: 0; }
+.cert-date  { font-family: var(--mono); font-size: 10px; color: var(--violet); margin-left: 10px; white-space: nowrap; flex-shrink: 0; }
 .cert-note  { font-family: var(--mono); font-size: 10.5px; color: var(--muted); font-style: italic; padding: 6px 0 2px 18px; }
 
 /* ── Sidebar ──────────────────────────────────── */
 .sidebar .section { margin-bottom: 32px; }
 
+.edu-block + .edu-block { margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--border); }
 .edu-degree { font-weight: 600; font-size: 13.5px; margin-bottom: 4px; }
 .edu-sub    { font-size: 12.5px; color: var(--muted); margin-bottom: 4px; }
-.edu-year   { font-family: var(--mono); font-size: 10.5px; color: var(--rose); margin-bottom: 10px; }
-.edu-note   { font-size: 11.5px; color: var(--muted); line-height: 1.6; border-left: 2px solid var(--border); padding-left: 10px; }
+.edu-year   { font-family: var(--mono); font-size: 10.5px; color: var(--violet); margin-bottom: 10px; }
+.edu-note   { font-size: 11.5px; color: var(--muted); line-height: 1.6; border-left: 2px solid var(--r-bd); padding-left: 10px; }
 
 .lang-row { display: flex; justify-content: space-between; align-items: center; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
 .lang-row:last-child { border: none; }
@@ -261,28 +267,28 @@ body {
 .skill-group-label { font-family: var(--mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 7px; }
 .tags { display: flex; flex-wrap: wrap; gap: 5px; }
 .tag { font-family: var(--mono); font-size: 10.5px; padding: 2px 8px; border-radius: 3px; border: 1px solid; }
-.tag.hi { background: var(--v-bg); color: var(--violet); border-color: var(--v-bd); }
-.tag.ro { background: var(--r-bg); color: var(--rose);   border-color: var(--r-bd); }
-.tag.lo { background: rgba(255,255,255,0.025); color: var(--muted); border-color: var(--border); }
+.tag.hi { background: var(--r-bg); color: var(--rose);   border-color: var(--r-bd); }
+.tag.ro { background: var(--v-bg); color: var(--violet); border-color: var(--v-bd); }
+.tag.lo { background: rgba(255,255,255,0.035); color: var(--muted); border-color: var(--border); }
 
 /* ── Competition card ─────────────────────────── */
 .comp-card { padding: 14px 16px; border: 1px solid var(--border); border-radius: 5px; background: var(--surface); transition: border-color 0.15s; }
-.comp-card:hover { border-color: var(--r-bd); }
+.comp-card:hover { border-color: var(--v-bd); }
 .comp-name { font-weight: 600; font-size: 13.5px; margin-bottom: 3px; }
-.comp-meta { font-family: var(--mono); font-size: 9.5px; color: var(--rose); margin-bottom: 8px; letter-spacing: 0.04em; }
+.comp-meta { font-family: var(--mono); font-size: 9.5px; color: var(--violet); margin-bottom: 8px; letter-spacing: 0.04em; }
 .comp-desc { font-size: 12px; color: var(--muted); line-height: 1.55; }
 
 /* ── Volunteering ─────────────────────────────── */
 .vol-item { margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
 .vol-item:last-child { border: none; margin: 0; padding: 0; }
 .vol-org  { font-weight: 600; font-size: 12.5px; margin-bottom: 2px; }
-.vol-role { font-family: var(--mono); font-size: 10px; color: var(--rose); margin-bottom: 4px; }
+.vol-role { font-family: var(--mono); font-size: 10px; color: var(--violet); margin-bottom: 4px; }
 .vol-desc { font-size: 11.5px; color: var(--muted); line-height: 1.5; }
 
 /* ── Workshops ────────────────────────────────── */
-.ws-item { display: flex; align-items: flex-start; gap: 8px; padding: 6px 0; border-bottom: 1px solid rgba(38,20,64,0.6); font-size: 12px; }
+.ws-item { display: flex; align-items: flex-start; gap: 8px; padding: 6px 0; border-bottom: 1px solid rgba(85,41,111,0.5); font-size: 12px; }
 .ws-item:last-child { border: none; }
-.ws-arrow { color: var(--violet); font-family: var(--mono); font-size: 10px; flex-shrink: 0; margin-top: 2px; }
+.ws-arrow { color: var(--rose); font-family: var(--mono); font-size: 10px; flex-shrink: 0; margin-top: 2px; }
 .ws-name  { font-weight: 500; margin-bottom: 1px; }
 .ws-desc  { font-size: 11px; color: var(--muted); }
 
@@ -310,7 +316,7 @@ body {
   font-size: 9.5px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--violet);
+  color: var(--rose);
   display: flex;
   align-items: center;
   gap: 12px;
@@ -347,24 +353,27 @@ body {
   position: relative;
 }
 
-.cert-card:hover {
-  border-color: var(--v-bd);
+.cert-card:hover,
+.cert-card:focus-visible {
+  border-color: var(--r-bd);
   transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(169,104,216,0.13);
+  box-shadow: 0 16px 40px rgba(255,125,184,0.16), 0 6px 22px rgba(181,138,245,0.12);
+  outline: none;
 }
 
-.cert-card:hover .cert-card-zoom { opacity: 1; }
+.cert-card:hover .cert-card-zoom,
+.cert-card:focus-visible .cert-card-zoom { opacity: 1; }
 
 .cert-card-zoom {
   position: absolute;
   top: 10px; right: 10px;
-  background: rgba(9,6,15,0.72);
-  border: 1px solid var(--v-bd);
+  background: rgba(26,10,41,0.74);
+  border: 1px solid var(--r-bd);
   border-radius: 4px;
   padding: 3px 7px;
   font-family: var(--mono);
   font-size: 9px;
-  color: var(--violet);
+  color: var(--rose);
   opacity: 0;
   transition: opacity 0.18s;
   pointer-events: none;
@@ -377,9 +386,9 @@ body {
 .cert-card-num {
   font-family: var(--mono);
   font-size: 8.5px;
-  color: var(--violet);
+  color: var(--rose);
   letter-spacing: 0.12em;
-  opacity: 0.6;
+  opacity: 0.7;
   margin-bottom: 3px;
 }
 
@@ -391,10 +400,10 @@ body {
   margin-bottom: 4px;
 }
 
-.cert-card-org { font-size: 10px; color: var(--violet); line-height: 1.3; opacity: 0.85; }
+.cert-card-org { font-size: 10px; color: var(--violet); line-height: 1.3; opacity: 0.95; }
 
 .cert-card-img-wrap {
-  background: #f7f5fa;
+  background: #fbf4f9;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -414,13 +423,14 @@ body {
 
 .cert-card:hover .cert-card-img-wrap img { transform: scale(1.03); }
 
-.cert-card.poster .cert-card-img-wrap { height: 230px; background: #f0eef4; }
+.cert-card.poster .cert-card-img-wrap { height: 230px; background: #f6edf4; }
 
 .cert-card-footer {
   padding: 9px 14px 10px;
   display: flex;
   align-items: center;
   gap: 8px;
+  margin-top: auto;
 }
 
 .cert-card-date  { font-family: var(--mono); font-size: 9.5px; color: var(--rose); flex: 1; }
@@ -429,9 +439,9 @@ body {
   font-size: 8px;
   padding: 2px 6px;
   border-radius: 3px;
-  border: 1px solid var(--r-bd);
-  color: var(--rose);
-  background: var(--r-bg);
+  border: 1px solid var(--v-bd);
+  color: var(--violet);
+  background: var(--v-bg);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   flex-shrink: 0;
@@ -441,7 +451,10 @@ body {
 .lightbox-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(9,6,15,0.97);
+  background: rgba(26,10,41,0.97);
+  background-image:
+    radial-gradient(ellipse 60% 50% at 20% 10%, rgba(255,125,184,0.12) 0%, transparent 65%),
+    radial-gradient(ellipse 60% 50% at 80% 90%, rgba(181,138,245,0.14) 0%, transparent 65%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -469,7 +482,7 @@ body {
   max-height: 80vh;
   object-fit: contain;
   border-radius: 6px;
-  box-shadow: 0 0 100px rgba(169,104,216,0.16), 0 0 40px rgba(0,0,0,0.6);
+  box-shadow: 0 0 100px rgba(255,125,184,0.18), 0 0 60px rgba(181,138,245,0.16), 0 0 40px rgba(0,0,0,0.6);
   display: block;
 }
 
@@ -481,7 +494,7 @@ body {
 .lightbox-close-btn {
   position: fixed;
   top: 18px; right: 24px;
-  background: rgba(38,20,64,0.6);
+  background: rgba(85,41,111,0.5);
   border: 1px solid var(--border);
   border-radius: 5px;
   color: var(--muted);
@@ -496,7 +509,7 @@ body {
 }
 
 .lightbox-close-btn:hover {
-  background: rgba(212,104,158,0.12);
+  background: rgba(255,125,184,0.14);
   color: var(--rose);
   border-color: var(--r-bd);
 }
@@ -509,7 +522,7 @@ body {
   font-family: var(--mono);
   font-size: 9px;
   color: var(--muted);
-  opacity: 0.5;
+  opacity: 0.6;
   letter-spacing: 0.1em;
   white-space: nowrap;
 }
@@ -530,7 +543,7 @@ body {
 
 @media print {
   body { background: #fff; color: #111; }
-  .name { -webkit-text-fill-color: #7B3FBE; }
+  .name { -webkit-text-fill-color: #B8286F; }
   .cursor { display: none; }
   .gallery-wrapper { display: none; }
 }
@@ -625,7 +638,7 @@ body {
           <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">AI Basic: Overview of AI</span><span class="cert-date">2025</span></div>
           <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Development and Basic Concepts of Cloud Computing</span><span class="cert-date">2025</span></div>
           <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Information Representation and Data Organization</span><span class="cert-date">2026</span></div>
-          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Python Programming Basics</span><span class="cert-date">2026</span></div>
+          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Python Programming Basics</span><span class="cert-date">Jan 2026</span></div>
         </div>
 
         <div class="cert-group">
@@ -636,16 +649,23 @@ body {
         </div>
 
         <div class="cert-group">
-          <div class="cert-group-label">Language &amp; Art Certifications</div>
-          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">French DELF A1 &mdash; Language Proficiency Certificate</span></div>
-          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">TREFLE Art Competition &mdash; 1st Prize (French)</span><span class="cert-date">2024</span></div>
+          <div class="cert-group-label">Language &amp; Academic Awards</div>
+          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">French DELF A1 &mdash; Diplôme d'Études en Langue Française</span><span class="cert-org">&mdash; France Éducation international</span><span class="cert-date">2025</span></div>
+          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">1st Place Nationwide &mdash; National French Language Competition (Preparatory Stage)</span><span class="cert-org">&mdash; Menoufia Directorate of Education</span></div>
+          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Le Jour des Prix de Français &mdash; 1er Prix</span><span class="cert-org">&mdash; Institut Français d'Égypte</span><span class="cert-date">2024</span></div>
           <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Chinese My Dream Art Competition &mdash; 2nd Position (African Region)</span><span class="cert-date">2023</span></div>
+          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Chinese Language &mdash; Certificate of Honor</span><span class="cert-org">&mdash; Misr El-Hurra Languages School</span><span class="cert-date">2024</span></div>
+          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Prep 3 Toppers &mdash; Graduation</span><span class="cert-org">&mdash; Misr El-Hurra IDEL</span><span class="cert-date">2025</span></div>
+          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Prophet Mohamed Birth Competition &mdash; Certificate of Appreciation</span><span class="cert-org">&mdash; Menofia STEM School</span></div>
+          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Safir El Tafawok Preparation Course &mdash; Accepted Superiors</span></div>
         </div>
 
         <div class="cert-group">
           <div class="cert-group-label">Individual Certifications</div>
           <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Social Media Marketing with AI</span><span class="cert-org">&mdash; Sololearn</span><span class="cert-date">Aug 2026</span></div>
           <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Effective Leadership</span><span class="cert-org">&mdash; HP LIFE &middot; HP Foundation</span><span class="cert-date">Aug 2026</span></div>
+          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">AI Ethics &amp; Responsible AI &mdash; Volunteer Service</span><span class="cert-org">&mdash; EthicWise AI</span><span class="cert-date">Aug 2026</span></div>
+          <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Cybersecurity Superhero Academy</span><span class="cert-org">&mdash; NTI &middot; MCIT Egypt</span><span class="cert-date">2026</span></div>
           <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Generative AI for Beginners</span><span class="cert-org">&mdash; Simplilearn SkillUp</span><span class="cert-date">2026</span></div>
           <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Robotics and Programming (Arduino) Level 1</span><span class="cert-org">&mdash; EGY STEM</span><span class="cert-date">2026</span></div>
           <div class="cert-item"><span class="cert-arrow">&#9658;</span><span class="cert-name">Leadership Training Course</span><span class="cert-org">&mdash; DemocraShe</span><span class="cert-date">2026</span></div>
@@ -662,10 +682,18 @@ body {
 
       <section class="section">
         <div class="section-label">Education</div>
-        <div class="edu-degree">Menofia STEM School</div>
-        <div class="edu-sub">11th Grade &middot; Grade A</div>
-        <div class="edu-year">2025 &ndash; Present</div>
-        <div class="edu-note">Bi-weekly EPA journal exams, capstone performance evaluations, leadership assessments, prototype presentations, team discussions, and cross-cultural workshops.</div>
+        <div class="edu-block">
+          <div class="edu-degree">Menofia STEM School</div>
+          <div class="edu-sub">11th Grade &middot; Grade A</div>
+          <div class="edu-year">2025 &ndash; Present</div>
+          <div class="edu-note">Bi-weekly EPA journal exams, capstone performance evaluations, leadership assessments, prototype presentations, team discussions, and cross-cultural workshops.</div>
+        </div>
+        <div class="edu-block">
+          <div class="edu-degree">Misr El-Hurra Official Language School (IDEL)</div>
+          <div class="edu-sub">Prep 3 &middot; Toppers</div>
+          <div class="edu-year">Graduated 2025</div>
+          <div class="edu-note">Top-student recognition at graduation; 1st place nationwide in the National French Language Competition (preparatory stage).</div>
+        </div>
       </section>
 
       <section class="section">
@@ -738,9 +766,14 @@ body {
       <section class="section">
         <div class="section-label">Volunteering</div>
         <div class="vol-item">
-          <div class="vol-org">Resala Charity Organization</div>
-          <div class="vol-role">Volunteer &middot; Ongoing</div>
-          <div class="vol-desc">Community and social outreach programs across Egypt.</div>
+          <div class="vol-org">Resala Charity Organization &mdash; Resala STEM</div>
+          <div class="vol-role">Volunteer &middot; 2025/2026 Season &middot; Ongoing</div>
+          <div class="vol-desc">70+ service hours across 30+ community engagements: aid convoys to rural villages, community campaigns, and medical &amp; clothing supplies for families in need.</div>
+        </div>
+        <div class="vol-item">
+          <div class="vol-org">EthicWise AI</div>
+          <div class="vol-role">Volunteer &middot; Aug 2026</div>
+          <div class="vol-desc">3 verified service hours in AI Ethics and Responsible AI.</div>
         </div>
         <div class="vol-item">
           <div class="vol-org">Girls Who Code</div>
@@ -766,6 +799,7 @@ body {
         <div class="ws-item"><span class="ws-arrow">&#9658;</span><div><div class="ws-name">Break the Code</div><div class="ws-desc">Programming and computational thinking</div></div></div>
         <div class="ws-item"><span class="ws-arrow">&#9658;</span><div><div class="ws-name">SheShines</div><div class="ws-desc">Online workshop for young women in STEM &amp; digital innovation</div></div></div>
         <div class="ws-item"><span class="ws-arrow">&#9658;</span><div><div class="ws-name">DemocraShe Initiative</div><div class="ws-desc">Leadership training and civic engagement for young women</div></div></div>
+        <div class="ws-item"><span class="ws-arrow">&#9658;</span><div><div class="ws-name">Cybersecurity Superhero Academy</div><div class="ws-desc">NTI &middot; Ministry of Communications &amp; IT, Egypt</div></div></div>
       </section>
 
     </aside>
@@ -804,15 +838,16 @@ body {
 
 <script>
 // =====================================================
-//  CERTS — 27 total, sorted newest → oldest
-//  FIX: all spaces in filenames encoded as %20
-//       entries 01 & 02 underscores corrected to %20
+//  CERTS — 34 total, newest → oldest
+//  Names / issuers / dates are taken from the certificates.
+//  Entries marked  ★ NEW  need the real screenshot filename
+//  (replace the img value with the file from your certs/ folder,
+//   spaces written as %20).
 // =====================================================
 const CERTS = [
 
   /* ── 2026 ──────────────────────────────────────── */
 
-  // 01 — Sololearn — Social Media Marketing with AI
   {
     name:  "Social Media Marketing with AI",
     org:   "Sololearn \u2014 Course Certificate",
@@ -820,15 +855,21 @@ const CERTS = [
     img:   "certs/Screenshot%202026-08-08%20022303.png",
     badge: "Completion"
   },
-  // 02 — HP LIFE — Effective Leadership
   {
-    name:  "Effective Leadership",
-    org:   "HP LIFE \u00b7 HP Foundation \u2014 Certificate of Completion",
+    name:  "Effective Leadership \u2014 Certificate of Completion",
+    org:   "HP LIFE \u00b7 HP Foundation",
     date:  "Aug 2026",
     img:   "certs/Screenshot%202026-08-08%20022336.png",
     badge: "Completion"
   },
-  // 03
+  // ★ NEW
+  {
+    name:  "Certificate of Volunteer Service \u2014 AI Ethics and Responsible AI",
+    org:   "EthicWise AI \u00b7 501(c)(3) Nonprofit \u00b7 3 verified hours",
+    date:  "Aug 2026",
+    img:   "certs/ethicwise-ai-volunteer.png",
+    badge: "Volunteer"
+  },
   {
     name:  "JavaScript Level 3",
     org:   "TOFAS \u2014 International Test of Fundamental Academic Skills",
@@ -836,15 +877,6 @@ const CERTS = [
     img:   "certs/Screenshot%202026-08-06%20215457.png",
     badge: "Achievement"
   },
-  // 04
-  {
-    name:  "JavaScript Level 2",
-    org:   "TOFAS \u2014 International Test of Fundamental Academic Skills",
-    date:  "2026",
-    img:   "certs/Screenshot%202026-07-19%20235827.png",
-    badge: "Achievement"
-  },
-  // 05
   {
     name:  "Leadership Training Course \u2014 Certificate of Graduation",
     org:   "DemocraShe \u00b7 Engage. Empower. Elect.",
@@ -852,7 +884,6 @@ const CERTS = [
     img:   "certs/Screenshot%202026-08-06%20215412.png",
     badge: "Completion"
   },
-  // 06
   {
     name:  "Generative AI for Beginners",
     org:   "Simplilearn SkillUp",
@@ -860,7 +891,13 @@ const CERTS = [
     img:   "certs/Screenshot%202026-08-06%20215439.png",
     badge: "Completion"
   },
-  // 07
+  {
+    name:  "JavaScript Level 2",
+    org:   "TOFAS \u2014 International Test of Fundamental Academic Skills",
+    date:  "2026",
+    img:   "certs/Screenshot%202026-07-19%20235827.png",
+    badge: "Achievement"
+  },
   {
     name:  "Robotics and Programming (Arduino) Level 1",
     org:   "EGY STEM \u2014 Certificate of Appreciation",
@@ -868,7 +905,6 @@ const CERTS = [
     img:   "certs/Screenshot%202026-07-19%20235238.png",
     badge: "Completion"
   },
-  // 08
   {
     name:  "Certificate of Exceptional Efficiency",
     org:   "STEAM for All",
@@ -876,7 +912,6 @@ const CERTS = [
     img:   "certs/Screenshot%202026-08-06%20215425.png",
     badge: "Award"
   },
-  // 09
   {
     name:  "Break the Code 2026",
     org:   "Certificate of Completion \u00b7 Sponsored by Mobbin",
@@ -884,7 +919,6 @@ const CERTS = [
     img:   "certs/Screenshot%202026-08-06%20215348.png",
     badge: "Completion"
   },
-  // 10
   {
     name:  "Study Abroad: What You Need to Know \u2014 Certificate of Completion",
     org:   "SheShines \u00b7 Study Abroad, Scholarships & STEM Pathways",
@@ -892,7 +926,14 @@ const CERTS = [
     img:   "certs/Screenshot%202026-08-06%20215357.png",
     badge: "Completion"
   },
-  // 11
+  // ★ NEW
+  {
+    name:  "Cybersecurity Superhero Academy \u2014 2026",
+    org:   "NTI \u00b7 Ministry of Communications & IT, Egypt \u00b7 EG-CERT \u00b7 NTRA",
+    date:  "2026",
+    img:   "certs/cybersecurity-superhero-academy.png",
+    badge: "Completion"
+  },
   {
     name:   "GALVINO \u2014 Galvanic Cell Energy Generator",
     org:    "STEM Research Project Poster \u00b7 Menofia STEM School \u00b7 S2 2026",
@@ -901,7 +942,6 @@ const CERTS = [
     badge:  "Poster",
     poster: true
   },
-  // 12
   {
     name:   "GREENADO \u2014 Eco-Friendly Building System",
     org:    "STEM Research Project Poster \u00b7 Menofia STEM School \u00b7 S1 2026",
@@ -910,15 +950,13 @@ const CERTS = [
     badge:  "Poster",
     poster: true
   },
-  // 13
   {
-    name:  "Python Programming Basics",
-    org:   "Huawei ICT Academy \u2014 Certificate of Completion",
-    date:  "2026",
+    name:  "Python Programming Basics \u2014 Certificate of Completion",
+    org:   "Huawei ICT Academy \u00b7 Certificate Code EBG20260130010090",
+    date:  "Jan 2026",
     img:   "certs/Screenshot%202026-07-19%20235740.png",
     badge: "Completion"
   },
-  // 14
   {
     name:  "Information Representation and Data Organization",
     org:   "Huawei ICT Academy \u2014 Certificate of Completion",
@@ -927,9 +965,19 @@ const CERTS = [
     badge: "Completion"
   },
 
+  /* ── 2025 / 2026 season ────────────────────────── */
+
+  // ★ NEW
+  {
+    name:  "Resala STEM \u2014 Volunteer Certificate (70+ service hours, 30+ engagements)",
+    org:   "Resala STEM Department \u00b7 Resala Charity Association",
+    date:  "2025/2026",
+    img:   "certs/resala-stem-volunteer.png",
+    badge: "Volunteer"
+  },
+
   /* ── 2025 ──────────────────────────────────────── */
 
-  // 15
   {
     name:  "Level Three: Data Science and AI \u2014 Nanodegree",
     org:   "Digital Egypt Cubs Initiative \u00b7 Udacity \u00b7 MoICT Egypt",
@@ -937,7 +985,6 @@ const CERTS = [
     img:   "certs/Screenshot%202026-07-19%20235213.png",
     badge: "Nanodegree"
   },
-  // 16
   {
     name:  "Development and Basic Concepts of Cloud Computing",
     org:   "Huawei ICT Academy \u2014 Certificate of Completion",
@@ -945,7 +992,6 @@ const CERTS = [
     img:   "certs/Screenshot%202026-07-19%20235751.png",
     badge: "Completion"
   },
-  // 17
   {
     name:  "AI Basic: Overview of AI (CRA Training Program)",
     org:   "Huawei ICT Academy \u2014 Certificate of Completion",
@@ -953,15 +999,21 @@ const CERTS = [
     img:   "certs/Screenshot%202026-07-19%20235727.png",
     badge: "Completion"
   },
-  // 18
   {
-    name:  "DELF Prep Course \u2014 Certificate of Appreciation",
-    org:   "Misr El-Bursa IDEL School",
+    name:  "DELF A1 \u2014 Dipl\u00f4me d'\u00c9tudes en Langue Fran\u00e7aise",
+    org:   "France \u00c9ducation international \u00b7 Minist\u00e8re de l'\u00c9ducation nationale",
     date:  "2025",
     img:   "certs/Screenshot%202026-07-20%20010748.png",
-    badge: "Appreciation"
+    badge: "Diploma"
   },
-  // 19
+  // ★ NEW
+  {
+    name:  "Prep 3 Toppers \u2014 Graduation 2025",
+    org:   "Misr El-Hurra Official Language School (IDEL)",
+    date:  "2025",
+    img:   "certs/prep3-toppers-graduation-2025.png",
+    badge: "Graduation"
+  },
   {
     name:  "DIGITOPIA \u2014 Certificate of Appreciation (Games & Digital Arts Track)",
     org:   "Ministry of Communications & IT, Egypt \u00b7 Edition 1",
@@ -969,7 +1021,6 @@ const CERTS = [
     img:   "certs/Screenshot%202026-07-19%20235949.png",
     badge: "Appreciation"
   },
-  // 20
   {
     name:  "DIGITOPIA \u2014 Certificate of Appreciation (Effective Participation)",
     org:   "Ministry of Communications & IT, Egypt \u00b7 Edition 1",
@@ -977,7 +1028,6 @@ const CERTS = [
     img:   "certs/Screenshot%202026-07-19%20235850.png",
     badge: "Appreciation"
   },
-  // 21
   {
     name:  "JavaScript Level 1",
     org:   "TOFAS \u2014 International Test of Fundamental Academic Skills",
@@ -988,7 +1038,13 @@ const CERTS = [
 
   /* ── 2024 ──────────────────────────────────────── */
 
-  // 22
+  {
+    name:  "1er Prix \u2014 Le Jour des Prix de Fran\u00e7ais",
+    org:   "Institut Fran\u00e7ais d'\u00c9gypte \u00b7 Ambassade de France \u00b7 TR\u00c8FLE \u00b7 Journ\u00e9e Internationale des Professeurs de Fran\u00e7ais",
+    date:  "Nov 2024",
+    img:   "certs/Screenshot%202026-07-20%20010758.png",
+    badge: "1st Prize"
+  },
   {
     name:  "Level Two \u2014 Nanodegree",
     org:   "Digital Egypt Cubs Initiative \u00b7 Udacity \u00b7 MoICT Egypt",
@@ -996,18 +1052,16 @@ const CERTS = [
     img:   "certs/Screenshot%202026-07-19%20235256.png",
     badge: "Nanodegree"
   },
-  // 23
   {
-    name:  "1er Prix \u2014 French Art Competition",
-    org:   "TREFLE \u00b7 Institut Fran\u00e7ais \u00b7 Ambassade de France en \u00c9gypte",
+    name:  "\u8363\u8a89\u8bc1\u4e66 \u2014 Certificate of Honor (Chinese Language)",
+    org:   "Misr El-Hurra Languages School",
     date:  "2024",
-    img:   "certs/Screenshot%202026-07-20%20010758.png",
-    badge: "1st Prize"
+    img:   "certs/Screenshot%202026-07-20%20010740.png",
+    badge: "Honor"
   },
 
   /* ── 2023 ──────────────────────────────────────── */
 
-  // 24
   {
     name:  "Lite One \u2014 Nanodegree",
     org:   "Digital Egypt Cubs Initiative \u00b7 Udacity \u00b7 MoICT Egypt",
@@ -1015,18 +1069,9 @@ const CERTS = [
     img:   "certs/Screenshot%202026-07-19%20235619.png",
     badge: "Nanodegree"
   },
-  // 25
-  {
-    name:  "Chinese My Dream Art \u2014 2nd Position, African Region",
-    org:   "Chinese Cultural Art Competition",
-    date:  "2023",
-    img:   "certs/Screenshot%202026-07-20%20010740.png",
-    badge: "2nd Place"
-  },
 
   /* ── Undated ────────────────────────────────────── */
 
-  // 26
   {
     name:  "Translation Workshop \u2014 Certificate of Achievement",
     org:   "Lingua Stochos",
@@ -1034,12 +1079,35 @@ const CERTS = [
     img:   "certs/Screenshot%202026-07-19%20235656.png",
     badge: "Achievement"
   },
-  // 27
   {
-    name:  "Microsoft Word & Excel Workshop \u2014 Certificate of Appreciation",
+    name:  "Workshop on \u201CWord and Excel\u201D \u2014 Certificate of Appreciation",
     org:   "Lingua Stochos",
     date:  "",
     img:   "certs/Screenshot%202026-07-19%20235711.png",
+    badge: "Appreciation"
+  },
+  // ★ NEW
+  {
+    name:  "Certificate of Appreciation \u2014 1st Place Nationwide, National French Language Competition (Preparatory Stage)",
+    org:   "Menoufia Directorate of Education \u00b7 Public Relations",
+    date:  "",
+    img:   "certs/national-french-competition.png",
+    badge: "1st Place"
+  },
+  // ★ NEW
+  {
+    name:  "Certificate of Appreciation \u2014 Prophet Mohamed Birth Competition",
+    org:   "Menofia STEM School \u00b7 Ministry of Education",
+    date:  "",
+    img:   "certs/prophet-birth-competition.png",
+    badge: "Appreciation"
+  },
+  // ★ NEW
+  {
+    name:  "Certificate of Appreciation \u2014 Safir El Tafawok Preparation Course (Accepted Superiors)",
+    org:   "Safir El Tafawok",
+    date:  "",
+    img:   "certs/safir-el-tafawok.png",
     badge: "Appreciation"
   }
 
@@ -1069,52 +1137,63 @@ function openLightbox(cert) {
 function closeLightbox() {
   overlay.classList.remove('open');
   document.body.style.overflow = '';
-  lbImg.src = '';
+  lbImg.removeAttribute('src');
 }
 
 /* ── Placeholder SVG for missing images ─────── */
 var phSVG = "data:image/svg+xml," + encodeURIComponent(
   '<svg xmlns="http://www.w3.org/2000/svg" width="320" height="200">' +
-    '<rect fill="#110A1C" width="320" height="200"/>' +
+    '<rect fill="#2E0F34" width="320" height="200"/>' +
     '<text x="50%" y="44%" font-family="monospace" font-size="28" ' +
-          'fill="#261440" text-anchor="middle">\uD83D\uDCC4</text>' +
+          'fill="#55296F" text-anchor="middle">\uD83D\uDCC4</text>' +
     '<text x="50%" y="62%" font-family="monospace" font-size="11" ' +
-          'fill="#9880B0" text-anchor="middle">Image not found</text>' +
+          'fill="#CFA9CB" text-anchor="middle">Image not found</text>' +
     '<text x="50%" y="76%" font-family="monospace" font-size="9" ' +
-          'fill="#261440" text-anchor="middle">Add file to certs/ folder</text>' +
+          'fill="#FF7DB8" text-anchor="middle">Add file to certs/ folder</text>' +
   '</svg>'
 );
+
+/* ── Small DOM helper (textContent = safe for &, quotes, etc.) ── */
+function el(tag, cls, text) {
+  var n = document.createElement(tag);
+  if (cls)  n.className   = cls;
+  if (text) n.textContent = text;
+  return n;
+}
 
 /* ── Build grid ─────────────────────────────── */
 var grid  = document.getElementById('certsGrid');
 var TOTAL = CERTS.length;
 
 CERTS.forEach(function(cert, i) {
-  var card = document.createElement('div');
-  card.className = 'cert-card' + (cert.poster ? ' poster' : '');
-  card.setAttribute('tabindex', '0');
+  var card = el('div', 'cert-card' + (cert.poster ? ' poster' : ''));
+  card.tabIndex = 0;
   card.setAttribute('role', 'button');
   card.setAttribute('aria-label', 'View certificate: ' + cert.name);
 
-  card.innerHTML =
-    '<div class="cert-card-zoom">view</div>' +
-    '<div class="cert-card-header">' +
-      '<div class="cert-card-num">' + String(i + 1).padStart(2, '0') + ' / ' + TOTAL + '</div>' +
-      '<div class="cert-card-name">' + cert.name + '</div>' +
-      '<div class="cert-card-org">'  + cert.org  + '</div>' +
-    '</div>' +
-    '<div class="cert-card-img-wrap">' +
-      '<img src="' + cert.img + '" alt="' + cert.name + '" loading="lazy" />' +
-    '</div>' +
-    '<div class="cert-card-footer">' +
-      '<div class="cert-card-date">' + (cert.date || '') + '</div>' +
-      (cert.badge ? '<div class="cert-card-badge">' + cert.badge + '</div>' : '') +
-    '</div>';
+  card.appendChild(el('div', 'cert-card-zoom', 'view'));
 
-  card.querySelector('img').addEventListener('error', function() {
-    this.onerror = null;
+  var head = el('div', 'cert-card-header');
+  head.appendChild(el('div', 'cert-card-num',  String(i + 1).padStart(2, '0') + ' / ' + TOTAL));
+  head.appendChild(el('div', 'cert-card-name', cert.name));
+  head.appendChild(el('div', 'cert-card-org',  cert.org));
+  card.appendChild(head);
+
+  var wrap = el('div', 'cert-card-img-wrap');
+  var img  = document.createElement('img');
+  img.src     = cert.img;
+  img.alt     = cert.name;
+  img.loading = 'lazy';
+  img.addEventListener('error', function() {
     this.src = phSVG;
   }, { once: true });
+  wrap.appendChild(img);
+  card.appendChild(wrap);
+
+  var foot = el('div', 'cert-card-footer');
+  foot.appendChild(el('div', 'cert-card-date', cert.date || ''));
+  if (cert.badge) foot.appendChild(el('div', 'cert-card-badge', cert.badge));
+  card.appendChild(foot);
 
   card.addEventListener('click', function() { openLightbox(cert); });
   card.addEventListener('keydown', function(e) {
