@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0A050D">
-<title>Kenzy Eltablawy — STEM Student · Data Science & AI</title>
-<meta name="description" content="STEM student specialising in Data Science, AI, and Python — three Udacity Nanodegrees, two STEM capstone prototypes, and a roadmap into systems programming.">
+<title>Kenzy Eltablawy — Junior UE5 Developer · STEM Student · Data Science &amp; AI</title>
+<meta name="description" content="Junior Unreal Engine 5 developer and STEM student. BLOOMS: event-driven, tick-free NPCs in UE 5.8 C++ — ISEF-format poster and talk — plus Data Science, AI and three Udacity Nanodegrees.">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
@@ -200,6 +200,172 @@ body::before {
 }
 
 .contacts a:hover { color: var(--red); }
+
+/* ═══════════════════════════════════════════════ */
+/*  ISEF FEATURE SECTION (top of page)             */
+/* ═══════════════════════════════════════════════ */
+.isef {
+  position: relative;
+  margin-bottom: 56px;
+  padding: 30px 30px 28px;
+  border: 1px solid var(--c-bd);
+  border-radius: 8px;
+  background: linear-gradient(160deg, rgba(255,77,115,0.12), var(--surface) 58%);
+  box-shadow: 0 0 40px rgba(255,77,115,0.08);
+}
+
+.isef::before {
+  content: '';
+  position: absolute;
+  top: -1px; left: 22px;
+  width: 64px; height: 3px;
+  background: linear-gradient(90deg, var(--red), var(--rose));
+  border-radius: 2px;
+}
+
+.isef-eyebrow {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--rose);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.isef-eyebrow::before { content: '\273F'; font-size: 12px; letter-spacing: 0; color: var(--red); }
+
+.isef-title {
+  font-family: var(--mono);
+  font-size: clamp(19px, 3.4vw, 27px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+  background: linear-gradient(105deg, var(--blush) 0%, var(--rose) 50%, var(--red) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.isef-sub  { font-family: var(--mono); font-size: 10.5px; color: var(--blush); margin-bottom: 16px; }
+.isef-lead { color: var(--muted); font-size: 13.5px; line-height: 1.8; margin-bottom: 22px; }
+.isef-lead b { color: var(--text); font-weight: 500; }
+
+.isef-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.isef-stat {
+  padding: 12px 12px 10px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background: rgba(10,5,13,0.45);
+}
+
+.isef-stat-num { font-family: var(--mono); font-size: 20px; font-weight: 700; color: var(--rose); line-height: 1.1; margin-bottom: 4px; }
+.isef-stat-lbl { font-size: 10.5px; color: var(--muted); line-height: 1.4; }
+
+.isef-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 26px; }
+
+.isef-btn {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  border: 1px solid var(--c-bd);
+  color: var(--rose);
+  background: var(--c-bg);
+  transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+}
+
+.isef-btn.primary {
+  background: linear-gradient(105deg, var(--crimson), var(--red));
+  border-color: transparent;
+  color: #fff;
+}
+
+.isef-btn:hover {
+  border-color: var(--red);
+  box-shadow: 0 0 18px rgba(255,77,115,0.22);
+  transform: translateY(-1px);
+}
+
+.isef-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+.isef-card {
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background: rgba(10,5,13,0.40);
+}
+
+.isef-card.wide { grid-column: 1 / -1; }
+
+.isef-card h3 {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 10px;
+}
+
+.isef-card p  { font-size: 12px; color: var(--muted); line-height: 1.65; }
+.isef-card p + p { margin-top: 8px; }
+.isef-card b  { color: var(--text); font-weight: 500; }
+
+.isef-card ul,
+.isef-card ol { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+
+.isef-card li {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.6;
+  padding-left: 20px;
+  position: relative;
+}
+
+.isef-card ul li::before {
+  content: '\2740';
+  position: absolute;
+  left: 0; top: 3px;
+  font-size: 10px;
+  color: var(--rose);
+}
+
+.isef-card ol { counter-reset: step; }
+.isef-card ol li { counter-increment: step; padding-left: 26px; }
+.isef-card ol li::before {
+  content: counter(step, decimal-leading-zero);
+  position: absolute;
+  left: 0; top: 2px;
+  font-family: var(--mono);
+  font-size: 9.5px;
+  color: var(--red);
+}
+
+.chip {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 9px;
+  padding: 1px 6px;
+  margin-left: 6px;
+  border-radius: 3px;
+  border: 1px solid;
+  white-space: nowrap;
+}
+
+.chip.ok   { color: #8FE3B0; border-color: rgba(143,227,176,0.40); background: rgba(143,227,176,0.08); }
+.chip.todo { color: var(--blush); border-color: var(--b-bd); background: var(--b-bg); }
 
 /* ── Two-column layout ────────────────────────── */
 .layout {
@@ -683,6 +849,9 @@ body::before {
   .cert-card-img-wrap { height: 160px; }
   .cert-card.poster .cert-card-img-wrap { height: 180px; }
   .deco { width: 150px; opacity: 0.45; }
+  .isef { padding: 22px 16px 20px; }
+  .isef-stats { grid-template-columns: repeat(2, 1fr); }
+  .isef-cols { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -696,6 +865,9 @@ body::before {
   .name { -webkit-text-fill-color: #C2336F; filter: none; }
   .cursor { display: none; }
   .gallery-wrapper { display: none; }
+  .isef { background: #fff; border-color: #ccc; box-shadow: none; }
+  .isef-title { -webkit-text-fill-color: #C2336F; }
+  .isef-btn { display: none; }
 }
 </style>
 </head>
@@ -873,7 +1045,7 @@ body::before {
 
   <header class="header">
     <div class="name">Kenzy Eltablawy<span class="cursor"></span></div>
-    <div class="role-line">STEM Student (Grade 11, A) &nbsp;&middot;&nbsp; Data Science &amp; AI &nbsp;&middot;&nbsp; Python &nbsp;&middot;&nbsp; C &amp; C++ (Learning) &nbsp;&middot;&nbsp; Egypt</div>
+    <div class="role-line">Junior UE5 Developer (C++) &nbsp;&middot;&nbsp; STEM Student (Grade 11, A) &nbsp;&middot;&nbsp; Data Science &amp; AI &nbsp;&middot;&nbsp; Python &nbsp;&middot;&nbsp; Egypt</div>
     <div class="contacts">
       <a href="tel:+201065304179">+20 106 530 4179</a>
       <a href="mailto:Kenzyrafat98@gmail.com">Kenzyrafat98@gmail.com</a>
@@ -882,13 +1054,106 @@ body::before {
     </div>
   </header>
 
+  <!-- ═════════ ISEF FEATURE SECTION ═════════ -->
+  <section class="isef" id="isef">
+    <div class="isef-eyebrow">ISEF Project &middot; Poster &amp; Talk</div>
+    <h2 class="isef-title">BLOOMS: Event-Driven, Tick-Free NPCs in Unreal Engine 5.8</h2>
+    <div class="isef-sub">Software Design / Engineering Design (SFTD) &middot; Unreal Engine 5.8 &middot; C++</div>
+
+    <p class="isef-lead">
+      I am a junior Unreal Engine 5 developer, and BLOOMS is the project where I went deepest into C++ for performance. In Unreal, NPCs normally tick: the engine runs their code every frame, even when they are just standing still. I asked a simple question: <b>can an NPC that runs only on events still behave socially and animate smoothly, and how little CPU time can it get away with?</b> To find out, I built a small city where Citizens greet the player, get uncomfortable if you stand too close, then confront, warn and walk away. Ticking is switched off in my own code, and the animation runs on a custom C++ proxy instead of an AnimGraph.
+    </p>
+
+    <div class="isef-stats">
+      <div class="isef-stat"><div class="isef-stat-num">0.01 ms</div><div class="isef-stat-lbl">biggest reading per frame, 5 Citizens animating together (30 s watch)</div></div>
+      <div class="isef-stat"><div class="isef-stat-num">&asymp; 0.002 ms</div><div class="isef-stat-lbl">per Citizen (0.01 &divide; 5)</div></div>
+      <div class="isef-stat"><div class="isef-stat-num">0.06%</div><div class="isef-stat-lbl">of a 60 FPS frame (16.67 ms)</div></div>
+      <div class="isef-stat"><div class="isef-stat-num">11</div><div class="isef-stat-lbl">places in my code where ticking is turned off</div></div>
+    </div>
+
+    <div class="isef-actions">
+      <a class="isef-btn primary" href="isef/BLOOMS_Poster.pdf" target="_blank" rel="noopener">&#9658; View the poster (PDF)</a>
+      <a class="isef-btn" href="isef/BLOOMS_Presentation_Rose.pdf" target="_blank" rel="noopener">&#9658; View the talk (PDF &middot; 12 slides)</a>
+      <a class="isef-btn" href="#isef-paper">&#9658; Research paper plan</a>
+    </div>
+
+    <div class="isef-cols">
+
+      <div class="isef-card">
+        <h3>The poster</h3>
+        <ul>
+          <li><b>Problem:</b> a standing NPC is asked &ldquo;anything to do?&rdquo; sixty times a second, and the answer is almost always no. A Blueprint tick adds the Blueprint virtual machine on top.</li>
+          <li><b>Method:</b> two drawings: the Citizen brain that only reacts to events, and the ten-step social ladder where every step starts from an event.</li>
+          <li><b>Experiment:</b> three builds, one counter. A packaged build, t.MaxFPS 0, r.VSync 0, the biggest value in a 30 s watch, three trials per build and count.</li>
+          <li><b>Results, limits and recommendations</b> are written in plain numbers. Where I cannot tell, I say so.</li>
+        </ul>
+      </div>
+
+      <div class="isef-card">
+        <h3>The talk &middot; 12 slides</h3>
+        <ol>
+          <li>Rationale: idle NPCs still cost time every frame (50 NPCs &times; 60 frames = 3,000 empty calls a second)</li>
+          <li>Hypotheses H1&ndash;H4 and five engineering goals</li>
+          <li>Method 1: a brain that never ticks (overlap, one-shot timer, animation callback)</li>
+          <li>Method 2: custom animation, the pose-snapshot fix, three builds, test protocol</li>
+          <li>Results 1&ndash;3: cost table, growth chart, comparison builds and the analysis rule</li>
+          <li>Discussion 1&ndash;2: why the cost is so low, and what the results cannot show</li>
+          <li>Conclusion, next steps and references</li>
+        </ol>
+      </div>
+
+      <div class="isef-card wide">
+        <h3>Deep C++ for performance &mdash; what I built</h3>
+        <ul>
+          <li><b>A brain that never ticks.</b> The Citizen brain is a <b>UHumanoidActorComponent</b> with tick flags off. Nothing I wrote is visited every frame.</li>
+          <li><b>Events only.</b> Two overlap spheres (250 cm interaction, 150 cm comfort), one-shot <b>FTimerHandle</b> timers that are cleared before they are reset, and animation-end callbacks drive the whole social ladder: notice, greet, reply, look again, discomfort, confront, last warning, walk away.</li>
+          <li><b>Animation without an AnimGraph.</b> A custom <b>FAnimInstanceProxy</b> whose Evaluate() runs on the animation worker thread: three cross-fading idles, five walk phases, head look-at clamped at 46&deg; and eyes at 35&deg;.</li>
+          <li><b>No pop at walk-stop.</b> The exact pose is copied as a snapshot, then blended into the idle, which removed a one-frame jump.</li>
+          <li><b>Data assets, not code.</b> Animations, audio, distances, blink, and head and eye limits are loaded once at BeginPlay.</li>
+          <li><b>Precise claim.</b> My behavior layer has no ticks. The engine still ticks movement and skeletal meshes, so &ldquo;zero tick&rdquo; never means &ldquo;the engine does nothing.&rdquo;</li>
+        </ul>
+      </div>
+
+      <div class="isef-card wide">
+        <h3>Hypotheses &mdash; honest status</h3>
+        <ul>
+          <li><b>H1</b> With ticking off, Citizens cost almost nothing even when several animate together.<span class="chip ok">Tested: 0.01 ms for five</span></li>
+          <li><b>H2</b> Cheaper than the same code with ticking on, and cheaper than a Blueprint version; the gap grows with crowd size.<span class="chip todo">Not tested &middot; needs builds A and B</span></li>
+          <li><b>H3</b> Behavior is identical in every build.<span class="chip todo">12 checks pending</span></li>
+          <li><b>H4</b> My C++ animation proxy costs less than an AnimGraph doing the same job.<span class="chip todo">Not tested &middot; needs an AnimGraph build</span></li>
+          <li>Because builds A and B are not measured yet, I do <b>not</b> claim BLOOMS is &ldquo;cheaper than&rdquo; ticking or Blueprint. If it turns out not to be cheaper, I will report that.</li>
+        </ul>
+      </div>
+
+      <div class="isef-card wide" id="isef-paper">
+        <h3>Research paper &middot; in preparation</h3>
+        <p><b>Working title:</b> &ldquo;What Does It Cost to Make an NPC React? Measuring Event-Driven, Tick-Free Behavior in Unreal Engine 5.8&rdquo;</p>
+        <p><b>Outline:</b> 1 Introduction and research question &middot; 2 Related work (Nystrom 2014; Gregory 2018; Millington &amp; Funge 2009; Iovino et al. 2022; Ripamonti et al. 2017) &middot; 3 Method: the BLOOMS architecture and builds A, B, B2 and C &middot; 4 Results with the average and the biggest value &middot; 5 Limits &middot; 6 Conclusion and future work.</p>
+        <p><b>Measurements still to run:</b> Build B (same C++, ticking on), Build B2 (adds a per-frame distance check, so it measures a real polling NPC), Build A (Blueprint with Event Tick and an Animation Blueprint), and an AnimGraph build for H4. Every count re-measured with the average next to the biggest value, a finer counter or Unreal Insights, the 12 behavior checks, and the Animation Budget Allocator on top.</p>
+        <p><b>Analysis rule:</b> reduction % = (bigger &minus; smaller) &divide; bigger &times; 100. If the gap between two builds is smaller than the spread between my own trials, I report &ldquo;cannot tell apart&rdquo; and give no percentage.</p>
+      </div>
+
+      <div class="isef-card wide">
+        <h3>What BLOOMS is teaching me as a game developer</h3>
+        <ul>
+          <li>Unreal C++ at engine level: components, overlaps, timers, delegates and reflection.</li>
+          <li>Which work runs on the game thread and which runs on the animation worker thread, and why a game-thread counter may not include it.</li>
+          <li>Profiling in a packaged build: one isolating counter, controlled settings, three trials, and Unreal Insights next.</li>
+          <li>Data-driven design: changing a Citizen without opening C++.</li>
+          <li>Experimental method and technical writing: hypotheses, controls, honest limits, a poster, a talk, and now a paper.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
   <div class="layout">
     <main>
 
       <section class="section">
         <div class="section-label">Profile</div>
         <p class="summary">
-          STEM student (11th grade, Grade A) with a strong foundation in data science, AI, and software development — validated by three consecutive Udacity Nanodegrees under Egypt's Digital Egypt Cubs Initiative (Ministry of Communications &amp; IT): Lite One &rarr; Level Two &rarr; Level Three: Data Science &amp; AI, with Level Four currently in progress. Proficient in Python-driven data pipelines, ML modeling with scikit-learn, and full-stack web fundamentals. Led two STEM capstone research teams producing functional prototypes — GREENADO (eco-friendly building) and GALVINO (galvanic energy system) — both addressing Egypt's Grand Challenges. Active competitor in DIGITOPIA 2025. Volunteer at Resala; participant in Girls Who Code, Mint Squad, and the New York Academy of Science. Expanding into systems-level programming in C and C++ with a roadmap toward game engine development.
+          STEM student (11th grade, Grade A) and junior Unreal Engine 5 developer. My main project, BLOOMS, is an event-driven, tick-free NPC system in UE 5.8 C++: Citizens that greet, get uncomfortable, confront, warn and walk away without any of my code running every frame, measured at 0.01 ms per frame for five Citizens animating together. I have prepared it as an ISEF-format poster and talk, and I am turning it into a research paper while I go deeper into C++ for performance. Alongside game development I have a strong foundation in data science and AI, validated by three consecutive Udacity Nanodegrees under Egypt's Digital Egypt Cubs Initiative (Lite One &rarr; Level Two &rarr; Level Three: Data Science &amp; AI, with Level Four in progress), with Python data pipelines and scikit-learn modeling. I led two STEM capstone research teams that produced functional prototypes, GREENADO (eco-friendly building) and GALVINO (galvanic energy system), both addressing Egypt's Grand Challenges. Active competitor in DIGITOPIA 2025 (Games &amp; Digital Arts track); volunteer at Resala; participant in Girls Who Code, Mint Squad and the New York Academy of Science.
         </p>
       </section>
 
@@ -929,12 +1194,17 @@ body::before {
       <section class="section">
         <div class="section-label">Portfolio</div>
         <div class="project">
-          <div class="project-num">I &nbsp;&mdash;&nbsp; STEM CAPSTONE &middot; DATA &amp; AI</div>
+          <div class="project-num">I &nbsp;&mdash;&nbsp; GAME DEV &middot; UNREAL ENGINE 5.8 &middot; C++</div>
+          <div class="project-name">BLOOMS &mdash; Event-Driven, Tick-Free NPCs <span class="project-badge">&middot; <a href="#isef" style="color:inherit">ISEF poster &amp; talk</a></span></div>
+          <div class="project-desc">A small Unreal Engine 5.8 city where Citizens run a ten-step social ladder (notice, greet, reply, discomfort, confront, warn, walk away) driven only by overlaps, one-shot timers and animation callbacks. The brain is a C++ component with ticking off; the animation is a custom FAnimInstanceProxy on the worker thread with a pose-snapshot blend, and all content lives in data assets. Measured at 0.01 ms per frame for five Citizens; comparison builds and a research paper are in progress.</div>
+        </div>
+        <div class="project">
+          <div class="project-num">II &nbsp;&mdash;&nbsp; STEM CAPSTONE &middot; DATA &amp; AI</div>
           <div class="project-name">Social Impact Data Project</div>
           <div class="project-desc">Framed a real Egyptian socio-technical problem as a structured data challenge. Built a full pipeline from raw data collection through cleaning, EDA, and visualization to actionable insight. Applied scikit-learn ML models for pattern recognition; integrated Arduino components to extend the solution into a tangible hardware-software system.</div>
         </div>
         <div class="project">
-          <div class="project-num">II &nbsp;&mdash;&nbsp; WEB &amp; PYTHON</div>
+          <div class="project-num">III &nbsp;&mdash;&nbsp; WEB &amp; PYTHON</div>
           <div class="project-name">Python &amp; Web Application Portfolio <span class="project-badge">&middot; Ongoing</span></div>
           <div class="project-desc">Multiple standalone Python applications across automation, data analysis, and AI/ML integration. Front-end web projects in HTML, CSS, and JavaScript with Angular component experimentation. Mobile and visual programming prototypes built with Thunkable and Blockly.</div>
         </div>
@@ -1030,9 +1300,17 @@ body::before {
         <div class="skill-group">
           <div class="skill-group-label">Programming Languages</div>
           <div class="tags">
-            <span class="tag hi">Python</span><span class="tag hi">JavaScript</span><span class="tag hi">SQL</span>
+            <span class="tag hi">C++ (Unreal Engine 5.8)</span><span class="tag hi">Python</span><span class="tag hi">JavaScript</span><span class="tag hi">SQL</span>
             <span class="tag hi">HTML</span><span class="tag hi">CSS</span>
-            <span class="tag lo">C (learning)</span><span class="tag lo">C++ (learning)</span>
+            <span class="tag lo">C (learning)</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-label">Game Development &middot; UE5</div>
+          <div class="tags">
+            <span class="tag ro">Unreal Engine 5.8</span><span class="tag ro">Event-Driven Design</span><span class="tag ro">Tick Optimization</span>
+            <span class="tag ro">Custom Anim Proxy</span><span class="tag ro">Data Assets</span>
+            <span class="tag lo">Timers &amp; Overlaps</span><span class="tag lo">stat Profiling</span><span class="tag lo">Unreal Insights (next)</span>
           </div>
         </div>
         <div class="skill-group">
@@ -1183,15 +1461,36 @@ body::before {
 
 <script>
 // =====================================================
-//  CERTS — 41 cards, newest → oldest
+//  CERTS — 43 cards, newest → oldest
 //  Filenames are written EXACTLY as they appear in the
 //  GitHub certs/ folder (real spaces, no %20).
 //  The script encodes them automatically with encodeURI().
 //  Entries marked  ★ NEW  use the 2026-11-01 20:xx uploads.
 //  (HP LIFE, EthicWise and Break the Code now use the clean
 //   digital screenshots instead of the phone photos.)
+//  The two BLOOMS entries at the top need
+//   certs/BLOOMS_Poster.png and certs/BLOOMS_Talk_Title.png
+//   (export page 1 of the poster PDF and slide 1 of the talk PDF).
 // =====================================================
 const CERTS = [
+
+  /* ── BLOOMS · ISEF ─────────────────────────────── */
+  {
+    name:   "BLOOMS \u2014 Event-Driven, Tick-Free NPCs in Unreal Engine 5.8",
+    org:    "ISEF-format Poster \u00b7 Software Design / Engineering Design (SFTD)",
+    date:   "2026",
+    img:    "certs/BLOOMS_Poster.png",
+    badge:  "Poster",
+    poster: true
+  },
+  {
+    name:   "BLOOMS \u2014 Talk (12 slides)",
+    org:    "Event-driven, tick-free NPC architecture in Unreal Engine 5.8",
+    date:   "2026",
+    img:    "certs/BLOOMS_Talk_Title.png",
+    badge:  "Talk",
+    poster: true
+  },
 
   /* ── Autumn 2026 ───────────────────────────────── */
 
