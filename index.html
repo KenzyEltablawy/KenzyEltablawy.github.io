@@ -19,14 +19,14 @@
   --muted:   #C99AB3;
   --rose:    #FF7FB0;
   --blush:   #FFB3D1;
-  --red:     #FF4D73;
-  --crimson: #D91F4A;
+  --red:     #E67B93;
+  --crimson: #B5566D;
   --r-bg:    rgba(255,127,176,0.09);
   --r-bd:    rgba(255,127,176,0.28);
   --b-bg:    rgba(255,179,209,0.08);
   --b-bd:    rgba(255,179,209,0.24);
-  --c-bg:    rgba(255,77,115,0.10);
-  --c-bd:    rgba(255,77,115,0.34);
+  --c-bg:    rgba(230,123,147,0.08);
+  --c-bd:    rgba(230,123,147,0.28);
   --mono:    'JetBrains Mono', monospace;
   --sans:    'Inter', sans-serif;
 }
@@ -37,7 +37,7 @@ body {
   background-color: var(--bg);
   background-image:
     radial-gradient(ellipse 60% 50% at 5% 0%,   rgba(255,127,176,0.07) 0%, transparent 70%),
-    radial-gradient(ellipse 45% 40% at 95% 10%, rgba(255,77,115,0.05) 0%, transparent 62%);
+    radial-gradient(ellipse 45% 40% at 95% 10%, rgba(230,123,147,0.04) 0%, transparent 62%);
   color: var(--text);
   font-family: var(--sans);
   font-size: 14px;
@@ -57,7 +57,7 @@ body::before {
   background:
     radial-gradient(ellipse 85% 42% at 50% 0%,   rgba(255,179,209,0.10) 0%, transparent 72%),
     radial-gradient(ellipse 60% 45% at 0% 60%,   rgba(255,179,209,0.05) 0%, transparent 70%),
-    radial-gradient(ellipse 60% 45% at 100% 75%, rgba(255,77,115,0.05) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 45% at 100% 75%, rgba(230,123,147,0.04) 0%, transparent 70%),
     radial-gradient(ellipse 80% 40% at 50% 105%, rgba(255,179,209,0.08) 0%, transparent 72%);
 }
 
@@ -93,7 +93,7 @@ body::before {
   will-change: transform;
 }
 
-.petal.red { background: linear-gradient(135deg, #FF8FA8, #D91F4A); }
+.petal.red { background: linear-gradient(135deg, #F0A3B4, #C4687E); }
 
 @keyframes petalFall {
   0%   { transform: translate3d(0, -5vh, 0) rotate(0deg) scale(var(--s, 1)); }
@@ -108,7 +108,7 @@ body::before {
   pointer-events: none;
   width: clamp(150px, 23vw, 340px);
   height: auto;
-  filter: drop-shadow(0 8px 22px rgba(217,31,74,0.22));
+  filter: drop-shadow(0 8px 22px rgba(181,86,109,0.18));
   -webkit-mask-image: radial-gradient(farthest-side at 100% 0, #000 58%, transparent 100%);
           mask-image: radial-gradient(farthest-side at 100% 0, #000 58%, transparent 100%);
 }
@@ -156,7 +156,7 @@ body::before {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(0 0 18px rgba(255,77,115,0.22));
+  filter: drop-shadow(0 0 18px rgba(230,123,147,0.18));
 }
 
 .cursor {
@@ -210,8 +210,8 @@ body::before {
   padding: 30px 30px 28px;
   border: 1px solid var(--c-bd);
   border-radius: 8px;
-  background: linear-gradient(160deg, rgba(255,77,115,0.12), var(--surface) 58%);
-  box-shadow: 0 0 40px rgba(255,77,115,0.08);
+  background: linear-gradient(160deg, rgba(230,123,147,0.09), var(--surface) 58%);
+  box-shadow: 0 0 40px rgba(230,123,147,0.06);
 }
 
 .isef::before {
@@ -287,14 +287,14 @@ body::before {
 }
 
 .isef-btn.primary {
-  background: linear-gradient(105deg, var(--crimson), var(--red));
+  background: linear-gradient(105deg, #9C4459, #B5566D);
   border-color: transparent;
   color: #fff;
 }
 
 .isef-btn:hover {
   border-color: var(--red);
-  box-shadow: 0 0 18px rgba(255,77,115,0.22);
+  box-shadow: 0 0 18px rgba(230,123,147,0.18);
   transform: translateY(-1px);
 }
 
@@ -486,7 +486,7 @@ body::before {
   border-radius: 2px;
 }
 
-.project:hover { border-color: var(--c-bd); box-shadow: 0 0 22px rgba(255,77,115,0.10); }
+.project:hover { border-color: var(--c-bd); box-shadow: 0 0 22px rgba(230,123,147,0.08); }
 
 .project-num { font-family: var(--mono); font-size: 9px; color: var(--red); letter-spacing: 0.1em; margin-bottom: 3px; }
 .project-name { font-weight: 600; font-size: 13.5px; margin-bottom: 5px; }
@@ -549,7 +549,7 @@ body::before {
 .comp-card { padding: 14px 16px; border: 1px solid var(--border); border-radius: 5px; background: var(--surface); transition: border-color 0.15s; }
 .comp-card + .comp-card { margin-top: 10px; }
 .comp-card:hover { border-color: var(--c-bd); }
-.comp-card.hl { border-color: var(--c-bd); background: linear-gradient(160deg, rgba(255,77,115,0.10), var(--surface) 60%); }
+.comp-card.hl { border-color: var(--c-bd); background: linear-gradient(160deg, rgba(230,123,147,0.08), var(--surface) 60%); }
 .comp-name { font-weight: 600; font-size: 13.5px; margin-bottom: 3px; }
 .comp-meta { font-family: var(--mono); font-size: 9.5px; color: var(--red); margin-bottom: 8px; letter-spacing: 0.04em; }
 .comp-desc { font-size: 12px; color: var(--muted); line-height: 1.55; }
@@ -640,7 +640,7 @@ body::before {
 .cert-card:focus-visible {
   border-color: var(--c-bd);
   transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(217,31,74,0.18), 0 4px 18px rgba(255,127,176,0.12);
+  box-shadow: 0 16px 40px rgba(181,86,109,0.16), 0 4px 18px rgba(255,127,176,0.10);
   outline: none;
 }
 
@@ -758,7 +758,7 @@ body::before {
   background: rgba(10,5,13,0.97);
   background-image:
     radial-gradient(ellipse 60% 50% at 20% 10%, rgba(255,127,176,0.12) 0%, transparent 65%),
-    radial-gradient(ellipse 60% 50% at 80% 90%, rgba(255,77,115,0.10) 0%, transparent 65%);
+    radial-gradient(ellipse 60% 50% at 80% 90%, rgba(230,123,147,0.08) 0%, transparent 65%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -786,7 +786,7 @@ body::before {
   max-height: 80vh;
   object-fit: contain;
   border-radius: 6px;
-  box-shadow: 0 0 100px rgba(255,77,115,0.18), 0 0 60px rgba(255,127,176,0.14), 0 0 40px rgba(0,0,0,0.6);
+  box-shadow: 0 0 100px rgba(230,123,147,0.14), 0 0 60px rgba(255,127,176,0.14), 0 0 40px rgba(0,0,0,0.6);
   display: block;
 }
 
@@ -813,7 +813,7 @@ body::before {
 }
 
 .lightbox-close-btn:hover {
-  background: rgba(255,77,115,0.14);
+  background: rgba(230,123,147,0.12);
   color: var(--red);
   border-color: var(--c-bd);
 }
@@ -953,10 +953,10 @@ body::before {
       <g transform="translate(120 236) rotate(160)"><use href="#leaf" x="-11" y="-44" width="22" height="44"/></g>
       <g transform="translate(236 232) rotate(-20)"><use href="#leaf" x="-12" y="-48" width="24" height="48"/></g>
 
-      <use href="#rose" x="100" y="68"  width="104" height="104" style="--p1:#E8457A;--p2:#FF6B9A;--p3:#FFA3C2;--edge:#8A1239"/>
-      <use href="#rose" x="176" y="-28" width="156" height="156" style="--p1:#B8143F;--p2:#DB2D5C;--p3:#FF5C87;--edge:#5E0820"/>
+      <use href="#rose" x="100" y="68"  width="104" height="104" style="--p1:#D9698E;--p2:#F08AAB;--p3:#FFB3CB;--edge:#7A3050"/>
+      <use href="#rose" x="176" y="-28" width="156" height="156" style="--p1:#A8475F;--p2:#C96982;--p3:#F09AB3;--edge:#5A2535"/>
       <use href="#rose" x="216" y="128" width="82"  height="82"  style="--p1:#F6A3C3;--p2:#FFC3DA;--p3:#FFE6F0;--edge:#B8456F"/>
-      <use href="#rose" x="64"  y="186" width="62"  height="62"  style="--p1:#A01238;--p2:#CF2A58;--p3:#F05A82;--edge:#52071C"/>
+      <use href="#rose" x="64"  y="186" width="62"  height="62"  style="--p1:#9A4058;--p2:#BD6079;--p3:#E48DA6;--edge:#4C2030"/>
       <use href="#rose" x="168" y="206" width="48"  height="48"  style="--p1:#FF8FB6;--p2:#FFB0CE;--p3:#FFD3E3;--edge:#C24A78"/>
 
       <use href="#blossom" x="300" y="126" width="38" height="38" style="--b1:#FFD3E3;--b2:#E8648F;--bc:#FFD98A"/>
@@ -980,8 +980,8 @@ body::before {
       <g transform="translate(92 196) rotate(-140)"><use href="#leaf" x="-10" y="-40" width="20" height="40"/></g>
       <g transform="translate(244 128) rotate(70)"><use href="#leaf" x="-11" y="-44" width="22" height="44"/></g>
 
-      <use href="#rose" x="104" y="84"  width="72"  height="72"  style="--p1:#B8143F;--p2:#DB2D5C;--p3:#FF5C87;--edge:#5E0820"/>
-      <use href="#rose" x="164" y="-18" width="116" height="116" style="--p1:#E0386F;--p2:#FF5C8E;--p3:#FF9BBE;--edge:#7B0F33"/>
+      <use href="#rose" x="104" y="84"  width="72"  height="72"  style="--p1:#A8475F;--p2:#C96982;--p3:#F09AB3;--edge:#5A2535"/>
+      <use href="#rose" x="164" y="-18" width="116" height="116" style="--p1:#D1587F;--p2:#E7799B;--p3:#F7A9C2;--edge:#6A2A40"/>
       <use href="#rose" x="222" y="116" width="52"  height="52"  style="--p1:#F6A3C3;--p2:#FFC3DA;--p3:#FFE6F0;--edge:#B8456F"/>
 
       <use href="#blossom" x="76"  y="22"  width="40" height="40" style="--b1:#FFEAF2;--b2:#E8648F;--bc:#FFD98A"/>
@@ -1006,9 +1006,9 @@ body::before {
 
       <use href="#rose" x="118" y="20" width="24" height="24" style="--p1:#F6A3C3;--p2:#FFC3DA;--p3:#FFE6F0;--edge:#B8456F"/>
       <use href="#rose" x="458" y="20" width="24" height="24" style="--p1:#F6A3C3;--p2:#FFC3DA;--p3:#FFE6F0;--edge:#B8456F"/>
-      <use href="#rose" x="186" y="18" width="30" height="30" style="--p1:#E0386F;--p2:#FF5C8E;--p3:#FF9BBE;--edge:#7B0F33"/>
-      <use href="#rose" x="384" y="18" width="30" height="30" style="--p1:#E0386F;--p2:#FF5C8E;--p3:#FF9BBE;--edge:#7B0F33"/>
-      <use href="#rose" x="274" y="6"  width="52" height="52" style="--p1:#B8143F;--p2:#DB2D5C;--p3:#FF5C87;--edge:#5E0820"/>
+      <use href="#rose" x="186" y="18" width="30" height="30" style="--p1:#D1587F;--p2:#E7799B;--p3:#F7A9C2;--edge:#6A2A40"/>
+      <use href="#rose" x="384" y="18" width="30" height="30" style="--p1:#D1587F;--p2:#E7799B;--p3:#F7A9C2;--edge:#6A2A40"/>
+      <use href="#rose" x="274" y="6"  width="52" height="52" style="--p1:#A8475F;--p2:#C96982;--p3:#F09AB3;--edge:#5A2535"/>
 
       <use href="#blossom" x="232" y="22" width="24" height="24" style="--b1:#FFEAF2;--b2:#E8648F;--bc:#FFD98A"/>
       <use href="#blossom" x="344" y="22" width="24" height="24" style="--b1:#FFEAF2;--b2:#E8648F;--bc:#FFD98A"/>
@@ -1072,8 +1072,7 @@ body::before {
     </div>
 
     <div class="isef-actions">
-      <a class="isef-btn primary" href="isef/BLOOMS_Poster.pdf" target="_blank" rel="noopener">&#9658; View the poster (PDF)</a>
-      <a class="isef-btn" href="isef/BLOOMS_Presentation_Rose.pdf" target="_blank" rel="noopener">&#9658; View the talk (PDF &middot; 12 slides)</a>
+      <a class="isef-btn primary" href="#" id="openPoster">&#9658; View the poster</a>
       <a class="isef-btn" href="#isef-paper">&#9658; Research paper plan</a>
     </div>
 
@@ -1461,36 +1460,17 @@ body::before {
 
 <script>
 // =====================================================
-//  CERTS — 43 cards, newest → oldest
+//  CERTS — 42 cards: 41 certificates newest → oldest,
+//  then the BLOOMS poster image as the very last card.
 //  Filenames are written EXACTLY as they appear in the
 //  GitHub certs/ folder (real spaces, no %20).
 //  The script encodes them automatically with encodeURI().
 //  Entries marked  ★ NEW  use the 2026-11-01 20:xx uploads.
 //  (HP LIFE, EthicWise and Break the Code now use the clean
 //   digital screenshots instead of the phone photos.)
-//  The two BLOOMS entries at the top need
-//   certs/BLOOMS_Poster.png and certs/BLOOMS_Talk_Title.png
-//   (export page 1 of the poster PDF and slide 1 of the talk PDF).
+//  The BLOOMS poster uses certs/Screenshot 2026-11-01 213047.png
 // =====================================================
 const CERTS = [
-
-  /* ── BLOOMS · ISEF ─────────────────────────────── */
-  {
-    name:   "BLOOMS \u2014 Event-Driven, Tick-Free NPCs in Unreal Engine 5.8",
-    org:    "ISEF-format Poster \u00b7 Software Design / Engineering Design (SFTD)",
-    date:   "2026",
-    img:    "certs/BLOOMS_Poster.png",
-    badge:  "Poster",
-    poster: true
-  },
-  {
-    name:   "BLOOMS \u2014 Talk (12 slides)",
-    org:    "Event-driven, tick-free NPC architecture in Unreal Engine 5.8",
-    date:   "2026",
-    img:    "certs/BLOOMS_Talk_Title.png",
-    badge:  "Talk",
-    poster: true
-  },
 
   /* ── Autumn 2026 ───────────────────────────────── */
 
@@ -1813,6 +1793,18 @@ const CERTS = [
     date:  "",
     img:   "certs/Screenshot 2026-11-01 202357.png",
     badge: "Completion"
+  },
+
+  /* ── BLOOMS poster (last card) ─────────────────── */
+
+  {
+    id:     "bloomsPoster",
+    name:   "BLOOMS \u2014 Event-Driven, Tick-Free NPCs in Unreal Engine 5.8",
+    org:    "ISEF-format Poster \u00b7 Software Design / Engineering Design (SFTD)",
+    date:   "2026",
+    img:    "certs/Screenshot 2026-11-01 213047.png",
+    badge:  "Poster",
+    poster: true
   }
 
 ];
@@ -1913,6 +1905,16 @@ overlay.addEventListener('click', function(e) { if (e.target === overlay) closeL
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape' && overlay.classList.contains('open')) closeLightbox();
 });
+
+/* ── "View the poster" button in the ISEF section ── */
+var posterCert = CERTS.filter(function(c) { return c.id === 'bloomsPoster'; })[0];
+var posterBtn  = document.getElementById('openPoster');
+if (posterBtn && posterCert) {
+  posterBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    openLightbox(posterCert);
+  });
+}
 
 /* ── Drifting rose petals ───────────────────── */
 (function () {
